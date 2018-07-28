@@ -182,7 +182,7 @@ export function syncPendingControls(form: FormGroup, directives: NgControl[]): v
   });
 }
 
-// TODO: vsavkin remove it once https://github.com/angular/angular/issues/3011 is implemented
+// TODO: vsavkin remove it once https://github.com/angular/angular/issues/3011 is implemented id:1005
 export function selectValueAccessor(
     dir: NgControl, valueAccessors: ControlValueAccessor[]): ControlValueAccessor|null {
   if (!valueAccessors) return null;
@@ -223,7 +223,7 @@ export function removeDir<T>(list: T[], el: T): void {
   if (index > -1) list.splice(index, 1);
 }
 
-// TODO(kara): remove after deprecation period
+// TODO (kara): remove after deprecation period id:748
 export function _ngModelWarning(
     name: string, type: {_ngModelWarningSentOnce: boolean},
     instance: {_ngModelWarningSent: boolean}, warningConfig: string | null) {

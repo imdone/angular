@@ -406,7 +406,7 @@ import {serializeNodes as serializeHtmlNodes} from '../ml_parser/ast_serializer_
 
     describe('blocks', () => {
       it('should console.warn if we use i18n comments', () => {
-        // TODO(ocombe): expect a warning message when we have a proper log service
+        // TODO (ocombe): expect a warning message when we have a proper log service id:527
         extract('<!-- i18n --><p><b i18n-title="m|d" title="msg"></b></p><!-- /i18n -->');
       });
 

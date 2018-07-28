@@ -939,7 +939,7 @@ function declareTests({useJit}: {useJit: boolean}) {
         @Directive({selector: '[host-listener]', host: {'(click)': 'doIt(id, unknownProp)'}})
         class DirectiveWithHostListener {
           id = 'one';
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:477
           receivedArgs !: any[];
 
           doIt(...args: any[]) { this.receivedArgs = args; }
@@ -1957,13 +1957,13 @@ class MyDir {
 
 @Directive({selector: '[title]', inputs: ['title']})
 class DirectiveWithTitle {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:692
   title !: string;
 }
 
 @Directive({selector: '[title]', inputs: ['title'], host: {'[title]': 'title'}})
 class DirectiveWithTitleAndHostProperty {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:602
   title !: string;
 }
 
@@ -2035,7 +2035,7 @@ class PushCmpWithHostEvent {
 })
 class PushCmpWithAsyncPipe {
   numberOfChecks: number = 0;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:554
   resolve !: (result: any) => void;
   promise: Promise<any>;
 
@@ -2222,7 +2222,7 @@ class DirectiveListeningDomEventNoPrevent {
 
 @Directive({selector: '[id]', inputs: ['id']})
 class IdDir {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:511
   id !: string;
 }
 
@@ -2286,7 +2286,7 @@ class ToolbarViewContainer {
   template: 'TOOLBAR(<div *ngFor="let  part of query" [toolbarVc]="part"></div>)',
 })
 class ToolbarComponent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:478
   @ContentChildren(ToolbarPart) query !: QueryList<ToolbarPart>;
   ctxProp: string = 'hello world';
 
@@ -2487,11 +2487,11 @@ class ComponentWithTemplate {
 class DirectiveWithPropDecorators {
   target: any;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:693
   @Input('elProp') dirProp !: string;
   @Output('elEvent') event = new EventEmitter();
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:603
   @HostBinding('attr.my-attr') myAttr !: string;
   @HostListener('click', ['$event.target'])
   onClick(target: any) { this.target = target; }

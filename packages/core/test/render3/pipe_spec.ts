@@ -382,12 +382,12 @@ class MultiArgPipe implements PipeTransform {
 }
 
 class Person {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:850
   age !: number;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:627
   name !: string | null;
   address: Address|null = null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:579
   phones !: number[];
 
   init(name: string|null, address: Address|null = null) {

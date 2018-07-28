@@ -30,7 +30,7 @@ export function main() {
 const isBazel = location.pathname.indexOf('/all/') !== 0;
 // isBazel needed while 'scripts/ci/test-e2e.sh test.e2e.protractor-e2e' is run
 // on Travis
-// TODO: port remaining protractor e2e tests to bazel protractor_web_test_suite rule
+// TODO: port remaining protractor e2e tests to bazel protractor_web_test_suite rule id:81
 if (isBazel) {
   main();
 }

@@ -73,7 +73,7 @@ export class Runner {
           // This might still create instances twice. We are creating a new injector with all the
           // providers.
           // Only WebDriverAdapter is reused.
-          // TODO(vsavkin): consider changing it when toAsyncFactory is added back or when child
+          // TODO (vsavkin): consider changing it when toAsyncFactory is added back or when child id:111
           // injectors are handled better.
           const injector = Injector.create([
             sampleProviders, {provide: Options.CAPABILITIES, useValue: capabilities},
@@ -81,7 +81,7 @@ export class Runner {
             {provide: WebDriverAdapter, useValue: adapter}
           ]);
 
-          // TODO: With TypeScript 2.5 injector.get does not infer correctly the
+          // TODO: With TypeScript 2.5 injector.get does not infer correctly the id:141
           // return type. Remove 'any' and investigate the issue.
           const sampler = injector.get(Sampler) as any;
           return sampler.sample();

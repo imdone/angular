@@ -32,7 +32,7 @@ export interface KeyValueDiffer<K, V> {
    * `diff()` invocation.
    */
   diff(object: {[key: string]: V}): KeyValueChanges<string, V>|null;
-  // TODO(TS2.1): diff<KP extends string>(this: KeyValueDiffer<KP, V>, object: Record<KP, V>):
+  // TODO (TS2.1): diff<KP extends string>(this: KeyValueDiffer<KP, V>, object: Record<KP, V>): id:269
   // KeyValueDiffer<KP, V>;
 }
 

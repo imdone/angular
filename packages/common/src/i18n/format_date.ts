@@ -382,7 +382,7 @@ const DATE_FORMATS: {[format: string]: DateFormatter} = {};
 // Based on CLDR formats:
 // See complete list: http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
 // See also explanations: http://cldr.unicode.org/translation/date-time
-// TODO(ocombe): support all missing cldr formats: Y, U, Q, D, F, e, c, j, J, C, A, v, V, X, x
+// TODO (ocombe): support all missing cldr formats: Y, U, Q, D, F, e, c, j, J, C, A, v, V, X, x id:119
 function getDateFormatter(format: string): DateFormatter|null {
   if (DATE_FORMATS[format]) {
     return DATE_FORMATS[format];

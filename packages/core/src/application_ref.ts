@@ -383,7 +383,7 @@ export class ApplicationRef {
   /**
    * Returns an Observable that indicates when the application is stable or unstable.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:264
   public readonly isStable !: Observable<boolean>;
 
   /** @internal */
@@ -565,7 +565,7 @@ export class ApplicationRef {
 
   /** @internal */
   ngOnDestroy() {
-    // TODO(alxhub): Dispose of the NgZone.
+    // TODO (alxhub): Dispose of the NgZone. id:310
     this._views.slice().forEach((view) => view.destroy());
   }
 

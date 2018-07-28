@@ -224,13 +224,13 @@ class DestroyableCmpt implements OnDestroy {
 
 @Directive({selector: 'tpl-refs', exportAs: 'tplRefs'})
 class CaptureTplRefs {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:122
   @ContentChildren(TemplateRef) tplRefs !: QueryList<TemplateRef<any>>;
 }
 
 @Component({selector: 'test-cmp', template: ''})
 class TestComponent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:152
   currentTplRef !: TemplateRef<any>;
   context: any = {foo: 'bar'};
   value = 'bar';

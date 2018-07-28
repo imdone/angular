@@ -131,7 +131,7 @@ export class NgswCommChannel {
   /**
    * @internal
    */
-  // TODO(i): the typings and casts in this method are wonky, we should revisit it and make the
+  // TODO (i): the typings and casts in this method are wonky, we should revisit it and make the id:1065
   // types flow correctly
   eventsOfType<T extends TypedEvent>(type: string): Observable<T> {
     return <Observable<T>>this.events.pipe(filter((event) => { return event.type === type; }));
@@ -140,7 +140,7 @@ export class NgswCommChannel {
   /**
    * @internal
    */
-  // TODO(i): the typings and casts in this method are wonky, we should revisit it and make the
+  // TODO (i): the typings and casts in this method are wonky, we should revisit it and make the id:1169
   // types flow correctly
   nextEventOfType<T extends TypedEvent>(type: string): Observable<T> {
     return <Observable<T>>(this.eventsOfType(type).pipe(take(1)));

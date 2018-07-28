@@ -50,7 +50,7 @@ describe('css selector matching', () => {
 
     describe('attributes matching', () => {
 
-      // TODO: do we need to differentiate no value and empty value? that is: title vs. title="" ?
+      // TODO: do we need to differentiate no value and empty value? that is: title vs. title="" ? id:639
 
       it('should match single attribute without value', () => {
 

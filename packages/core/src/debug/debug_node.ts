@@ -19,7 +19,7 @@ export class EventListener {
 export class DebugNode {
   nativeNode: any;
   listeners: EventListener[];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:315
   parent !: DebugElement | null;
 
   constructor(nativeNode: any, parent: DebugNode|null, private _debugContext: DebugContext) {
@@ -47,7 +47,7 @@ export class DebugNode {
  * @experimental All debugging apis are currently experimental.
  */
 export class DebugElement extends DebugNode {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:535
   name !: string;
   properties: {[key: string]: any};
   attributes: {[key: string]: string | null};

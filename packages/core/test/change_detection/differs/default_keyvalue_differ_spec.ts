@@ -11,7 +11,7 @@ import {DefaultKeyValueDiffer, DefaultKeyValueDifferFactory} from '@angular/core
 import {kvChangesAsString, testChangesAsString} from '../../change_detection/util';
 
 
-// TODO(vicb): Update the code & tests for object equality
+// TODO (vicb): Update the code & tests for object equality id:392
 {
   describe('keyvalue differ', function() {
     describe('DefaultKeyValueDiffer', function() {

@@ -15,7 +15,7 @@ describe ('HeroesService (with spies)', () => {
   let heroService: HeroService;
 
   beforeEach(() => {
-    // TODO: spy on other methods too
+    // TODO: spy on other methods too id:48
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     heroService = new HeroService(<any> httpClientSpy);
   });
@@ -211,5 +211,5 @@ describe('HeroesService (with mocks)', () => {
     // #enddocregion network-error
   });
 
-  // TODO: test other HeroService methods
+  // TODO: test other HeroService methods id:7
 });

@@ -90,7 +90,7 @@ export function normalizeCSS(css: string): string {
 }
 
 const _singleTagWhitelist = ['br', 'hr', 'input'];
-export function stringifyElement(el: any /** TODO #9100 */): string {
+export function stringifyElement(el: any /** TODO #9100 id:888*/): string {
   let result = '';
   if (getDOM().isElementNode(el)) {
     const tagName = getDOM().tagName(el).toLowerCase();

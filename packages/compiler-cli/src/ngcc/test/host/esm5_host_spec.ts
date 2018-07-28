@@ -1019,7 +1019,7 @@ describe('Esm5ReflectionHost', () => {
       const values = Array.from(exportDeclarations !.values())
                          .map(declaration => [declaration.node.getText(), declaration.viaModule]);
       expect(values).toEqual([
-        // TODO: clarify what is expected here...
+        // TODO: clarify what is expected here... id:128
         //[`Directive = callableClassDecorator()`, '@angular/core'],
         [`Directive = callableClassDecorator()`, null],
         [`a = 'a'`, null],

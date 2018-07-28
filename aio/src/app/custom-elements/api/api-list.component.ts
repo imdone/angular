@@ -80,7 +80,7 @@ export class ApiListComponent implements OnInit {
     this.initializeSearchCriteria();
   }
 
-  // TODO: may need to debounce as the original did
+  // TODO: may need to debounce as the original did id:29
   // although there shouldn't be any perf consequences if we don't
   setQuery(query: string) {
     this.setSearchCriteria({query: (query || '').toLowerCase().trim() });

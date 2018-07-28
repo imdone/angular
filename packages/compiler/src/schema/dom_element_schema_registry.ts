@@ -36,10 +36,10 @@ const OBJECT = 'object';
  * An `element` may inherit additional properties from `parentElement` If no `^parentElement` is
  * specified then `""` (blank) element is assumed.
  *
- * NOTE: The blank element inherits from root `[Element]` element, the super element of all
+ * NOTE: The blank element inherits from root `[Element]` element, the super element of all id:498
  * elements.
  *
- * NOTE an element prefix such as `:svg:` has no special meaning to the schema.
+ * NOTE an element prefix such as `: has no special meaning to the schema. svg:` id:415
  *
  * ## Properties
  *
@@ -57,8 +57,8 @@ const OBJECT = 'object';
  * The class creates an internal squas representation which allows to easily answer the query of
  * if a given property exist on a given element.
  *
- * NOTE: We don't yet support querying for types or events.
- * NOTE: This schema is auto extracted from `schema_extractor.ts` located in the test folder,
+ * NOTE: We don't yet support querying for types or events. id:359
+ * NOTE: This schema is auto extracted from `schema_extractor.ts` located in the test folder, id:260
  *       see dom_element_schema_registry_spec.ts
  */
 

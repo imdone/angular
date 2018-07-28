@@ -116,7 +116,7 @@ describe('mock_compiler', () => {
         result.source, 'ctx.name // ... ctx.name.length', 'could not find correct length access');
   });
 
-  it('should be able to skip TODO comments (// TODO)', () => {
+  it('should be able to skip TODO comments (// TODO )', () => { id:285
     const files = {
       app: {
         'hello.component.ts': `
@@ -139,9 +139,9 @@ describe('mock_compiler', () => {
 
     expectEmit(
         result.source, `
-    // TODO: this comment should not be taken into account
+    // TODO: this comment should not be taken into account id:329
     $r3$.ɵT(0, "Hello!");
-    // TODO: this comment should not be taken into account
+    // TODO: this comment should not be taken into account id:234
     `,
         'todo comments should be ignored');
   });

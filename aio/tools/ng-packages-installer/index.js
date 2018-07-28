@@ -166,7 +166,7 @@ class NgPackagesInstaller {
       }
     });
 
-    // FIXME: Temporarily use RxJS from root `node_modules/`.
+    // FIXME: Temporarily use RxJS from root `node_modules/`. id:54
     if (peerDependencies.rxjs) {
       peerDependencies.rxjs = `file:${ANGULAR_ROOT_DIR}/node_modules/rxjs`;
     }

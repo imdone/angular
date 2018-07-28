@@ -86,7 +86,7 @@ export class BrowserDomAdapter extends GenericBrowserDomAdapter {
   getProperty(el: Node, name: string): any { return (<any>el)[name]; }
   invoke(el: Node, methodName: string, args: any[]): any { (<any>el)[methodName](...args); }
 
-  // TODO(tbosch): move this into a separate environment class once we have it
+  // TODO (tbosch): move this into a separate environment class once we have it id:1145
   logError(error: string): void {
     if (window.console) {
       if (console.error) {
@@ -374,7 +374,7 @@ export class BrowserDomAdapter extends GenericBrowserDomAdapter {
     return this.getAttribute(element, 'data-' + name);
   }
   getComputedStyle(element: any): any { return getComputedStyle(element); }
-  // TODO(tbosch): move this into a separate environment class once we have it
+  // TODO (tbosch): move this into a separate environment class once we have it id:878
   supportsWebAnimation(): boolean {
     return typeof(<any>Element).prototype['animate'] === 'function';
   }

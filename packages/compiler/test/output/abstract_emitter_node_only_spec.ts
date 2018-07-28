@@ -116,7 +116,7 @@ function expectMap(
   const sm = ctx.toSourceMapGenerator('o.ts').toJSON() !;
   const genPosition = {line: genLine + 1, column: genCol};
   const origPosition = originalPositionFor(sm, genPosition);
-  // TODO: Review use of `any` here (#19904)
+  // TODO: Review use of `any` here (#19904) id:528
   expect(origPosition.source as any).toEqual(source);
   expect(origPosition.line as any).toEqual(srcLine === null ? null : srcLine + 1);
   expect(origPosition.column as any).toEqual(srcCol);

@@ -52,12 +52,12 @@ describe('ApplicationRef bootstrap', () => {
        const appRef = moduleRef.injector.get(ApplicationRef);
        const helloWorldComponent = appRef.components[0].instance as HelloWorldComponent;
        expect(document.body.innerHTML).toEqual('<hello-world><div>Hello World</div></hello-world>');
-       // TODO(jasonaden): Get with Kara on lifecycle hooks
+       // TODO (jasonaden): Get with Kara on lifecycle hooks id:682
        //  expect(helloWorldComponent.log).toEqual(['OnInit', 'DoCheck']);
        helloWorldComponent.name = 'Mundo';
        appRef.tick();
        expect(document.body.innerHTML).toEqual('<hello-world><div>Hello Mundo</div></hello-world>');
-       // TODO(jasonaden): Get with Kara on lifecycle hooks
+       // TODO (jasonaden): Get with Kara on lifecycle hooks id:446
        //  expect(helloWorldComponent.log).toEqual(['OnInit', 'DoCheck', 'DoCheck']);
 
        // Cleanup TestabilityRegistry

@@ -391,7 +391,7 @@ export class NodeEmitterVisitor implements StatementVisitor, ExpressionVisitor {
                                        this._visitStatements(stmt.constructorMethod.body))]) ||
         [];
 
-    // TODO {chuckj}: Determine what should be done for a method with a null name.
+    // TODO {chuckj}: Determine what should be done for a method with a null name. id:179
     const methods = stmt.methods.filter(method => method.name)
                         .map(
                             method => ts.createMethod(
@@ -540,7 +540,7 @@ export class NodeEmitterVisitor implements StatementVisitor, ExpressionVisitor {
   }
 
   visitConditionalExpr(expr: ConditionalExpr): RecordedNode<ts.ParenthesizedExpression> {
-    // TODO {chuckj}: Review use of ! on falseCase. Should it be non-nullable?
+    // TODO {chuckj}: Review use of ! on falseCase. Should it be non-nullable? id:208
     return this.record(
         expr,
         ts.createParen(ts.createConditional(

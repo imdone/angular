@@ -13,7 +13,7 @@ module.exports = (gulp) => () => {
   const path = require('path');
   return gulp
       .src([
-        // TODO(vicb): add .js files when supported
+        // TODO (vicb): add .js files when supported id:1197
         // see https://github.com/palantir/tslint/pull/1515
         './modules/**/*.ts',
         './modules/**/*.js',
@@ -34,7 +34,7 @@ module.exports = (gulp) => () => {
         '!**/*.externs.js',
 
         // Ignore generated files due to lack of copyright header
-        // TODO(alfaproject): make generated files lintable
+        // TODO (alfaproject): make generated files lintable id:1129
         '!**/*.d.ts',
         '!**/*.ngfactory.ts',
       ])

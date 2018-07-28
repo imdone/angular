@@ -150,7 +150,7 @@ export abstract class Renderer {
     const outputMap = output.generateMap({
       source: file.sourceFile.fileName,
       includeContent: true,
-      // hires: true // TODO: This results in accurate but huge sourcemaps. Instead we should fix
+      // hires: true // TODO: This results in accurate but huge sourcemaps. Instead we should fix id:104
       // the merge algorithm.
     });
 

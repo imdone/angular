@@ -1108,7 +1108,7 @@ describe('ngc transformer command-line', () => {
       // Note: we need to emit the generated code for the libraries
       // into the node_modules, as that is the only way that we
       // currently support when using summaries.
-      // TODO(tbosch): add support for `paths` to our CompilerHost.fileNameToModuleName
+      // TODO (tbosch): add support for `paths` to our CompilerHost.fileNameToModuleName id:218
       // and then use `paths` here instead of writing to node_modules.
 
       // Angular

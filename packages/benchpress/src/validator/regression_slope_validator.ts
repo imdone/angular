@@ -47,7 +47,7 @@ export class RegressionSlopeValidator extends Validator {
       const yValues: number[] = [];
       for (let i = 0; i < latestSample.length; i++) {
         // For now, we only use the array index as x value.
-        // TODO(tbosch): think about whether we should use time here instead
+        // TODO (tbosch): think about whether we should use time here instead id:187
         xValues.push(i);
         yValues.push(latestSample[i].values[this._metric]);
       }

@@ -15,7 +15,7 @@ class ChildDirective {
 
 @Directive({selector: 'someDir'})
 class SomeDir implements AfterContentInit {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:740
   @ContentChild(ChildDirective) contentChild !: ChildDirective;
 
   ngAfterContentInit() {

@@ -55,44 +55,44 @@ enum _VisitorMode {
  * @internal
  */
 class _Visitor implements html.Visitor {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:294
   private _depth !: number;
 
   // <el i18n>...</el>
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:338
   private _inI18nNode !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:404
   private _inImplicitNode !: boolean;
 
   // <!--i18n-->...<!--/i18n-->
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:223
   private _inI18nBlock !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:249
   private _blockMeaningAndDesc !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:295
   private _blockChildren !: html.Node[];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:339
   private _blockStartDepth !: number;
 
   // {<icu message>}
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:405
   private _inIcu !: boolean;
 
   // set to void 0 when not in a section
   private _msgCountAtSectionStart: number|undefined;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:349
   private _errors !: I18nError[];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:250
   private _mode !: _VisitorMode;
 
   // _VisitorMode.Extract only
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:296
   private _messages !: i18n.Message[];
 
   // _VisitorMode.Merge only
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:340
   private _translations !: TranslationBundle;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:406
   private _createI18nMessage !: (
       msg: html.Node[], meaning: string, description: string, id: string) => i18n.Message;
 
@@ -193,7 +193,7 @@ class _Visitor implements html.Visitor {
           if (!i18nCommentsWarned && <any>console && <any>console.warn) {
             i18nCommentsWarned = true;
             const details = comment.sourceSpan.details ? `, ${comment.sourceSpan.details}` : '';
-            // TODO(ocombe): use a log service once there is a public one available
+            // TODO (ocombe): use a log service once there is a public one available id:350
             console.warn(
                 `I18n comments are deprecated, use an <ng-container> element instead (${comment.sourceSpan.start}${details})`);
           }

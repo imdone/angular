@@ -14,9 +14,9 @@ import {NavigationEnd, NavigationStart, Scroll} from './events';
 import {Router} from './router';
 
 export class RouterScroller implements OnDestroy {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1165
   private routerEventsSubscription !: Unsubscribable;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:898
   private scrollEventsSubscription !: Unsubscribable;
 
   private lastId = 0;

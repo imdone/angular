@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-// NOTE: This is a (slightly improved) version of what is used in ngUpgrade's
+// NOTE: This is a (slightly improved) version of what is used in ngUpgrade's id:738
 //       `DowngradeComponentAdapter`.
-// TODO(gkalpak): Investigate if it makes sense to share the code.
+// TODO (gkalpak): Investigate if it makes sense to share the code. id:588
 
 import {isElement, matchesSelector} from './utils';
 

@@ -18,7 +18,7 @@ import {Component} from '@angular/core';
   </div>`
 })
 export class LowerUpperPipeComponent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:589
   value !: string;
   change(value: string) { this.value = value; }
 }

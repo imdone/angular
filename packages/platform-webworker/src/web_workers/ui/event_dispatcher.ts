@@ -24,7 +24,7 @@ export class EventDispatcher {
 
   dispatchRenderEvent(element: any, eventTarget: string, eventName: string, event: any): boolean {
     let serializedEvent: any;
-    // TODO (jteplitz602): support custom events #3350
+    // TODO (jteplitz602): support custom events #3350 id:941
     switch (event.type) {
       case 'click':
       case 'mouseup':
@@ -113,7 +113,7 @@ export class EventDispatcher {
       'event': serializedEvent,
     });
 
-    // TODO(kegluneq): Eventually, we want the user to indicate from the UI side whether the event
+    // TODO (kegluneq): Eventually, we want the user to indicate from the UI side whether the event id:1157
     // should be canceled, but for now just call `preventDefault` on the original DOM event.
     return false;
   }

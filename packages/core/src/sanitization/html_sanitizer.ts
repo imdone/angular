@@ -148,7 +148,7 @@ class SanitizingHtmlSerializer {
         continue;
       }
       let value = elAttr !.value;
-      // TODO(martinprobst): Special case image URIs for data:image/...
+      // TODO (martinprobst): Special case image URIs for data:image/... id:438
       if (URI_ATTRS[lower]) value = _sanitizeUrl(value);
       if (SRCSET_ATTRS[lower]) value = sanitizeSrcset(value);
       this.buf.push(' ', attrName, '="', encodeEntities(value), '"');

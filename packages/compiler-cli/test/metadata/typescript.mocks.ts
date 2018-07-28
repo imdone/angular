@@ -102,7 +102,7 @@ export class MockNode implements ts.Node {
 
 export class MockIdentifier extends MockNode implements ts.Identifier {
   public text: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:289
   public escapedText !: ts.__String;
   // tslint:disable
   public _declarationBrand: any;
@@ -140,7 +140,7 @@ export class MockVariableDeclaration extends MockNode implements ts.VariableDecl
 }
 
 export class MockSymbol implements ts.Symbol {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:333
   public escapedName !: ts.__String;
   constructor(
       public name: string, private node: ts.Declaration = MockVariableDeclaration.of(name),
@@ -151,7 +151,7 @@ export class MockSymbol implements ts.Symbol {
   getEscapedName(): ts.__String { return this.escapedName; }
   getDeclarations(): ts.Declaration[] { return [this.node]; }
   getDocumentationComment(): ts.SymbolDisplayPart[] { return []; }
-  // TODO(vicb): removed in TS 2.2
+  // TODO (vicb): removed in TS 2.2 id:238
   getJsDocTags(): any[] { return []; }
 
   static of (name: string): MockSymbol { return new MockSymbol(name); }

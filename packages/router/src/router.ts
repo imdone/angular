@@ -219,7 +219,7 @@ export class Router {
   private rawUrlTree: UrlTree;
   private navigations = new BehaviorSubject<NavigationParams>(null !);
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:974
   private locationSubscription !: Subscription;
   private navigationId: number = 0;
   private configLoader: RouterConfigLoader;
@@ -305,7 +305,7 @@ export class Router {
   /**
    * Creates the router service.
    */
-  // TODO: vsavkin make internal after the final is out.
+  // TODO: vsavkin make internal after the final is out. id:948
   constructor(
       private rootComponentType: Type<any>|null, private urlSerializer: UrlSerializer,
       private rootContexts: ChildrenOutletContexts, private location: Location, injector: Injector,
@@ -326,11 +326,11 @@ export class Router {
 
   /**
    * @internal
-   * TODO: this should be removed once the constructor of the router made internal
+   * TODO: this should be removed once the constructor of the router made internal id:1164
    */
   resetRootComponentType(rootComponentType: Type<any>): void {
     this.rootComponentType = rootComponentType;
-    // TODO: vsavkin router 4.0 should make the root component set to null
+    // TODO: vsavkin router 4.0 should make the root component set to null id:897
     // this will simplify the lifecycle of the router.
     this.routerState.root.component = this.rootComponentType;
   }

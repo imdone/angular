@@ -112,7 +112,7 @@ describe('injection', () => {
       expect(toHtml(app)).toEqual('<my-comp title="WORKS">WORKS</my-comp>');
     });
 
-    // TODO(misko): enable once `providers` and `viewProvdires` are implemented.
+    // TODO (misko): enable once `providers` and `viewProvdires` are implemented. id:495
     xit('should inject into an injectable', () => {
       type $MyApp$ = MyApp;
 

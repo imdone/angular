@@ -68,9 +68,9 @@ class BadTemplateUrl {
            }));
 
         it('should allow the use of fakeAsync',
-           fakeAsync(inject([FancyService], (service: any /** TODO #9100 */) => {
-             let value: any /** TODO #9100 */;
-             service.getAsyncValue().then(function(val: any /** TODO #9100 */) { value = val; });
+           fakeAsync(inject([FancyService], (service: any /** TODO #9100 id:1144*/) => {
+             let value: any /** TODO #9100 id:877*/;
+             service.getAsyncValue().then(function(val: any /** TODO #9100 id:859*/) { value = val; });
              tick();
              expect(value).toEqual('async value');
            })));

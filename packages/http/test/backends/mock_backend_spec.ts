@@ -109,7 +109,7 @@ import {ReplaySubject} from 'rxjs';
               res => expect(res.text()).toBe('response2'), null !, async.done);
         }));
 
-    // TODO(robwormald): readyStates are leaving?
+    // TODO (robwormald): readyStates are leaving? id:1137
     it('should allow resolution of requests manually', () => {
       const connection1: MockConnection = backend.createConnection(sampleRequest1);
       const connection2: MockConnection = backend.createConnection(sampleRequest1);

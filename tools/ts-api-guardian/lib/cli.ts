@@ -8,7 +8,7 @@
 
 // tslint:disable:no-console
 
-// TODO(alexeagle): why not import chalk from 'chalk'?
+// TODO (alexeagle): why not import chalk from 'chalk'? id:1198
 // Something to do with TS default export in UMD emit...
 const chalk = require('chalk');
 import * as minimist from 'minimist';

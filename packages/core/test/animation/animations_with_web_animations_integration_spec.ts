@@ -138,7 +138,7 @@ import {TestBed} from '../../testing';
             [transition('* => *', [style({height: '!'}), animate(1000, style({height: '*'}))])])]
       })
       class Cmp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:389
         public exp !: number;
         public items = [0, 1, 2, 3, 4];
       }
@@ -359,7 +359,7 @@ import {TestBed} from '../../testing';
         ]
       })
       class Cmp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:500
         public exp !: string;
       }
 
@@ -413,7 +413,7 @@ import {TestBed} from '../../testing';
            ]
          })
          class Cmp {
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:467
            public exp !: string;
            public items: any[] = [];
          }

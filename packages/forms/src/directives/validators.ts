@@ -79,9 +79,9 @@ export const CHECKBOX_REQUIRED_VALIDATOR: StaticProvider = {
   host: {'[attr.required]': 'required ? "" : null'}
 })
 export class RequiredValidator implements Validator {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:598
   private _required !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:715
   private _onChange !: () => void;
 
   @Input()
@@ -152,9 +152,9 @@ export const EMAIL_VALIDATOR: any = {
   providers: [EMAIL_VALIDATOR]
 })
 export class EmailValidator implements Validator {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:667
   private _enabled !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1006
   private _onChange !: () => void;
 
   @Input()
@@ -202,12 +202,12 @@ export const MIN_LENGTH_VALIDATOR: any = {
 })
 export class MinLengthValidator implements Validator,
     OnChanges {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:749
   private _validator !: ValidatorFn;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:599
   private _onChange !: () => void;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:716
   @Input() minlength !: string;
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -254,12 +254,12 @@ export const MAX_LENGTH_VALIDATOR: any = {
 })
 export class MaxLengthValidator implements Validator,
     OnChanges {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:668
   private _validator !: ValidatorFn;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1007
   private _onChange !: () => void;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:750
   @Input() maxlength !: string;
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -308,12 +308,12 @@ export const PATTERN_VALIDATOR: any = {
 })
 export class PatternValidator implements Validator,
     OnChanges {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:773
   private _validator !: ValidatorFn;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:717
   private _onChange !: () => void;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:669
   @Input() pattern !: string | RegExp;
 
   ngOnChanges(changes: SimpleChanges): void {

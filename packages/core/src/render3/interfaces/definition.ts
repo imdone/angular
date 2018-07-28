@@ -71,7 +71,7 @@ export type DirectiveDefInternal<T> = DirectiveDef<T, string>;
  * This is internal data structure used by the render to link
  * directives into templates.
  *
- * NOTE: Always use `defineDirective` function to create this object,
+ * NOTE: Always use `defineDirective` function to create this object, id:377
  * never create the object directly since the shape of this object
  * can change between versions.
  *
@@ -168,7 +168,7 @@ export type ComponentDefInternal<T> = ComponentDef<T, string>;
  * This is internal data structure used by the render to link
  * components into templates.
  *
- * NOTE: Always use `defineComponent` function to create this object,
+ * NOTE: Always use `defineComponent` function to create this object, id:278
  * never create the object directly since the shape of this object
  * can change between versions.
  *
@@ -228,7 +228,7 @@ export interface ComponentDef<T, Selector extends string> extends DirectiveDef<T
  * This is internal data structure used by the renderer to link
  * pipes into templates.
  *
- * NOTE: Always use `definePipe` function to create this object,
+ * NOTE: Always use `definePipe` function to create this object, id:455
  * never create the object directly since the shape of this object
  * can change between versions.
  *

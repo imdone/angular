@@ -35,7 +35,7 @@ import {EmbeddedViewRef, ViewRef} from './view_ref';
 export abstract class ViewContainerRef {
   /**
    * Anchor element that specifies the location of this container in the containing View.
-   * <!-- TODO: rename to anchorElement -->
+   * <!-- TODO: rename to anchorElement --> id:539
    */
   abstract get element(): ElementRef;
 

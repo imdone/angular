@@ -103,7 +103,7 @@ if (typeof customElements !== 'undefined') {
 })
 class TestComponent {
   @Input() fooFoo: string = 'foo';
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:657
   @Input('barbar') barBar !: string;
 
   @Output() bazBaz = new EventEmitter<boolean>();

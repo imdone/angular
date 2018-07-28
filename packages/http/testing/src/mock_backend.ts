@@ -19,7 +19,7 @@ import {take} from 'rxjs/operators';
  * @deprecated see https://angular.io/guide/http
  */
 export class MockConnection implements Connection {
-  // TODO: Name `readyState` should change to be more generic, and states could be made to be more
+  // TODO: Name `readyState` should change to be more generic, and states could be made to be more id:830
   // descriptive than ResourceLoader states.
   /**
    * Describes the state of the connection, based on `XMLHttpRequest.readyState`, but with
@@ -81,7 +81,7 @@ export class MockConnection implements Connection {
     // }
   }
 
-  // TODO(jeffbcross): consider using Response type
+  // TODO (jeffbcross): consider using Response type id:923
   /**
    * Emits the provided error object as an error to the {@link Response} {@link EventEmitter}
    * returned

@@ -152,5 +152,5 @@ describe('HeroesService', () => {
     });
   });
 
-  // TODO: test other HeroService methods
+  // TODO: test other HeroService methods id:37
 });

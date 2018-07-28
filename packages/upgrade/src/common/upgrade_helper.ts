@@ -101,7 +101,7 @@ export class UpgradeHelper {
   }
 
   buildController(controllerType: angular.IController, $scope: angular.IScope) {
-    // TODO: Document that we do not pre-assign bindings on the controller instance.
+    // TODO: Document that we do not pre-assign bindings on the controller instance. id:1076
     // Quoted properties below so that this code can be optimized with Closure Compiler.
     const locals = {'$scope': $scope, '$element': this.$element};
     const controller = this.$controller(controllerType, locals, null, this.directive.controllerAs);
@@ -189,7 +189,7 @@ export class UpgradeHelper {
       // To avoid this issue, we add a
       // [zero-width non-joiner character](https://en.wikipedia.org/wiki/Zero-width_non-joiner)
       // to empty text nodes (which can only be a result of Angular removing their initial content).
-      // NOTE: Transcluded text content that starts with whitespace followed by an interpolation
+      // NOTE: Transcluded text content that starts with whitespace followed by an interpolation id:1180
       //       will still fail to be detected by AngularJS v1.6+
       $template.forEach(node => {
         if (node.nodeType === Node.TEXT_NODE && !node.nodeValue) {
@@ -290,7 +290,7 @@ function getOrCall<T>(property: T | Function): T {
   return isFunction(property) ? property() : property;
 }
 
-// NOTE: Only works for `typeof T !== 'object'`.
+// NOTE: Only works for `typeof T !== 'object'`. id:1112
 function isMap<T>(value: angular.SingleOrListOrMap<T>): value is {[key: string]: T} {
   return value && !Array.isArray(value) && typeof value === 'object';
 }

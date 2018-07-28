@@ -57,7 +57,7 @@ export class Text implements Node {
   visit(visitor: Visitor, context?: any): any { return visitor.visitText(this, context); }
 }
 
-// TODO(vicb): do we really need this node (vs an array) ?
+// TODO (vicb): do we really need this node (vs an array) ? id:251
 export class Container implements Node {
   constructor(public children: Node[], public sourceSpan: ParseSourceSpan) {}
 
@@ -65,7 +65,7 @@ export class Container implements Node {
 }
 
 export class Icu implements Node {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:297
   public expressionPlaceholder !: string;
   constructor(
       public expression: string, public type: string, public cases: {[k: string]: Node},

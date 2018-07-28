@@ -287,7 +287,7 @@ describe('Collector', () => {
           arguments: ['firstName']
         }]
       }]
-    } as any as MetadataMap);  // TODO: Review use of `any` here (#19904)
+    } as any as MetadataMap);  // TODO: Review use of `any` here (#19904) id:216
 
     const caseGetProp = <ClassMetadata>casesMetadata.metadata['GetProp'];
     expect(caseGetProp.members).toEqual(propertyData(11));
@@ -320,7 +320,7 @@ describe('Collector', () => {
               }]
             }]
           }
-    } as any as ClassMetadata);  // TODO: Review use of `any` here (#19904)
+    } as any as ClassMetadata);  // TODO: Review use of `any` here (#19904) id:242
   });
 
   it('should report errors for destructured imports', () => {
@@ -535,7 +535,7 @@ describe('Collector', () => {
           arguments: ['a']
         }
       }]
-    }] as any as MetadataSymbolicExpression[]);  // TODO: Review use of `any` here (#19904)
+    }] as any as MetadataSymbolicExpression[]);  // TODO: Review use of `any` here (#19904) id:288
   });
 
   it('should be able to collect a static field', () => {
@@ -578,7 +578,7 @@ describe('Collector', () => {
           }
         }]
       }]
-    }] as any as MetadataSymbolicExpression[]);  // TODO: Review use of `any` here (#19904)
+    }] as any as MetadataSymbolicExpression[]);  // TODO: Review use of `any` here (#19904) id:332
   });
 
   it('should be able to collect a method with a conditional expression', () => {
@@ -766,7 +766,7 @@ describe('Collector', () => {
         }]],
         parameters: [{__symbolic: 'reference', name: 'any'}]
       }]
-    } as any as MetadataMap);  // TODO: Review use of `any` here (#19904)
+    } as any as MetadataMap);  // TODO: Review use of `any` here (#19904) id:237
   });
 
   describe('with interpolations', () => {
@@ -870,7 +870,7 @@ describe('Collector', () => {
           {__symbolic: 'reference', module: './foo', name: 'Foo', line: 3, character: 24}
         ]
       }]
-    } as any as MetadataMap);  // TODO: Review use of `any` here (#19904)
+    } as any as MetadataMap);  // TODO: Review use of `any` here (#19904) id:217
   });
 
   it('should treat exported class expressions as a class', () => {
@@ -1137,7 +1137,7 @@ describe('Collector', () => {
   }
 });
 
-// TODO: Do not use \` in a template literal as it confuses clang-format
+// TODO: Do not use \` in a template literal as it confuses clang-format id:243
 const FILES: Directory = {
   'app': {
     'app.component.ts': `

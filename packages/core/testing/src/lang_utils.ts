@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-export function getTypeOf(instance: any /** TODO #9100 */) {
+export function getTypeOf(instance: any /** TODO #9100 id:655*/) {
   return instance.constructor;
 }
 

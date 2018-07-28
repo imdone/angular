@@ -13,7 +13,7 @@ const DIRECTIVE_PREFIX_REGEXP = /^(?:x|data)[:\-_]/i;
 const DIRECTIVE_SPECIAL_CHARS_REGEXP = /[:\-_]+(.)/g;
 
 export function onError(e: any) {
-  // TODO: (misko): We seem to not have a stack trace here!
+  // TODO: (misko): We seem to not have a stack trace here! id:1045
   if (console.error) {
     console.error(e, e.stack);
   } else {
@@ -43,9 +43,9 @@ export function isFunction(value: any): value is Function {
 
 export class Deferred<R> {
   promise: Promise<R>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:991
   resolve !: (value?: R | PromiseLike<R>) => void;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1077
   reject !: (error?: any) => void;
 
   constructor() {

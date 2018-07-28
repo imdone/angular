@@ -39,7 +39,7 @@ import {FormArray} from '@angular/forms/src/model';
 
   function otherAsyncValidator() { return Promise.resolve({'other': true}); }
 
-  function syncValidator(_: any /** TODO #9100 */): any /** TODO #9100 */ { return null; }
+  function syncValidator(_: any /** TODO #9100 id:807*/): any /** TODO #9100 */ { return null; }
 
   describe('FormControl', () => {
     it('should default the value to null', () => {
@@ -773,7 +773,7 @@ import {FormArray} from '@angular/forms/src/model';
       it('should fire an event after the status has been updated to pending', fakeAsync(() => {
            const c = new FormControl('old', Validators.required, asyncValidator('expected'));
 
-           const log: any[] /** TODO #9100 */ = [];
+           const log: any[] /** TODO #9100 id:1013*/ = [];
            c.valueChanges.subscribe({next: (value: any) => log.push(`value: '${value}'`)});
 
            c.statusChanges.subscribe({next: (status: any) => log.push(`status: '${status}'`)});
@@ -799,10 +799,10 @@ import {FormArray} from '@angular/forms/src/model';
            ]);
          }));
 
-      // TODO: remove the if statement after making observable delivery sync
+      // TODO: remove the if statement after making observable delivery sync id:756
       it('should update set errors and status before emitting an event',
          inject([AsyncTestCompleter], (async: AsyncTestCompleter) => {
-           c.valueChanges.subscribe((value: any /** TODO #9100 */) => {
+           c.valueChanges.subscribe((value: any /** TODO #9100 id:779*/) => {
              expect(c.valid).toEqual(false);
              expect(c.errors).toEqual({'required': true});
              async.done();

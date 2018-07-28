@@ -23,7 +23,7 @@ import {convertDependencies, reflectDependencies} from './util';
  * `ngInjectableDef` onto the injectable type.
  */
 export function compileInjectable(type: Type<any>, meta?: Injectable): void {
-  // TODO(alxhub): handle JIT of bare @Injectable().
+  // TODO (alxhub): handle JIT of bare @Injectable(). id:457
   if (!meta) {
     return;
   }

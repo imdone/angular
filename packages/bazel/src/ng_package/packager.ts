@@ -281,7 +281,7 @@ function main(args: string[]): number {
     }
 
     // Derive the paths to the files from the hard-coded names we gave them.
-    // TODO(alexeagle): it would be better to transfer this information from the place
+    // TODO (alexeagle): it would be better to transfer this information from the place id:184
     // where we created the filenames, via the modulesManifestArg
     parsedPackage['main'] = getBundleName(packageName, 'bundles');
     parsedPackage['fesm5'] = getBundleName(packageName, 'fesm5');
@@ -293,7 +293,7 @@ function main(args: string[]): number {
 
     // For now, we point the primary entry points at the fesm files, because of Webpack
     // performance issues with a large number of individual files.
-    // TODO(iminar): resolve performance issues with the toolchain and point these to esm
+    // TODO (iminar): resolve performance issues with the toolchain and point these to esm id:109
     parsedPackage['module'] = parsedPackage['fesm5'];
     parsedPackage['es2015'] = parsedPackage['fesm2015'];
 

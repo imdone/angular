@@ -95,7 +95,7 @@ export class MockServerState {
   private requests: Request[] = [];
   private gate: Promise<void> = Promise.resolve();
   private resolve: Function|null = null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1036
   private resolveNextRequest !: Function;
   online = true;
   nextRequest: Promise<Request>;

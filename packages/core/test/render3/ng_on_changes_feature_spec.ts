@@ -261,7 +261,7 @@ describe('NgOnChangesFeature', () => {
     class MyDirective implements OnChanges {
       public log: Array<string|SimpleChange|undefined> = [];
       public valA: string = 'initValue';
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:578
       public valB !: string;
 
       ngOnChanges(changes: SimpleChanges): void {

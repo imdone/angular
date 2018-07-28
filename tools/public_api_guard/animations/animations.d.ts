@@ -102,7 +102,7 @@ export interface AnimationPlayer {
     play(): void;
     reset(): void;
     restart(): void;
-    setPosition(p: any /** TODO #9100 */): void;
+    setPosition(p: any /** TODO #9100 id:1062*/): void;
 }
 
 export interface AnimationQueryMetadata extends AnimationMetadata {

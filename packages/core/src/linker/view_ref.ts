@@ -17,13 +17,13 @@ export abstract class ViewRef extends ChangeDetectorRef {
 
   abstract get destroyed(): boolean;
 
-  abstract onDestroy(callback: Function): any /** TODO #9100 */;
+  abstract onDestroy(callback: Function): any /** TODO #9100 id:429*/;
 }
 
 /**
  * Represents an Angular View.
  *
- * <!-- TODO: move the next two paragraphs to the dev guide -->
+ * <!-- TODO: move the next two paragraphs to the dev guide --> id:373
  * A View is a fundamental building block of the application UI. It is the smallest grouping of
  * Elements which are created and destroyed together.
  *

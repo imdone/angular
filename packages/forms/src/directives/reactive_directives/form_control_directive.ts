@@ -141,13 +141,13 @@ export const formControlBinding: any = {
 export class FormControlDirective extends NgControl implements OnChanges {
   viewModel: any;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:664
   @Input('formControl') form !: FormControl;
 
   @Input('disabled')
   set isDisabled(isDisabled: boolean) { ReactiveErrors.disabledAttrWarning(); }
 
-  // TODO(kara): remove next 4 properties once deprecation period is over
+  // TODO (kara): remove next 4 properties once deprecation period is over id:1003
 
   /** @deprecated as of v6 */
   @Input('ngModel') model: any;

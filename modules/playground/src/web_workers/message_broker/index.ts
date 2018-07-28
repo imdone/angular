@@ -21,7 +21,7 @@ function afterBootstrap(ref: PlatformRef) {
 
   document.getElementById('send_echo').addEventListener('click', (e) => {
     const val = (<HTMLInputElement>document.getElementById('echo_input')).value;
-    // TODO(jteplitz602): Replace default constructors with real constructors
+    // TODO (jteplitz602): Replace default constructors with real constructors id:19
     // once they're in the .d.ts file (#3926)
     const fnArg = new FnArg(val);
     const args = new UiArguments('echo', [fnArg]);

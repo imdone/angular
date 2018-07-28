@@ -15,7 +15,7 @@ export class SpyApplicationRef extends SpyObject {
 }
 
 export class SpyComponentRef extends SpyObject {
-  injector: any /** TODO #9100 */;
+  injector: any /** TODO #9100 id:864*/;
   constructor() {
     super();
     this.injector =
@@ -23,6 +23,6 @@ export class SpyComponentRef extends SpyObject {
   }
 }
 
-export function callNgProfilerTimeChangeDetection(config?: any /** TODO #9100 */): void {
+export function callNgProfilerTimeChangeDetection(config?: any /** TODO #9100 id:960*/): void {
   (<any>global).ng.profiler.timeChangeDetection(config);
 }

@@ -20,7 +20,7 @@ import {ClassProvider, ClassSansProvider, ConstructorProvider, ConstructorSansPr
  * `InjectorDef`, `NgModule`, or a special scope (e.g. `'root'`). A value of `null` indicates
  * that the injectable does not belong to any scope.
  *
- * NOTE: This is a private type and should not be exported
+ * NOTE: This is a private type and should not be exported id:425
  */
 export interface InjectableDef<T> {
   /**
@@ -52,12 +52,12 @@ export interface InjectableDef<T> {
  * structure of providers with a defined priority (identically to how `NgModule`s also have
  * an import/dependency structure).
  *
- * NOTE: This is a private type and should not be exported
+ * NOTE: This is a private type and should not be exported id:369
  */
 export interface InjectorDef<T> {
   factory: () => T;
 
-  // TODO(alxhub): Narrow down the type here once decorators properly change the return type of the
+  // TODO (alxhub): Narrow down the type here once decorators properly change the return type of the id:270
   // class they are decorating (to add the ngInjectableDef property for example).
   providers: (Type<any>|ValueProvider|ExistingProvider|FactoryProvider|ConstructorProvider|
               StaticClassProvider|ClassProvider|any[])[];
@@ -100,7 +100,7 @@ export interface InjectorType<T> extends Type<T> {
  *
  * Objects of this type can be listed in the imports section of an `InjectorDef`.
  *
- * NOTE: This is a private type and should not be exported
+ * NOTE: This is a private type and should not be exported id:316
  */
 export interface InjectorTypeWithProviders<T> {
   ngModule: InjectorType<T>;

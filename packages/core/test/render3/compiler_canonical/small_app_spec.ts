@@ -177,8 +177,8 @@ class ToDoAppModule {
 describe('small_app', () => {
   xit('should render',
       () => withBody('<todo-app></todo-app>', async() => {
-        // TODO: Implement this method once all of the pieces of this application can execute.
-        // TODO: add i18n example by translating to french.
+        // TODO: Implement this method once all of the pieces of this application can execute. id:621
+        // TODO: add i18n example by translating to french. id:573
         const todoApp = r3.renderComponent(ToDoAppComponent);
         await r3.whenRendered(todoApp);
         expect(r3.getRenderedText(todoApp)).toEqual('...');

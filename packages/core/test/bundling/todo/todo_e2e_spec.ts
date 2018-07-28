@@ -22,7 +22,7 @@ describe('functional test for todo', () => {
     describe(bundle, () => {
       it('should render todo', withBody('<todo-app></todo-app>', async() => {
            require(path.join(PACKAGE, bundle));
-           // TODO(misko): have cleaner way to do this for tests.
+           // TODO (misko): have cleaner way to do this for tests. id:684
            const toDoAppComponent = (window as any).toDoAppComponent;
            expect(document.body.textContent).toContain('todos');
            expect(document.body.textContent).toContain('Demonstrate Components');

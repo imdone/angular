@@ -164,7 +164,7 @@ describe('ngRoute shim', function () {
     expect($location.path()).toBe('/home');
   }));
 
-  //TODO: this is broken in recognition. un-xit this when https://github.com/angular/angular/issues/4133 is fixed
+  //TODO: this is broken in recognition. un-xit this when https://github.com/angular/angular/issues/4133 is fixed id:74
   xit('should adapt "otherwise" routes', inject(function ($location) {
     $routeProvider
       .when('/home', {

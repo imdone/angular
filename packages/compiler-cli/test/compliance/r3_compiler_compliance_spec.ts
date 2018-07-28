@@ -171,7 +171,7 @@ describe('compiler compliance', () => {
       expectEmit(result.source, template, 'Incorrect template');
     });
 
-    // TODO(https://github.com/angular/angular/issues/24426): We need to support the parser actually
+    // TODO (https://github.com/angular/angular/issues/24426): We need to support the parser actually id:214
     // building the proper attributes based off of xmlns atttribuates.
     xit('should support namspaced attributes', () => {
       const files = {
@@ -1305,13 +1305,13 @@ describe('compiler compliance', () => {
               }
 
               private update() {
-                // TODO(chuckj): Not implemented yet
+                // TODO (chuckj): Not implemented yet id:240
                 // this.view.clear();
                 if (this.forOf) {
                   const current = this.forOf;
                   for (let i = 0; i < current.length; i++) {
                     const context = {$implicit: current[i], index: i, even: i % 2 == 0, odd: i % 2 == 1};
-                    // TODO(chuckj): Not implemented yet
+                    // TODO (chuckj): Not implemented yet id:286
                     // this.view.createEmbeddedView(this.template, context);
                   }
                   this.previous = [...this.forOf];
@@ -1346,7 +1346,7 @@ describe('compiler compliance', () => {
           }
         };
 
-        // TODO(benlesh): Enforce this when the directives are specified
+        // TODO (benlesh): Enforce this when the directives are specified id:330
         const ForDirectiveDefinition = `
               ForOfDirective.ngDirectiveDef = $r3$.ɵdefineDirective({
                 type: ForOfDirective,
@@ -1390,7 +1390,7 @@ describe('compiler compliance', () => {
         const result = compile(files, angularFiles);
         const source = result.source;
 
-        // TODO(benlesh): Enforce this when the directives are specified
+        // TODO (benlesh): Enforce this when the directives are specified id:235
         // expectEmit(source, ForDirectiveDefinition, 'Invalid directive definition');
         expectEmit(source, MyComponentDefinition, 'Invalid component definition');
       });
@@ -1419,7 +1419,7 @@ describe('compiler compliance', () => {
           }
         };
 
-        // TODO(chuckj): Enforce this when the directives are specified
+        // TODO (chuckj): Enforce this when the directives are specified id:215
         const ForDirectiveDefinition = `
           ForOfDirective.ngDirectiveDef = $r3$.ɵdefineDirective({
             type: ForOfDirective,
@@ -1468,7 +1468,7 @@ describe('compiler compliance', () => {
         const result = compile(files, angularFiles);
         const source = result.source;
 
-        // TODO(chuckj): Enforce this when the directives are specified
+        // TODO (chuckj): Enforce this when the directives are specified id:241
         // expectEmit(source, ForDirectiveDefinition, 'Invalid directive definition');
         expectEmit(source, MyComponentDefinition, 'Invalid component definition');
       });

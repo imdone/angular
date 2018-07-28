@@ -32,7 +32,7 @@ fi
 BUILD_SCM_VERSION_RAW=$(git describe --match [0-9].[0-9].[0-9]* --abbrev=7 --tags HEAD)
 
 # Find out if there are any uncommitted local changes
-# TODO(i): is it ok to use "--untracked-files=no" to ignore untracked files since they should not affect anything?
+# TODO (i): is it ok to use "--untracked-files=no" to ignore untracked files since they should not affect anything? id:1107
 if [[ $(git status --untracked-files=no --porcelain) ]]; then LOCAL_CHANGES="true"; else LOCAL_CHANGES="false"; fi
 echo BUILD_SCM_LOCAL_CHANGES ${LOCAL_CHANGES}
 

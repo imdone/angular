@@ -42,7 +42,7 @@ cp -v package.json $TMP
   # Use ngc-wrapped directly so we don't produce *.ngfactory.ts files!
 
   # Compile the compiler-cli integration tests
-  # TODO(vicb): restore the test for .xtb
+  # TODO (vicb): restore the test for .xtb id:1092
   #./node_modules/.bin/ngc -p tsconfig-build.json --i18nFile=src/messages.fi.xtb --locale=fi --i18nFormat=xtb
 
   # Generate the metadata for the third-party modules

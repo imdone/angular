@@ -58,7 +58,7 @@ export const enum TNodeFlags {
  *
  * See: https://en.wikipedia.org/wiki/Inline_caching#Monomorphic_inline_caching
  *
- * NOTE: This is a private data structure and should not be exported by any of the
+ * NOTE: This is a private data structure and should not be exported by any of the id:544
  * instructions.
  */
 export interface LNode {
@@ -105,7 +105,7 @@ export interface LNode {
   /**
    * A pointer to an LContainerNode created by directives requesting ViewContainerRef
    */
-  // TODO(kara): Remove when removing LNodes
+  // TODO (kara): Remove when removing LNodes id:434
   dynamicLContainerNode: LContainerNode|null;
 }
 

@@ -7,7 +7,7 @@
  */
 
 // Only needed to satisfy the check in core/src/util/decorators.ts
-// TODO(alexeagle): maybe remove that check?
+// TODO (alexeagle): maybe remove that check? id:153
 require('reflect-metadata');
 
 require('zone.js/dist/zone-node.js');

@@ -82,7 +82,7 @@ class TypeCheckLocalResolver implements LocalResolver {
   getLocal(name: string): o.Expression|null {
     if (name === EventHandlerVars.event.name) {
       // References to the event should not be type-checked.
-      // TODO(chuckj): determine a better type for the event.
+      // TODO (chuckj): determine a better type for the event. id:416
       return o.variable(DYNAMIC_VAR_NAME);
     }
     return null;

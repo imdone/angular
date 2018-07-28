@@ -614,11 +614,11 @@ import {stringify} from '../../src/util';
            @Component(
                {selector: 'auto-projecting', template: '<div *ngIf="true; then: content"></div>'})
            class AutoProjecting {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:556
              @ContentChild(TemplateRef)
              content !: TemplateRef<any>;
 
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:513
              @ContentChildren(TextDirective)
              query !: QueryList<TextDirective>;
            }
@@ -640,16 +640,16 @@ import {stringify} from '../../src/util';
 
 @Directive({selector: '[text]', inputs: ['text'], exportAs: 'textDir'})
 class TextDirective {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:480
   text !: string;
   constructor() {}
 }
 
 @Component({selector: 'needs-content-children', template: ''})
 class NeedsContentChildren implements AfterContentInit {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:695
   @ContentChildren(TextDirective) textDirChildren !: QueryList<TextDirective>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:605
   numberOfChildrenAfterContentInit !: number;
 
   ngAfterContentInit() { this.numberOfChildrenAfterContentInit = this.textDirChildren.length; }
@@ -657,9 +657,9 @@ class NeedsContentChildren implements AfterContentInit {
 
 @Component({selector: 'needs-view-children', template: '<div text></div>'})
 class NeedsViewChildren implements AfterViewInit {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:557
   @ViewChildren(TextDirective) textDirChildren !: QueryList<TextDirective>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:514
   numberOfChildrenAfterViewInit !: number;
 
   ngAfterViewInit() { this.numberOfChildrenAfterViewInit = this.textDirChildren.length; }
@@ -668,7 +668,7 @@ class NeedsViewChildren implements AfterViewInit {
 @Component({selector: 'needs-content-child', template: ''})
 class NeedsContentChild implements AfterContentInit, AfterContentChecked {
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:481
   _child !: TextDirective;
 
   @ContentChild(TextDirective)
@@ -678,7 +678,7 @@ class NeedsContentChild implements AfterContentInit, AfterContentChecked {
   }
 
   get child() { return this._child; }
-  logs: any[] /** TODO #9100 */ = [];
+  logs: any[] /** TODO #9100 id:696*/ = [];
 
   ngAfterContentInit() { this.logs.push(['init', this.child ? this.child.text : null]); }
 
@@ -687,7 +687,7 @@ class NeedsContentChild implements AfterContentInit, AfterContentChecked {
 
 @Directive({selector: '[directive-needs-content-child]'})
 class DirectiveNeedsContentChild {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:606
   @ContentChild(TextDirective) child !: TextDirective;
 }
 
@@ -696,7 +696,7 @@ class NeedsViewChild implements AfterViewInit, AfterViewChecked {
   shouldShow: boolean = true;
   shouldShow2: boolean = false;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:558
   _child !: TextDirective;
 
   @ViewChild(TextDirective)
@@ -706,7 +706,7 @@ class NeedsViewChild implements AfterViewInit, AfterViewChecked {
   }
 
   get child() { return this._child; }
-  logs: any[] /** TODO #9100 */ = [];
+  logs: any[] /** TODO #9100 id:515*/ = [];
 
   ngAfterViewInit() { this.logs.push(['init', this.child ? this.child.text : null]); }
 
@@ -727,9 +727,9 @@ function createTestCmpAndDetectChanges<T>(type: Type<T>, template: string): Comp
 
 @Component({selector: 'needs-static-content-view-child', template: `<div text="viewFoo"></div>`})
 class NeedsStaticContentAndViewChild {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:482
   @ContentChild(TextDirective) contentChild !: TextDirective;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:697
   @ViewChild(TextDirective) viewChild !: TextDirective;
 }
 
@@ -742,19 +742,19 @@ class InertDirective {
   template: '<div text="ignoreme"></div><b *ngFor="let  dir of query">{{dir.text}}|</b>'
 })
 class NeedsQuery {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:607
   @ContentChildren(TextDirective) query !: QueryList<TextDirective>;
 }
 
 @Component({selector: 'needs-four-queries', template: ''})
 class NeedsFourQueries {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:559
   @ContentChild(TextDirective) query1 !: TextDirective;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:516
   @ContentChild(TextDirective) query2 !: TextDirective;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:483
   @ContentChild(TextDirective) query3 !: TextDirective;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:698
   @ContentChild(TextDirective) query4 !: TextDirective;
 }
 
@@ -763,25 +763,25 @@ class NeedsFourQueries {
   template: '<ng-content></ng-content><div *ngFor="let  dir of query">{{dir.text}}|</div>'
 })
 class NeedsQueryDesc {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:608
   @ContentChildren(TextDirective, {descendants: true}) query !: QueryList<TextDirective>;
 }
 
 @Component({selector: 'needs-query-by-ref-binding', template: '<ng-content>'})
 class NeedsQueryByLabel {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:560
   @ContentChildren('textLabel', {descendants: true}) query !: QueryList<any>;
 }
 
 @Component({selector: 'needs-view-query-by-ref-binding', template: '<div #textLabel>text</div>'})
 class NeedsViewQueryByLabel {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:517
   @ViewChildren('textLabel') query !: QueryList<any>;
 }
 
 @Component({selector: 'needs-query-by-ref-bindings', template: '<ng-content>'})
 class NeedsQueryByTwoLabels {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:484
   @ContentChildren('textLabel1,textLabel2', {descendants: true}) query !: QueryList<any>;
 }
 
@@ -790,7 +790,7 @@ class NeedsQueryByTwoLabels {
   template: '<div *ngFor="let  dir of query">{{dir.text}}|</div><ng-content></ng-content>'
 })
 class NeedsQueryAndProject {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:805
   @ContentChildren(TextDirective) query !: QueryList<TextDirective>;
 }
 
@@ -799,14 +799,14 @@ class NeedsQueryAndProject {
   template: '<div text="1"><div text="2"></div></div><div text="3"></div><div text="4"></div>'
 })
 class NeedsViewQuery {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:609
   @ViewChildren(TextDirective) query !: QueryList<TextDirective>;
 }
 
 @Component({selector: 'needs-view-query-if', template: '<div *ngIf="show" text="1"></div>'})
 class NeedsViewQueryIf {
   show: boolean = false;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:561
   @ViewChildren(TextDirective) query !: QueryList<TextDirective>;
 }
 
@@ -816,7 +816,7 @@ class NeedsViewQueryIf {
 })
 class NeedsViewQueryNestedIf {
   show: boolean = true;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:518
   @ViewChildren(TextDirective) query !: QueryList<TextDirective>;
 }
 
@@ -827,7 +827,7 @@ class NeedsViewQueryNestedIf {
       '<div text="4"></div>'
 })
 class NeedsViewQueryOrder {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:485
   @ViewChildren(TextDirective) query !: QueryList<TextDirective>;
   list: string[] = ['2', '3'];
 }
@@ -839,16 +839,16 @@ class NeedsViewQueryOrder {
       '<div text="4"></div></div>'
 })
 class NeedsViewQueryOrderWithParent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:806
   @ViewChildren(TextDirective) query !: QueryList<TextDirective>;
   list: string[] = ['2', '3'];
 }
 
 @Component({selector: 'needs-tpl', template: '<ng-template><div>shadow</div></ng-template>'})
 class NeedsTpl {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:610
   @ViewChildren(TemplateRef) viewQuery !: QueryList<TemplateRef<Object>>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:562
   @ContentChildren(TemplateRef) query !: QueryList<TemplateRef<Object>>;
   constructor(public vc: ViewContainerRef) {}
 }
@@ -856,26 +856,26 @@ class NeedsTpl {
 @Component(
     {selector: 'needs-named-tpl', template: '<ng-template #tpl><div>shadow</div></ng-template>'})
 class NeedsNamedTpl {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:519
   @ViewChild('tpl') viewTpl !: TemplateRef<Object>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:486
   @ContentChild('tpl') contentTpl !: TemplateRef<Object>;
   constructor(public vc: ViewContainerRef) {}
 }
 
 @Component({selector: 'needs-content-children-read', template: ''})
 class NeedsContentChildrenWithRead {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:815
   @ContentChildren('q', {read: TextDirective}) textDirChildren !: QueryList<TextDirective>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:611
   @ContentChildren('nonExisting', {read: TextDirective}) nonExistingVar !: QueryList<TextDirective>;
 }
 
 @Component({selector: 'needs-content-child-read', template: ''})
 class NeedsContentChildWithRead {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:563
   @ContentChild('q', {read: TextDirective}) textDirChild !: TextDirective;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:520
   @ContentChild('nonExisting', {read: TextDirective}) nonExistingVar !: TextDirective;
 }
 
@@ -884,7 +884,7 @@ class NeedsContentChildWithRead {
   template: '<div [ngTemplateOutlet]="templateRef"></div>'
 })
 class NeedsContentChildTemplateRef {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:487
   @ContentChild(TemplateRef) templateRef !: TemplateRef<any>;
 }
 
@@ -902,9 +902,9 @@ class NeedsContentChildTemplateRefApp {
   template: '<div #q text="va"></div><div #w text="vb"></div>',
 })
 class NeedsViewChildrenWithRead {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:816
   @ViewChildren('q,w', {read: TextDirective}) textDirChildren !: QueryList<TextDirective>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:612
   @ViewChildren('nonExisting', {read: TextDirective}) nonExistingVar !: QueryList<TextDirective>;
 }
 
@@ -913,19 +913,19 @@ class NeedsViewChildrenWithRead {
   template: '<div #q text="va"></div>',
 })
 class NeedsViewChildWithRead {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:564
   @ViewChild('q', {read: TextDirective}) textDirChild !: TextDirective;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:521
   @ViewChild('nonExisting', {read: TextDirective}) nonExistingVar !: TextDirective;
 }
 
 @Component({selector: 'needs-viewcontainer-read', template: '<div #q></div>'})
 class NeedsViewContainerWithRead {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:488
   @ViewChild('q', {read: ViewContainerRef}) vc !: ViewContainerRef;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:817
   @ViewChild('nonExisting', {read: ViewContainerRef}) nonExistingVar !: ViewContainerRef;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:613
   @ContentChild(TemplateRef) template !: TemplateRef<Object>;
 
   createView() { this.vc.createEmbeddedView(this.template); }
@@ -948,14 +948,14 @@ class MyCompBroken0 {
 
 @Component({selector: 'manual-projecting', template: '<div #vc></div>'})
 class ManualProjecting {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:565
   @ContentChild(TemplateRef) template !: TemplateRef<any>;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:522
   @ViewChild('vc', {read: ViewContainerRef})
   vc !: ViewContainerRef;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:489
   @ContentChildren(TextDirective)
   query !: QueryList<TextDirective>;
 

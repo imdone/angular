@@ -11,7 +11,7 @@ import {Component, ContentChildren, Directive, Input, QueryList} from '@angular/
 
 @Directive({selector: 'pane'})
 export class Pane {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:590
   @Input() id !: string;
 }
 
@@ -23,9 +23,9 @@ export class Pane {
   `
 })
 export class Tab {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:707
   @ContentChildren(Pane) topLevelPanes !: QueryList<Pane>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:659
   @ContentChildren(Pane, {descendants: true}) arbitraryNestedPanes !: QueryList<Pane>;
 
   get serializedPanes(): string {

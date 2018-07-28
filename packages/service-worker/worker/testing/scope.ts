@@ -79,7 +79,7 @@ export class SwTestHarness implements ServiceWorkerGlobalScope, Adapter, Context
   private skippedWaiting = true;
 
   private selfMessageQueue: any[] = [];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:982
   unregistered !: boolean;
   readonly notifications: {title: string, options: Object}[] = [];
   readonly registration: ServiceWorkerRegistration = {

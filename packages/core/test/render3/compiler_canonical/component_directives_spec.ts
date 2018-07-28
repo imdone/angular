@@ -292,7 +292,7 @@ describe('components & directives', () => {
       changeDetection: ChangeDetectionStrategy.OnPush
     })
     class MyComp {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:631
       @Input() name !: string;
 
       // NORMATIVE
@@ -417,7 +417,7 @@ describe('components & directives', () => {
       `
     })
     class MyArrayComp {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:494
       @Input() names !: string[];
 
       static ngComponentDef = $r3$.ɵdefineComponent({
@@ -526,7 +526,7 @@ describe('components & directives', () => {
 
       @Component({selector: 'my-comp', template: `{{ num }}`})
       class MyComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:842
         num !: number;
 
         static ngComponentDef = $r3$.ɵdefineComponent({
@@ -649,7 +649,7 @@ describe('components & directives', () => {
         `
       })
       class MyComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:619
         @Input() names !: string[];
 
         static ngComponentDef = $r3$.ɵdefineComponent({
@@ -755,7 +755,7 @@ describe('components & directives', () => {
         `
       })
       class ObjectComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:571
         config !: {[key: string]: any};
 
         static ngComponentDef = $r3$.ɵdefineComponent({
@@ -832,7 +832,7 @@ describe('components & directives', () => {
         `
       })
       class NestedComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:632
         config !: {[key: string]: any};
 
         static ngComponentDef = $r3$.ɵdefineComponent({

@@ -152,7 +152,7 @@ module.exports = function(config) {
       config.sauceLabs.build = buildId;
       config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
 
-      // TODO(mlaval): remove once SauceLabs supports websockets.
+      // TODO (mlaval): remove once SauceLabs supports websockets. id:73
       // This speeds up the capturing a bit, as browsers don't even try to use websocket.
       console.log('>>>> setting socket.io transport to polling <<<<');
       config.transports = ['polling'];

@@ -266,7 +266,7 @@ export class SelectorScopeRegistry {
   private _readMetadataFromCompiledClass(clazz: ts.Declaration, ngModuleImportedFrom: string|null):
       ModuleData|null {
     // This operation is explicitly not memoized, as it depends on `ngModuleImportedFrom`.
-    // TODO(alxhub): investigate caching of .d.ts module metadata.
+    // TODO (alxhub): investigate caching of .d.ts module metadata. id:204
     const ngModuleDef = this.reflector.getMembersOfClass(clazz).find(
         member => member.name === 'ngModuleDef' && member.isStatic);
     if (ngModuleDef === undefined) {

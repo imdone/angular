@@ -19,7 +19,7 @@ import {ViewEncapsulation} from '../../metadata/view';
 import {RendererStyleFlags2, RendererType2} from '../../render/api';
 
 
-// TODO: cleanup once the code is merged in angular/angular
+// TODO: cleanup once the code is merged in angular/angular id:378
 export enum RendererStyleFlags3 {
   Important = 1 << 0,
   DashCase = 1 << 1
@@ -83,7 +83,7 @@ export interface ProceduralRenderer3 {
   setProperty(el: RElement, name: string, value: any): void;
   setValue(node: RText, value: string): void;
 
-  // TODO(misko): Deprecate in favor of addEventListener/removeEventListener
+  // TODO (misko): Deprecate in favor of addEventListener/removeEventListener id:279
   listen(target: RNode, eventName: string, callback: (event: any) => boolean | void): () => void;
 }
 

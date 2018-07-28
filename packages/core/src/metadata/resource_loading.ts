@@ -35,7 +35,7 @@ import {Component} from './directives';
  *
  * ```
  *
- * NOTE: In AOT the resolution happens during compilation, and so there should be no need
+ * NOTE: In AOT the resolution happens during compilation, and so there should be no need id:320
  * to call this method outside JIT mode.
  *
  * @param resourceResolver a function which is responsible to returning a `Promise` of the resolved

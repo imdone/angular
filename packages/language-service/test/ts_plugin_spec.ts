@@ -124,7 +124,7 @@ describe('plugin', () => {
        () => { contains('app/parsing-cases.ts', 'for-people', 'people'); });
     it('should include person in the let scope',
        () => { contains('app/parsing-cases.ts', 'for-interp-person', 'person'); });
-    // TODO: Enable when we can infer the element type of the ngFor
+    // TODO: Enable when we can infer the element type of the ngFor id:876
     // it('should include determine person\'s type as Person', () => {
     //   contains('app/parsing-cases.ts', 'for-interp-name', 'name', 'age');
     //   contains('app/parsing-cases.ts', 'for-interp-age', 'name', 'age');
@@ -141,7 +141,7 @@ describe('plugin', () => {
        () => { contains('app/parsing-cases.ts', 'test-comp-content', 'test1', 'test2', 'div'); });
     it('should reference the component',
        () => { contains('app/parsing-cases.ts', 'test-comp-after-test', 'name'); });
-    // TODO: Enable when we have a flag that indicates the project targets the DOM
+    // TODO: Enable when we have a flag that indicates the project targets the DOM id:804
     // it('should reference the element if no component', () => {
     //   contains('app/parsing-cases.ts', 'test-comp-after-div', 'innerText');
     // });

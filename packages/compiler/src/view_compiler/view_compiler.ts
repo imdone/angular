@@ -118,7 +118,7 @@ class ViewBuilder implements TemplateAstVisitor, LocalResolver {
       private embeddedViewIndex: number, private usedPipes: CompilePipeSummary[],
       private staticQueryIds: Map<TemplateAst, StaticAndDynamicQueryIds>,
       private viewBuilderFactory: ViewBuilderFactory) {
-    // TODO(tbosch): The old view compiler used to use an `any` type
+    // TODO (tbosch): The old view compiler used to use an `any` type id:360
     // for the context in any embedded view. We keep this behaivor for now
     // to be able to introduce the new view compiler without too many errors.
     this.compType = this.embeddedViewIndex > 0 ?

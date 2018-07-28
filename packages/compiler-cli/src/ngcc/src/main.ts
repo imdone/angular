@@ -11,8 +11,8 @@ import {PackageTransformer} from './transform/package_transformer';
 export function mainNgcc(args: string[]): number {
   const packagePath = resolve(args[0]);
 
-  // TODO: find all the package tyoes to transform
-  // TODO: error/warning logging/handling etc
+  // TODO: find all the package tyoes to transform id:202
+  // TODO: error/warning logging/handling etc id:127
 
   const transformer = new PackageTransformer();
   transformer.transform(packagePath, 'fesm2015');

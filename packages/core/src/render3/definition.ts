@@ -93,7 +93,7 @@ export function defineComponent<T>(componentDefinition: {
    * This allows the render to re-construct the minified, public, and declared names
    * of properties.
    *
-   * NOTE:
+   * NOTE:  id:276
    *  - Because declared and public name are usually same we only generate the array
    *    `['declared', 'public']` format when they differ.
    *  - The reason why this API and `outputs` API is not the same is that `NgOnChanges` has
@@ -424,7 +424,7 @@ export const defineDirective = defineComponent as any as<T>(directiveDefinition:
    * This allows the render to re-construct the minified, public, and declared names
    * of properties.
    *
-   * NOTE:
+   * NOTE:  id:322
    *  - Because declared and public name are usually same we only generate the array
    *    `['declared', 'public']` format when they differ.
    *  - The reason why this API and `outputs` API is not the same is that `NgOnChanges` has

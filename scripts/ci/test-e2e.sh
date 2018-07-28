@@ -31,7 +31,7 @@ travisFoldStart "test.e2e.protractor-perf"
   NODE_PATH=$NODE_PATH:./dist/all $(npm bin)/protractor ./protractor-perf.conf.js --bundles=true --dryrun
 travisFoldEnd "test.e2e.protractor-perf"
 
-# TODO(i): temporarily disable this test because we don't have rxjs backwards compatibility package
+# TODO (i): temporarily disable this test because we don't have rxjs backwards compatibility package id:1196
 #   and cdk+material are not yet compatible with rxjs v6
 #   uncomment when we have cdk and material releases compatible with rxjs v6
 #travisFoldStart "test.e2e.offlineCompiler"

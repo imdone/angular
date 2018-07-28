@@ -12,8 +12,8 @@ import {describe, expect, it} from '@angular/core/testing/src/testing_internal';
   describe('Shim', () => {
 
     it('should provide correct function.name ', () => {
-      const functionWithoutName = identity(() => function(_: any /** TODO #9100 */) {});
-      function foo(_: any /** TODO #9100 */) {}
+      const functionWithoutName = identity(() => function(_: any /** TODO #9100 id:471*/) {});
+      function foo(_: any /** TODO #9100 id:686*/) {}
 
       expect((<any>functionWithoutName).name).toBeFalsy();
       expect((<any>foo).name).toEqual('foo');
@@ -22,6 +22,6 @@ import {describe, expect, it} from '@angular/core/testing/src/testing_internal';
   });
 }
 
-function identity(a: any /** TODO #9100 */) {
+function identity(a: any /** TODO #9100 id:450*/) {
   return a;
 }

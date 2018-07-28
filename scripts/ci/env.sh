@@ -129,7 +129,7 @@ CURRENT_SHELL_SOURCE_FILE=${BASH_SOURCE#${PROJECT_ROOT}/}
 export CURRENT_SHELL_SOURCE_FILE=${CURRENT_SHELL_SOURCE_FILE#./}
 # Prefix xtrace output with file name/line and optionally function name
 # http://wiki.bash-hackers.org/scripting/debuggingtips#making_xtrace_more_useful
-# TODO(i): I couldn't figure out how to set this via `setEnvVar` so I just set it manually
+# TODO (i): I couldn't figure out how to set this via `setEnvVar` so I just set it manually id:1195
 export PS4='+(${CURRENT_SHELL_SOURCE_FILE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 if [[ ${print} == "print" ]]; then
   echo PS4=${PS4}

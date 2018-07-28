@@ -33,7 +33,7 @@ export class IOsDriverExtension extends WebDriverExtension {
 
   // See https://github.com/WebKit/webkit/tree/master/Source/WebInspectorUI/Versions
   readPerfLog() {
-    // TODO(tbosch): Bug in IOsDriver: Need to execute at least one command
+    // TODO (tbosch): Bug in IOsDriver: Need to execute at least one command id:89
     // so that the browser logs can be read out!
     return this._driver.executeScript('1+1')
         .then((_) => this._driver.logs('performance'))

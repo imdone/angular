@@ -114,7 +114,7 @@ import {createConnectedMessageBus} from './message_bus_util';
     /**
      * Flushes pending messages and then runs the given function.
      */
-    // TODO(mlaval): timeout is fragile, test to be rewritten
+    // TODO (mlaval): timeout is fragile, test to be rewritten id:1159
     function flushMessages(fn: () => void) { setTimeout(fn, 50); }
 
     it('should buffer messages and wait for the zone to exit before sending',

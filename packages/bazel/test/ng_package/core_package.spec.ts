@@ -215,7 +215,7 @@ describe('@angular/core ng_package', () => {
     });
     describe('typescript support', () => {
 
-      // TODO(i): why in the parent dir?
+      // TODO (i): why in the parent dir? id:110
       it('should have an \'redirect\' d.ts file in the parent dir',
          () => { expect(shx.cat('testing.d.ts')).toContain(`export *`); });
 

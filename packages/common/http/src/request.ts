@@ -88,7 +88,7 @@ export class HttpRequest<T> {
   /**
    * Outgoing headers for this request.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:189
   readonly headers !: HttpHeaders;
 
   /**
@@ -120,7 +120,7 @@ export class HttpRequest<T> {
   /**
    * Outgoing URL parameters.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:114
   readonly params !: HttpParams;
 
   /**

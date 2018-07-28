@@ -58,9 +58,9 @@ describe('directive', () => {
           inputs: {test: 'test', other: 'other'}
         });
 
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:644
         testValue !: boolean;
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:847
         other !: boolean;
 
         /**
@@ -106,11 +106,11 @@ describe('directive', () => {
              inputs: {test: 'test', prop1: 'prop1', prop2: 'prop2'}
            });
 
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:624
            prop1 !: boolean;
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:576
            prop2 !: boolean;
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:637
            testValue !: boolean;
 
 

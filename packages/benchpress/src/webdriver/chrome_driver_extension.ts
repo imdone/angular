@@ -72,7 +72,7 @@ export class ChromeDriverExtension extends WebDriverExtension {
   // See [Chrome Trace Event
   // Format](https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/edit)
   readPerfLog(): Promise<PerfLogEvent[]> {
-    // TODO(tbosch): Chromedriver bug https://code.google.com/p/chromedriver/issues/detail?id=1098
+    // TODO (tbosch): Chromedriver bug https://code.google.com/p/chromedriver/issues/detail?id=1098 id:112
     // Need to execute at least one command so that the browser logs can be read out!
     return this._driver.executeScript('1+1')
         .then((_) => this._driver.logs('performance'))
@@ -112,7 +112,7 @@ export class ChromeDriverExtension extends WebDriverExtension {
     } else if (this._isEvent(
                    categories, name, ['benchmark'],
                    'BenchmarkInstrumentation::ImplThreadRenderingStats')) {
-      // TODO(goderbauer): Instead of BenchmarkInstrumentation::ImplThreadRenderingStats the
+      // TODO (goderbauer): Instead of the BenchmarkInstrumentation::ImplThreadRenderingStats id:142
       // following events should be used (if available) for more accurate measurements:
       //   1st choice: vsync_before - ground truth on Android
       //   2nd choice: BenchmarkInstrumentation::DisplayRenderingStats - available on systems with

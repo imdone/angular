@@ -86,7 +86,7 @@ class TestViewProvidersComp {
 
 @Directive({selector: '[someDir]', host: {'[title]': 'someDir'}})
 class SomeDirective {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:939
   @Input()
   someDir !: string;
 }
@@ -729,7 +729,7 @@ class CompWithUrlTemplate {
           class TestDir {
             constructor() { testDir = this; }
 
-            // TODO(issue/24571): remove '!'.
+            // TODO (issue/24571): remove '!'. id:1155
             @Input('test')
             test !: string;
           }

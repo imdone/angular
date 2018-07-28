@@ -81,7 +81,7 @@ function declareTests({useJit}: {useJit: boolean}) {
            @Directive({selector: '[myDir]'})
            class MyDir {
              setterCalls: {[key: string]: any} = {};
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:566
              changes !: SimpleChanges;
 
              @Input()
@@ -125,7 +125,7 @@ function declareTests({useJit}: {useJit: boolean}) {
       it('should evaluate a conditional in a statement binding', () => {
         @Component({selector: 'some-comp', template: '<p (click)="nullValue?.click()"></p>'})
         class SomeComponent {
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:523
           nullValue !: SomeReferencedClass;
         }
 
@@ -274,7 +274,7 @@ function declareTests({useJit}: {useJit: boolean}) {
 
       @Directive({selector: '[someDir]'})
       class MyDir {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:490
         @Input('someDir') template !: TemplateRef<any>;
       }
 
@@ -295,7 +295,7 @@ function declareTests({useJit}: {useJit: boolean}) {
     it('should not recreate ViewContainerRefs in queries', () => {
       @Component({template: '<div #vc></div><div *ngIf="show" #vc></div>'})
       class MyComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:819
         @ViewChildren('vc', {read: ViewContainerRef})
         viewContainers !: QueryList<ViewContainerRef>;
 
@@ -348,7 +348,7 @@ function declareTests({useJit}: {useJit: boolean}) {
     it('should support @ContentChild and @Input on the same property for static queries', () => {
       @Directive({selector: 'test'})
       class Test {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:615
         @Input() @ContentChild(TemplateRef) tpl !: TemplateRef<any>;
       }
 

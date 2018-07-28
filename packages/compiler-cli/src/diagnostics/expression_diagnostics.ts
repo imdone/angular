@@ -161,7 +161,7 @@ function refinedVariableType(
 function getEventDeclaration(info: DiagnosticTemplateInfo, includeEvent?: boolean) {
   let result: SymbolDeclaration[] = [];
   if (includeEvent) {
-    // TODO: Determine the type of the event parameter based on the Observable<T> or EventEmitter<T>
+    // TODO: Determine the type of the event parameter based on the Observable<T> or EventEmitter<T> id:170
     // of the event.
     result = [{name: '$event', kind: 'variable', type: info.query.getBuiltinType(BuiltinType.Any)}];
   }
@@ -185,7 +185,7 @@ export function getExpressionScope(
 
 class ExpressionDiagnosticsVisitor extends RecursiveTemplateAstVisitor {
   private path: TemplateAstPath;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:199
   private directiveSummary !: CompileDirectiveSummary;
 
   diagnostics: ExpressionDiagnostic[] = [];

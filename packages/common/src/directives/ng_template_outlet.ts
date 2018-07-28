@@ -34,13 +34,13 @@ import {Directive, EmbeddedViewRef, Input, OnChanges, SimpleChange, SimpleChange
  */
 @Directive({selector: '[ngTemplateOutlet]'})
 export class NgTemplateOutlet implements OnChanges {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:95
   private _viewRef !: EmbeddedViewRef<any>;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:165
   @Input() public ngTemplateOutletContext !: Object;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:194
   @Input() public ngTemplateOutlet !: TemplateRef<any>;
 
   constructor(private _viewContainerRef: ViewContainerRef) {}

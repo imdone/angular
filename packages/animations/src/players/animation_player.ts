@@ -26,7 +26,7 @@ export interface AnimationPlayer {
   finish(): void;
   destroy(): void;
   reset(): void;
-  setPosition(p: any /** TODO #9100 */): void;
+  setPosition(p: any /** TODO #9100 id:21*/): void;
   getPosition(): number;
   parentPlayer: AnimationPlayer|null;
   readonly totalTime: number;

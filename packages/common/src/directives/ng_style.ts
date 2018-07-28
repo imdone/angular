@@ -32,9 +32,9 @@ import {Directive, DoCheck, ElementRef, Input, KeyValueChanges, KeyValueDiffer, 
  */
 @Directive({selector: '[ngStyle]'})
 export class NgStyle implements DoCheck {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:193
   private _ngStyle !: {[key: string]: string};
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:118
   private _differ !: KeyValueDiffer<string, string|number>;
 
   constructor(

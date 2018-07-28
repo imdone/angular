@@ -117,7 +117,7 @@ export class URLSearchParams {
   //
   // E.g: "a=[1,2,3], c=[8]" + "a=[4,5,6], b=[7]" = "a=[4], c=[8], b=[7]"
   //
-  // TODO(@caitp): document this better
+  // TODO (@caitp): document this better id:869
   setAll(searchParams: URLSearchParams) {
     searchParams.paramsMap.forEach((value, param) => {
       const list = this.paramsMap.get(param) || [];
@@ -140,7 +140,7 @@ export class URLSearchParams {
   //
   // E.g: "a=[1,2], c=[8]" + "a=[3,4], b=[7]" = "a=[1,2,3,4], c=[8], b=[7]"
   //
-  // TODO(@caitp): document this better
+  // TODO (@caitp): document this better id:797
   appendAll(searchParams: URLSearchParams) {
     searchParams.paramsMap.forEach((value, param) => {
       const list = this.paramsMap.get(param) || [];
@@ -158,7 +158,7 @@ export class URLSearchParams {
   //
   // E.g: "a=[1,2,3], c=[8]" + "a=[4,5,6], b=[7]" = "a=[4,5,6], c=[8], b=[7]"
   //
-  // TODO(@caitp): document this better
+  // TODO (@caitp): document this better id:828
   replaceAll(searchParams: URLSearchParams) {
     searchParams.paramsMap.forEach((value, param) => {
       const list = this.paramsMap.get(param) || [];

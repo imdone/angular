@@ -207,7 +207,7 @@ import {MyInput, MyInputForm} from './value_accessor_integration_spec';
         fixture.detectChanges();
 
         emailInput = fixture.debugElement.query(By.css('[formControlName="email"]'));
-        expect(emailInput as any).toBe(null);  // TODO: Review use of `any` here (#19904)
+        expect(emailInput as any).toBe(null);  // TODO: Review use of `any` here (#19904) id:808
       });
 
       it('should strip array controls that are not found', () => {
@@ -2470,7 +2470,7 @@ function sortedClassList(el: HTMLElement) {
 
 @Component({selector: 'form-control-comp', template: `<input type="text" [formControl]="control">`})
 class FormControlComp {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1014
   control !: FormControl;
 }
 
@@ -2482,11 +2482,11 @@ class FormControlComp {
     </form>`
 })
 class FormGroupComp {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:757
   control !: FormControl;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:780
   form !: FormGroup;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:724
   event !: Event;
 }
 
@@ -2502,7 +2502,7 @@ class FormGroupComp {
     </form>`
 })
 class NestedFormGroupComp {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:809
   form !: FormGroup;
 }
 
@@ -2518,9 +2518,9 @@ class NestedFormGroupComp {
      </form>`
 })
 class FormArrayComp {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1015
   form !: FormGroup;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:758
   cityArray !: FormArray;
 }
 
@@ -2537,9 +2537,9 @@ class FormArrayComp {
      </div>`
 })
 class FormArrayNestedGroup {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:781
   form !: FormGroup;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:725
   cityArray !: FormArray;
 }
 
@@ -2552,11 +2552,11 @@ class FormArrayNestedGroup {
    </form>`
 })
 class FormGroupNgModel {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:810
   form !: FormGroup;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1016
   login !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:759
   password !: string;
 }
 
@@ -2568,13 +2568,13 @@ class FormGroupNgModel {
   `
 })
 class FormControlNgModel {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:782
   control !: FormControl;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:726
   login !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:811
   passwordControl !: FormControl;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1017
   password !: string;
 }
 
@@ -2589,7 +2589,7 @@ class FormControlNgModel {
    </div>`
 })
 class LoginIsEmptyWrapper {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:760
   form !: FormGroup;
 }
 
@@ -2604,15 +2604,15 @@ class LoginIsEmptyWrapper {
    </div>`
 })
 class ValidationBindingsForm {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:783
   form !: FormGroup;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:727
   required !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:812
   minLen !: number;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1018
   maxLen !: number;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:761
   pattern !: string;
 }
 
@@ -2621,7 +2621,7 @@ class ValidationBindingsForm {
   template: `<input type="checkbox" [formControl]="control">`
 })
 class FormControlCheckboxRequiredValidator {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:784
   control !: FormControl;
 }
 
@@ -2633,6 +2633,6 @@ class FormControlCheckboxRequiredValidator {
   </div>`
 })
 class UniqLoginWrapper {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:728
   form !: FormGroup;
 }

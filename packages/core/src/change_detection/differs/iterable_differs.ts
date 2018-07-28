@@ -53,7 +53,7 @@ export interface IterableChanges<V> {
    * Iterate over a set of operations which when applied to the original `Iterable` will produce the
    * new `Iterable`.
    *
-   * NOTE: These are not necessarily the actual operations which were applied to the original
+   * NOTE: These are not necessarily the actual operations which were applied to the original id:368
    * `Iterable`, rather these are a set of computed operations which may not be the same as the
    * ones applied.
    *

@@ -468,7 +468,7 @@ export class AnimationTimelineContext {
     const newOptions = options as any;
     let optionsToUpdate = this.options;
 
-    // NOTE: this will get patched up when other animation methods support duration overrides
+    // NOTE: this will get patched up when other animation methods support duration overrides id:77
     if (newOptions.duration != null) {
       (optionsToUpdate as any).duration = resolveTimingValue(newOptions.duration);
     }
@@ -586,7 +586,7 @@ export class AnimationTimelineContext {
 
 export class TimelineBuilder {
   public duration: number = 0;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:68
   public easing !: string | null;
   private _previousKeyframe: ɵStyleData = {};
   private _currentKeyframe: ɵStyleData = {};

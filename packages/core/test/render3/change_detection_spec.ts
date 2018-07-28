@@ -353,7 +353,7 @@ describe('change detection', () => {
         const comp = renderComponent(MyComp, {hostFeatures: [LifecycleHooksFeature]});
         expect(comp.doCheckCount).toEqual(1);
 
-        // NOTE: in current Angular, detectChanges does not itself trigger doCheck, but you
+        // NOTE: in current Angular, detectChanges does not itself trigger doCheck, but you id:841
         // may see doCheck called in some cases bc of the extra CD run triggered by zone.js.
         // It's important not to call doCheck to allow calls to detectChanges in that hook.
         comp.cdr.detectChanges();
@@ -668,7 +668,7 @@ describe('change detection', () => {
 
         class OnPushComp {
           /** @Input() */
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:618
           value !: string;
 
           constructor(public cdr: ChangeDetectorRef) {}
@@ -875,7 +875,7 @@ describe('change detection', () => {
         expect(getRenderedText(parent)).toEqual('two - two');
       });
 
-      // TODO(kara): add test for dynamic views once bug fix is in
+      // TODO (kara): add test for dynamic views once bug fix is in id:570
     });
 
     describe('checkNoChanges', () => {

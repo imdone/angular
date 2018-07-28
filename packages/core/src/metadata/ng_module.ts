@@ -39,7 +39,7 @@ export type NgModuleDefInternal<T> = NgModuleDef<T, any, any, any>;
  * This is the internal data structure used by the runtime to assemble components, directives,
  * pipes, and injectors.
  *
- * NOTE: Always use `defineNgModule` function to create this object,
+ * NOTE: Always use `defineNgModule` function to create this object, id:274
  * never create the object directly since the shape of this object
  * can change between versions.
  */

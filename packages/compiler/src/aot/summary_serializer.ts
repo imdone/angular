@@ -225,7 +225,7 @@ class ToJsonSerializer extends ValueTransformer {
    * Strip line and character numbers from ngsummaries.
    * Emitting them causes white spaces changes to retrigger upstream
    * recompilations in bazel.
-   * TODO: find out a way to have line and character numbers in errors without
+   * TODO: find out a way to have line and character numbers in errors without id:246
    * excessive recompilation in bazel.
    */
   visitStringMap(map: {[key: string]: any}, context: any): any {
@@ -421,7 +421,7 @@ class ForJitSerializer {
 }
 
 class FromJsonDeserializer extends ValueTransformer {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:292
   private symbols !: StaticSymbol[];
 
   constructor(

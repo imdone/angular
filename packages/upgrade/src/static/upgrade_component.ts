@@ -76,18 +76,18 @@ export class UpgradeComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
   private directive: angular.IDirective;
   private bindings: Bindings;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1183
   private controllerInstance !: IControllerInstance;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1115
   private bindingDestination !: IBindingDestination;
 
   // We will be instantiating the controller in the `ngOnInit` hook, when the
   // first `ngOnChanges` will have been already triggered. We store the
   // `SimpleChanges` and "play them back" later.
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1048
   private pendingChanges !: SimpleChanges | null;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:994
   private unregisterDoCheckWatcher !: Function;
 
   /**

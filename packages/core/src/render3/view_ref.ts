@@ -32,7 +32,7 @@ export class ViewRef<T> implements viewEngine_EmbeddedViewRef<T>, viewEngine_Int
   _lViewNode: LViewNode|null = null;
 
   context: T;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:458
   rootNodes !: any[];
 
   constructor(protected _view: LViewData, context: T|null) { this.context = context !; }
@@ -67,7 +67,7 @@ export class ViewRef<T> implements viewEngine_EmbeddedViewRef<T>, viewEngine_Int
    * checked when it needs to be re-rendered but the two normal triggers haven't marked it
    * dirty (i.e. inputs haven't changed and events haven't fired in the view).
    *
-   * <!-- TODO: Add a link to a chapter on OnPush components -->
+   * <!-- TODO: Add a link to a chapter on OnPush components --> id:547
    *
    * @usageNotes
    * ### Example
@@ -101,8 +101,8 @@ export class ViewRef<T> implements viewEngine_EmbeddedViewRef<T>, viewEngine_Int
    * {@link ChangeDetectorRef#detectChanges detectChanges} to implement local change
    * detection checks.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:437
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master --> id:381
    *
    * @usageNotes
    * ### Example
@@ -154,7 +154,7 @@ export class ViewRef<T> implements viewEngine_EmbeddedViewRef<T>, viewEngine_Int
    * This can be used to re-attach views that were previously detached from the tree
    * using {@link ChangeDetectorRef#detach detach}. Views are attached to the tree by default.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:282
    *
    * @usageNotes
    * ### Example
@@ -212,8 +212,8 @@ export class ViewRef<T> implements viewEngine_EmbeddedViewRef<T>, viewEngine_Int
    * This can also be used in combination with {@link ChangeDetectorRef#detach detach} to implement
    * local change detection checks.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:459
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master --> id:674
    *
    * @usageNotes
    * ### Example

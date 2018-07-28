@@ -163,7 +163,7 @@ export function resetDOM() {
   containerEl.setAttribute('host', '');
   document.body.appendChild(containerEl);
   host = null;
-  // TODO: assert that the global state is clean (e.g. ngData, previousOrParentNode, etc)
+  // TODO: assert that the global state is clean (e.g. ngData, previousOrParentNode, etc) id:699
 }
 
 /**

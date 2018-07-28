@@ -25,7 +25,7 @@ import {getSymbolIterator} from '../util';
  *
  * Changes can be observed by subscribing to the changes `Observable`.
  *
- * NOTE: In the future this class will implement an `Observable` interface.
+ * NOTE: In the future this class will implement an `Observable` interface. id:318
  *
  * @usageNotes
  * ### Example
@@ -42,9 +42,9 @@ export class QueryList<T>/* implements Iterable<T> */ {
   public readonly changes: Observable<any> = new EventEmitter();
 
   readonly length: number = 0;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:538
   readonly first !: T;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:428
   readonly last !: T;
 
   /**

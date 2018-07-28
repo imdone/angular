@@ -95,7 +95,7 @@ export abstract class Reference<T extends ts.Node = ts.Node> {
   /**
    * Whether an `Expression` can be generated which references the node.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:129
   readonly expressable !: boolean;
 
   /**
@@ -143,8 +143,8 @@ export class ResolvedReference<T extends ts.Node = ts.Node> extends Reference<T>
       return new WrappedNodeExpr(localIdentifier);
     } else {
       // Relative import from context -> this.node.getSourceFile().
-      // TODO(alxhub): investigate the impact of multiple source roots here.
-      // TODO(alxhub): investigate the need to map such paths via the Host for proper g3 support.
+      // TODO (alxhub): investigate the impact of multiple source roots here. id:227
+      // TODO (alxhub): investigate the need to map such paths via the Host for proper g3 support. id:106
       let relative =
           path.posix.relative(path.dirname(context.fileName), this.node.getSourceFile().fileName)
               .replace(TS_DTS_EXTENSION, '');
@@ -470,7 +470,7 @@ class StaticInterpreter {
       ResolvedValue {
     const lhs = this.visitExpression(node.expression, context);
     const rhs = node.name.text;
-    // TODO: handle reference to class declaration.
+    // TODO: handle reference to class declaration. id:176
     if (isDynamicValue(lhs)) {
       return DYNAMIC_VALUE;
     }
@@ -660,7 +660,7 @@ class StaticInterpreter {
       throw new Error(`Don't know how to refer to ${ts.SyntaxKind[node.kind]}`);
     }
     if (context.absoluteModuleName !== null) {
-      // TODO(alxhub): investigate whether this can get symbol names wrong in the event of
+      // TODO (alxhub): investigate whether this can get symbol names wrong in the event of id:205
       // re-exports under different names.
       return new AbsoluteReference(node, id, context.absoluteModuleName, id.text);
     } else {

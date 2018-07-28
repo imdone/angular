@@ -78,7 +78,7 @@ export class RequestOptions {
    */
   responseType: ResponseContentType|null;
 
-  // TODO(Dzmitry): remove search when this.search is removed
+  // TODO (Dzmitry): remove search when this.search is removed id:824
   constructor(opts: RequestOptionsArgs = {}) {
     const {method, headers, body, url, search, params, withCredentials, responseType} = opts;
     this.method = method != null ? normalizeMethodName(method) : null;

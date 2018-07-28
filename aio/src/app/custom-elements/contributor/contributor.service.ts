@@ -6,7 +6,7 @@ import { map, publishLast } from 'rxjs/operators';
 
 import { Contributor, ContributorGroup } from './contributors.model';
 
-// TODO(andrewjs): Look into changing this so that we don't import the service just to get the const
+// TODO (andrewjs): Look into changing this so that we don't import the service just to get the const id:59
 import { CONTENT_URL_PREFIX } from 'app/documents/document.service';
 
 const contributorsPath = CONTENT_URL_PREFIX + 'contributors.json';

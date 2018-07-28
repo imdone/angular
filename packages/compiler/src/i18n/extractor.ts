@@ -115,7 +115,7 @@ export class Extractor {
         new DirectiveResolver(staticReflector), new PipeResolver(staticReflector), summaryResolver,
         elementSchemaRegistry, normalizer, console, symbolCache, staticReflector);
 
-    // TODO(vicb): implicit tags & attributes
+    // TODO (vicb): implicit tags & attributes id:248
     const messageBundle = new MessageBundle(htmlParser, [], {}, locale);
 
     const extractor = new Extractor(host, staticSymbolResolver, messageBundle, resolver);

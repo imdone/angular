@@ -32,19 +32,19 @@ class MockBrowserXHR extends BrowserXhr {
   open: any;
   response: any;
   responseType: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:870
   responseText !: string;
   setRequestHeader: any;
   callbacks = new Map<string, Function>();
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:798
   status !: number;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:829
   responseHeaders !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:922
   responseURL !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1138
   statusText !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:871
   withCredentials !: boolean;
 
   constructor() {
@@ -320,7 +320,7 @@ class MockBrowserXHR extends BrowserXhr {
                 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
       });
 
-      if ((global as any /** TODO #9100 */)['Blob']) {
+      if ((global as any /** TODO #9100 `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3, but a BlobBuilder can be used instead id:799 `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3, but a BlobBuilder can be used instead */)['Blob']) {
         // `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3,
         // but a BlobBuilder can be used instead
         const createBlob = (data: Array<string>, datatype: string) => {

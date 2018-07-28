@@ -151,7 +151,7 @@ export abstract class ReflectiveInjector implements Injector {
   /**
    * Parent of this injector.
    *
-   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection.
+   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection. id:317
    * -->
    *
    * @usageNotes
@@ -168,7 +168,7 @@ export abstract class ReflectiveInjector implements Injector {
   /**
    * Resolves an array of providers and creates a child injector from those providers.
    *
-   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection.
+   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection. id:537
    * -->
    *
    * The passed-in providers can be an array of `Type`, `Provider`,
@@ -194,7 +194,7 @@ export abstract class ReflectiveInjector implements Injector {
   /**
    * Creates a child injector from previously resolved providers.
    *
-   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection.
+   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection. id:427
    * -->
    *
    * This API is the recommended way to construct injectors in performance-sensitive parts.

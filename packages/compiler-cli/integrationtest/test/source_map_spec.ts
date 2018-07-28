@@ -10,7 +10,7 @@ import './init';
 import {BindingErrorComp} from '../src/errors';
 import {createComponent} from './util';
 
-// TODO(tbosch): source maps does not currently work with the transformer pipeline
+// TODO (tbosch): source maps does not currently work with the transformer pipeline id:100
 xdescribe('source maps', () => {
   it('should report source location for binding errors', () => {
     const comp = createComponent(BindingErrorComp);

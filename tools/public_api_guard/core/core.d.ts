@@ -944,7 +944,7 @@ export declare enum ViewEncapsulation {
 export declare abstract class ViewRef extends ChangeDetectorRef {
     abstract readonly destroyed: boolean;
     abstract destroy(): void;
-    abstract onDestroy(callback: Function): any /** TODO #9100 */;
+    abstract onDestroy(callback: Function): any /** TODO #9100 id:1108*/;
 }
 
 export declare class WrappedValue {

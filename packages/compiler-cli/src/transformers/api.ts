@@ -38,7 +38,7 @@ export function isNgDiagnostic(diagnostic: any): diagnostic is Diagnostic {
 }
 
 export interface CompilerOptions extends ts.CompilerOptions {
-  // NOTE: These comments and aio/content/guides/aot-compiler.md should be kept in sync.
+  // NOTE: These comments and aio/content/guides/aot-compiler.md should be kept in sync. id:228
 
   // Write statistics about compilation (e.g. total time, ...)
   // Note: this is the --diagnostics command line option from TS (which is @internal

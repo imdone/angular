@@ -63,7 +63,7 @@ import {EventEmitter} from '../src/event_emitter';
 
     it('delivers next and error events synchronously',
        inject([AsyncTestCompleter], (async: AsyncTestCompleter) => {
-         const log: any[] /** TODO #9100 */ = [];
+         const log: any[] /** TODO #9100 id:548*/ = [];
 
          emitter.subscribe({
            next: (x: any) => {
@@ -84,7 +84,7 @@ import {EventEmitter} from '../src/event_emitter';
        }));
 
     it('delivers next and complete events synchronously', () => {
-      const log: any[] /** TODO #9100 */ = [];
+      const log: any[] /** TODO #9100 id:505*/ = [];
 
       emitter.subscribe({
         next: (x: any) => {
@@ -108,7 +108,7 @@ import {EventEmitter} from '../src/event_emitter';
     it('delivers events asynchronously when forced to async mode',
        inject([AsyncTestCompleter], (async: AsyncTestCompleter) => {
          const e = new EventEmitter(true);
-         const log: any[] /** TODO #9100 */ = [];
+         const log: any[] /** TODO #9100 id:472*/ = [];
          e.subscribe((x: any) => {
            log.push(x);
            expect(log).toEqual([1, 3, 2]);
@@ -180,7 +180,7 @@ import {EventEmitter} from '../src/event_emitter';
       expect(emitter.observers.length).toBe(0);
     });
 
-    // TODO: vsavkin: add tests cases
+    // TODO: vsavkin: add tests cases id:687
     // should call dispose on the subscription if generator returns {done:true}
     // should call dispose on the subscription on throw
     // should call dispose on the subscription on return

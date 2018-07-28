@@ -8,7 +8,7 @@ import { MinimalLogger }       from './minimal-logger.service';
 @Component({
   selector: 'app-hero-of-the-month',
   templateUrl: './hero-of-the-month.component.html',
-  // TODO: move this aliasing, `useExisting` provider to the AppModule
+  // TODO: move this aliasing, `useExisting` provider to the AppModule id:22
   providers: [{ provide: MinimalLogger, useExisting: LoggerService }]
 })
 export class HeroOfTheMonthComponent {

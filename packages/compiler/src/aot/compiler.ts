@@ -305,7 +305,7 @@ export class AotCompiler {
     const errors: ParseError[] = [];
     const htmlParser = new HtmlParser();
 
-    // TODO(vicb): implicit tags & attributes
+    // TODO (vicb): implicit tags & attributes id:239
     const messageBundle = new MessageBundle(htmlParser, [], {}, locale);
 
     analyzeResult.files.forEach(file => {

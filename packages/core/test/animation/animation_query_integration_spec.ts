@@ -1049,7 +1049,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
             ])]
         })
         class Cmp {
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:399
           public items !: any[];
         }
 
@@ -1130,7 +1130,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
         })
         class Cmp {
              public exp: any;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:465
              public items !: any[];
            }
 
@@ -1351,7 +1351,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
         })
         class Cmp {
           public exp: any;
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:680
           public items !: any[];
         }
 
@@ -1404,7 +1404,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
         })
         class Cmp {
           public exp: any;
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:444
           public items !: any[];
         }
 
@@ -1467,7 +1467,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
         class Cmp {
           public exp1: any;
           public exp2: any;
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:388
           public items !: any[];
         }
 
@@ -1537,7 +1537,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
            })
            class Cmp {
              public exp: any;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:400
              public items !: any[];
            }
 
@@ -1592,7 +1592,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
           })
           class Cmp {
              public exp: any;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:466
              public items !: any[];
            }
 
@@ -2476,7 +2476,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
           `
            })
            class Cmp {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:681
              public exp !: boolean;
            }
 
@@ -2656,7 +2656,7 @@ import {fakeAsync, flushMicrotasks} from '../../testing/src/fake_async';
           `
            })
            class Cmp {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:445
              public exp !: boolean;
              public log: string[] = [];
              callback(event: any) {

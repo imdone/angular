@@ -300,7 +300,7 @@ describe('Format date', () => {
       expect(formatDate(date, 'a', 'hu')).toEqual('de.');
       expect(formatDate(date, 'a', 'sr')).toEqual('пре подне');
 
-      // TODO(ocombe): activate this test when we support local numbers
+      // TODO (ocombe): activate this test when we support local numbers id:99
       // expect(formatDate(date, 'hh', 'mr')).toEqual('०९');
     });
 

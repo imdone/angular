@@ -20,7 +20,7 @@ export class HttpHeaders {
   /**
    * Internal map of lowercase header names to values.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:90
   private headers !: Map<string, string[]>;
 
 
@@ -33,7 +33,7 @@ export class HttpHeaders {
   /**
    * Complete the lazy initialization of this object (needed before reading).
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:160
   private lazyInit !: HttpHeaders | Function | null;
 
   /**

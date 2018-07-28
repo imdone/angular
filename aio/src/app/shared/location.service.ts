@@ -37,7 +37,7 @@ export class LocationService {
     swUpdates.updateActivated.subscribe(() => this.swUpdateActivated = true);
   }
 
-  // TODO: ignore if url-without-hash-or-search matches current location?
+  // TODO: ignore if url-without-hash-or-search matches current location? id:31
   go(url: string|null|undefined) {
     if (!url) { return; }
     url = this.stripSlashes(url);
@@ -122,7 +122,7 @@ export class LocationService {
 
     // If there is a target and it is not `_self` then we take this
     // as a signal that it doesn't want to be intercepted.
-    // TODO: should we also allow an explicit `_self` target to opt-out?
+    // TODO: should we also allow an explicit `_self` target to opt-out? id:53
     const anchorTarget = anchor.target;
     if (anchorTarget && anchorTarget !== '_self') {
       return true;

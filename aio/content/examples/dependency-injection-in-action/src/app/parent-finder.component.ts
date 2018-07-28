@@ -151,7 +151,7 @@ export class BethComponent implements Parent {
 // #docregion alex-1
 })
 // #enddocregion alex-1
-// TODO: Add `... implements Parent` to class signature
+// TODO: Add `... implements Parent` to class signature id:3
 // #docregion alex-1
 // #docregion alex-class-signature
 export class AlexComponent extends Base
