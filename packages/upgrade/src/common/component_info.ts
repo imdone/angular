@@ -13,17 +13,17 @@
  * and attribute have the same identifier.
  */
 export class PropertyBinding {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1074
   bracketAttr !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1178
   bracketParenAttr !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1110
   parenAttr !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1043
   onAttr !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:989
   bindAttr !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1075
   bindonAttr !: string;
 
   constructor(public prop: string, public attr: string) { this.parseBinding(); }

@@ -14,7 +14,7 @@ import {Component, Injectable, NgModule, ɵrenderComponent as renderComponent} f
 class Todo {
   editing: boolean;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:447
   private _title !: string;
   get title() { return this._title; }
   set title(value: string) { this._title = value.trim(); }
@@ -58,7 +58,7 @@ class TodoStore {
 
 @Component({
   selector: 'todo-app',
-  // TODO(misko): make this work with `[(ngModel)]`
+  // TODO (misko): make this work with `[(ngModel)]` id:391
   template: `
   <section class="todoapp">
     <header class="header">
@@ -106,7 +106,7 @@ class TodoStore {
     </footer>
   </section>
   `,
-  // TODO(misko): switch over to OnPush
+  // TODO (misko): switch over to OnPush id:502
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 class ToDoAppComponent {
@@ -152,5 +152,5 @@ class ToDoAppComponent {
 class ToDoAppModule {
 }
 
-// TODO(misko): create cleaner way to publish component into global location for tests.
+// TODO (misko): create cleaner way to publish component into global location for tests. id:469
 (window as any).toDoAppComponent = renderComponent(ToDoAppComponent);

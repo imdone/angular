@@ -1636,7 +1636,7 @@ const DEFAULT_COMPONENT_ID = '1';
           ]
         })
         class Cmp {
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:396
           public exp !: string | null;
         }
 
@@ -2024,7 +2024,7 @@ const DEFAULT_COMPONENT_ID = '1';
            })
            class Cmp {
              public exp: any;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:462
              public color !: string | null;
            }
 
@@ -2458,7 +2458,7 @@ const DEFAULT_COMPONENT_ID = '1';
            })
            class Cmp {
              exp: any = false;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:677
              event !: AnimationEvent;
 
              callback = (event: any) => { this.event = event; };
@@ -2494,7 +2494,7 @@ const DEFAULT_COMPONENT_ID = '1';
            })
            class Cmp {
              exp: any = false;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:441
              event !: AnimationEvent;
 
              callback = (event: any) => { this.event = event; };
@@ -2550,9 +2550,9 @@ const DEFAULT_COMPONENT_ID = '1';
            class Cmp {
              exp1: any = false;
              exp2: any = false;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:385
              event1 !: AnimationEvent;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:397
              event2 !: AnimationEvent;
              // tslint:disable:semicolon
              callback1 = (event: any) => { this.event1 = event; };
@@ -2614,9 +2614,9 @@ const DEFAULT_COMPONENT_ID = '1';
            class Cmp {
              exp1: any = false;
              exp2: any = false;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:463
              event1 !: AnimationEvent;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:678
              event2 !: AnimationEvent;
              callback1 = (event: any) => { this.event1 = event; };
              callback2 = (event: any) => { this.event2 = event; };
@@ -2721,7 +2721,7 @@ const DEFAULT_COMPONENT_ID = '1';
                      [style({'opacity': '0'}), animate(1000, style({'opacity': '1'}))])])],
            })
            class Cmp {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:442
              event !: AnimationEvent;
 
              @HostBinding('@myAnimation2')
@@ -2756,7 +2756,7 @@ const DEFAULT_COMPONENT_ID = '1';
              animations: [trigger('myAnimation', [])]
            })
            class Cmp {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:386
              exp !: string;
              log: any[] = [];
              callback = (event: any) => this.log.push(`${event.phaseName} => ${event.toState}`);
@@ -2868,9 +2868,9 @@ const DEFAULT_COMPONENT_ID = '1';
            })
            class Cmp {
              log: string[] = [];
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:398
              exp1 !: string;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:464
              exp2 !: string;
 
              cb(name: string, event: AnimationEvent) { this.log.push(name); }
@@ -2948,7 +2948,7 @@ const DEFAULT_COMPONENT_ID = '1';
         class Cmp {
                  log: string[] = [];
                  events: {[name: string]: any} = {};
-                 // TODO(issue/24571): remove '!'.
+                 // TODO (issue/24571): remove '!'. id:679
                  exp !: string;
                  items: any = [0, 1, 2, 3];
 
@@ -3276,9 +3276,9 @@ const DEFAULT_COMPONENT_ID = '1';
              class Cmp {
                disableExp = false;
                exp = '';
-               // TODO(issue/24571): remove '!'.
+               // TODO (issue/24571): remove '!'. id:443
                startEvent !: AnimationEvent;
-               // TODO(issue/24571): remove '!'.
+               // TODO (issue/24571): remove '!'. id:387
                doneEvent !: AnimationEvent;
              }
 

@@ -30,7 +30,7 @@ export const scheduler = {
    * Returns a function that when executed will cancel the scheduled function.
    */
   scheduleBeforeRender(taskFn: () => void): () => void{
-    // TODO(gkalpak): Implement a better way of accessing `requestAnimationFrame()`
+    // TODO (gkalpak): Implement a better way of accessing `requestAnimationFrame()` id:705
     //                (e.g. accounting for vendor prefix, SSR-compatibility, etc).
     if (typeof window === 'undefined') {
       // For SSR just schedule immediately.

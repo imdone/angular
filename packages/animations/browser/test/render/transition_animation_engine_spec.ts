@@ -43,7 +43,7 @@ const DEFAULT_NAMESPACE_ID = 'id';
 
     describe('trigger registration', () => {
       it('should ignore and not throw an error if the same trigger is registered twice', () => {
-        // TODO (matsko): ask why this is avoided
+        // TODO (matsko): ask why this is avoided id:85
         const engine = makeEngine();
         registerTrigger(element, engine, trigger('trig', []));
         expect(() => { registerTrigger(element, engine, trigger('trig', [])); }).not.toThrow();

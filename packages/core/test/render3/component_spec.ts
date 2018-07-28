@@ -130,7 +130,7 @@ describe('component with a container', () => {
   }
 
   class WrapperComponent {
-    // TODO(issue/24571): remove '!'.
+    // TODO (issue/24571): remove '!'. id:643
     items !: string[];
     static ngComponentDef = defineComponent({
       type: WrapperComponent,
@@ -175,7 +175,7 @@ describe('component with a container', () => {
 
 });
 
-// TODO: add tests with Native once tests are run in real browser (domino doesn't support shadow
+// TODO: add tests with Native once tests are run in real browser (domino doesn't support shadow id:846
 // root)
 describe('encapsulation', () => {
   class WrapperComponent {
@@ -362,7 +362,7 @@ describe('recursive components', () => {
 
   it('should map inputs minified & unminified names', async() => {
     class TestInputsComponent {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:623
       minifiedName !: string;
       static ngComponentDef = defineComponent({
         type: TestInputsComponent,

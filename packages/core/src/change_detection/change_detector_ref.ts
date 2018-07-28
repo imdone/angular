@@ -57,7 +57,7 @@ export abstract class ChangeDetectorRef {
    * have changed or events have fired in the view. Call this method to ensure that
    * a component is checked even if these triggers have not occured.
    *
-   * <!-- TODO: Add a link to a chapter on OnPush components -->
+   * <!-- TODO: Add a link to a chapter on OnPush components --> id:530
    *
    */
   abstract markForCheck(): void;
@@ -70,8 +70,8 @@ export abstract class ChangeDetectorRef {
    * Detached views are not checked during change detection runs until they are
    * re-attached, even if they are marked as dirty.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:420
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master --> id:364
    *
    */
   abstract detach(): void;
@@ -81,8 +81,8 @@ export abstract class ChangeDetectorRef {
    * detach}
    * to implement local change detection checks.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:265
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master --> id:311
    *
    */
   abstract detectChanges(): void;
@@ -99,7 +99,7 @@ export abstract class ChangeDetectorRef {
    * Re-attaches the previously detached view to the change detection tree.
    * Views are attached to the tree by default.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:531
    *
    */
   abstract reattach(): void;

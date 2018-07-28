@@ -54,7 +54,7 @@ export class SwUpdatesService implements OnDestroy {
     this.sw.checkForUpdate()
         .pipe(
             // Temp workaround for https://github.com/angular/mobile-toolkit/pull/137.
-            // TODO (gkalpak): Remove once #137 is fixed.
+            // TODO (gkalpak): Remove once #137 is fixed. id:70
             defaultIfEmpty(false),
             first(),
             tap(v => this.log(`Update available: ${v}`)),

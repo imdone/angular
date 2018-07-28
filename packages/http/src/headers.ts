@@ -40,7 +40,7 @@ export class Headers {
   /** @internal map lower case names to actual names */
   _normalizedNames: Map<string, string> = new Map();
 
-  // TODO(vicb): any -> string|string[]
+  // TODO (vicb): any -> string|string[] id:1133
   constructor(headers?: Headers|{[name: string]: any}|null) {
     if (!headers) {
       return;
@@ -151,7 +151,7 @@ export class Headers {
   /**
    * Returns string of all headers.
    */
-  // TODO(vicb): returns {[name: string]: string[]}
+  // TODO (vicb): returns {[name: string]: string[]} id:771
   toJSON(): {[name: string]: any} {
     const serialized: {[name: string]: string[]} = {};
 

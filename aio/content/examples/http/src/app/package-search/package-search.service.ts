@@ -45,7 +45,7 @@ export class PackageSearchService {
 
     const options = createHttpOptions(packageName, refresh);
 
-    // TODO: Add error handling
+    // TODO: Add error handling id:5
     return this.http.get(searchUrl, options).pipe(
       map((data: any) => {
         return data.results.map(entry => ({

@@ -17,7 +17,7 @@ import * as xml from './xml_helper';
 
 const _VERSION = '2.0';
 const _XMLNS = 'urn:oasis:names:tc:xliff:document:2.0';
-// TODO(vicb): make this a param (s/_/-/)
+// TODO (vicb): make this a param (s/_/-/) id:254
 const _DEFAULT_SOURCE_LANG = 'en';
 const _PLACEHOLDER_TAG = 'ph';
 const _PLACEHOLDER_SPANNING_TAG = 'pc';
@@ -112,7 +112,7 @@ export class Xliff2 extends Serializer {
 }
 
 class _WriteVisitor implements i18n.Visitor {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:300
   private _nextPlaceholderId !: number;
 
   visitText(text: i18n.Text, context?: any): xml.Node[] { return [new xml.Text(text.value)]; }
@@ -191,11 +191,11 @@ class _WriteVisitor implements i18n.Visitor {
 
 // Extract messages as xml nodes from the xliff file
 class Xliff2Parser implements ml.Visitor {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:344
   private _unitMlString !: string | null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:410
   private _errors !: I18nError[];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:354
   private _msgIdToHtml !: {[msgId: string]: string};
   private _locale: string|null = null;
 
@@ -289,7 +289,7 @@ class Xliff2Parser implements ml.Visitor {
 
 // Convert ml nodes (xliff syntax) to i18n nodes
 class XmlToI18n implements ml.Visitor {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:255
   private _errors !: I18nError[];
 
   convert(message: string, url: string) {

@@ -69,7 +69,7 @@ export const formGroupNameProvider: any = {
  */
 @Directive({selector: '[formGroupName]', providers: [formGroupNameProvider]})
 export class FormGroupName extends AbstractFormGroupDirective implements OnInit, OnDestroy {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1004
   @Input('formGroupName') name !: string;
 
   constructor(
@@ -153,7 +153,7 @@ export class FormArrayName extends ControlContainer implements OnInit, OnDestroy
   /** @internal */
   _asyncValidators: any[];
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:747
   @Input('formArrayName') name !: string;
 
   constructor(

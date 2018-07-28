@@ -404,7 +404,7 @@ export abstract class AssetGroup {
         // hash expected. This could be because the HTTP cache got in the way and returned stale
         // data, or because the version on the server really doesn't match. A cache-busting
         // request will differentiate these two situations.
-        // TODO: handle case where the URL has parameters already (unlikely for assets).
+        // TODO: handle case where the URL has parameters already (unlikely for assets). id:1034
         const cacheBustReq = this.adapter.newRequest(this.cacheBust(req.url));
         const cacheBustedResult = await this.safeFetch(cacheBustReq);
 

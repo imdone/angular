@@ -47,7 +47,7 @@ describe('event listeners', () => {
 
   class PreventDefaultComp {
     handlerReturnValue: any = true;
-    // TODO(issue/24571): remove '!'.
+    // TODO (issue/24571): remove '!'. id:626
     event !: Event;
 
     onClick(e: any) {

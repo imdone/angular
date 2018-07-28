@@ -24,7 +24,7 @@ export interface NgModuleAnalysis {
 /**
  * Compiles @NgModule annotations to ngModuleDef fields.
  *
- * TODO(alxhub): handle injector side of things as well.
+ * TODO (alxhub): handle injector side of things as well. id:105
  */
 export class NgModuleDecoratorHandler implements DecoratorHandler<NgModuleAnalysis> {
   constructor(
@@ -206,7 +206,7 @@ function resolveTypeList(resolvedList: ResolvedValue, name: string): Reference[]
       }
       refList.push(entry);
     } else {
-      // TODO(alxhub): expand ModuleWithProviders.
+      // TODO (alxhub): expand ModuleWithProviders. id:175
       throw new Error(`Value at position ${idx} in ${name} array is not a reference: ${entry}`);
     }
   });

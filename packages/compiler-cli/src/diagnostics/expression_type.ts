@@ -23,7 +23,7 @@ export class TypeDiagnostic {
 
 // AstType calculatetype of the ast given AST element.
 export class AstType implements AstVisitor {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:124
   public diagnostics !: TypeDiagnostic[];
 
   constructor(
@@ -204,7 +204,7 @@ export class AstType implements AstVisitor {
     if (!target || !target.callable) return this.reportError('Call target is not callable', ast);
     const signature = target.selectSignature(args);
     if (signature) return signature.result;
-    // TODO: Consider a better error message here.
+    // TODO: Consider a better error message here. id:154
     return this.reportError('Unable no compatible signature found for call', ast);
   }
 
@@ -261,7 +261,7 @@ export class AstType implements AstVisitor {
     if (this.diagnostics) {
       visitAstChildren(ast, this);
     }
-    // TODO: Return a composite type.
+    // TODO: Return a composite type. id:101
     return this.anyType;
   }
 
@@ -335,7 +335,7 @@ export class AstType implements AstVisitor {
     return this.resolvePropertyRead(this.query.getNonNullableType(this.getType(ast.receiver)), ast);
   }
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:171
   private _anyType !: Symbol;
   private get anyType(): Symbol {
     let result = this._anyType;
@@ -345,7 +345,7 @@ export class AstType implements AstVisitor {
     return result;
   }
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:200
   private _undefinedType !: Symbol;
   private get undefinedType(): Symbol {
     let result = this._undefinedType;

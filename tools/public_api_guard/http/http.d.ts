@@ -249,7 +249,7 @@ export declare class XHRConnection implements Connection {
     request: Request;
     response: Observable<Response>;
     constructor(req: Request, browserXHR: BrowserXhr, baseResponseOptions?: ResponseOptions);
-    setDetectedContentType(req: any /** TODO Request */, _xhr: any /** XMLHttpRequest */): void;
+    setDetectedContentType(req: any /** TODO Request id:1094*/, _xhr: any /** XMLHttpRequest */): void;
 }
 
 /** @deprecated */

@@ -73,9 +73,9 @@ describe('Integration', () => {
         `
          })
          class ComponentWithRouterLink {
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:1033
            @ViewChild(TemplateRef) templateRef !: TemplateRef<any>;
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:979
            @ViewChild('container', {read: ViewContainerRef}) container !: ViewContainerRef;
 
            addLink() {

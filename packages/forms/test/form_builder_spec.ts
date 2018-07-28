@@ -11,8 +11,8 @@ import {FormBuilder} from '@angular/forms';
 import {of } from 'rxjs';
 
 (function() {
-  function syncValidator(_: any /** TODO #9100 */): any /** TODO #9100 */ { return null; }
-  function asyncValidator(_: any /** TODO #9100 */) { return Promise.resolve(null); }
+  function syncValidator(_: any /** TODO #9100 id:778*/): any /** TODO #9100 */ { return null; }
+  function asyncValidator(_: any /** TODO #9100 id:722*/) { return Promise.resolve(null); }
 
   describe('Form Builder', () => {
     let b: FormBuilder;

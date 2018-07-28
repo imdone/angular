@@ -14,11 +14,11 @@ import {Component, NgModule, ɵrenderComponent as renderComponent} from '@angula
 })
 export class HelloWorld {
 }
-// TODO(misko): Forgetting to export HelloWorld and not having NgModule fails silently.
+// TODO (misko): Forgetting to export HelloWorld and not having NgModule fails silently. id:468
 
 @NgModule({declarations: [HelloWorld]})
 export class INeedToExistEvenThoughIAmNotNeeded {
 }
-// TODO(misko): Package should not be required to make this work.
+// TODO (misko): Package should not be required to make this work. id:683
 
 renderComponent(HelloWorld);

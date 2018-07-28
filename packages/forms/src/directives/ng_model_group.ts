@@ -47,7 +47,7 @@ export const modelGroupProvider: any = {
  */
 @Directive({selector: '[ngModelGroup]', providers: [modelGroupProvider], exportAs: 'ngModelGroup'})
 export class NgModelGroup extends AbstractFormGroupDirective implements OnInit, OnDestroy {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:711
   @Input('ngModelGroup') name !: string;
 
   constructor(

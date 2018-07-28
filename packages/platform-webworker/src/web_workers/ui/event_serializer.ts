@@ -27,7 +27,7 @@ export function serializeGenericEvent(e: Event): {[key: string]: any} {
   return serializeEvent(e, EVENT_PROPERTIES);
 }
 
-// TODO(jteplitz602): Allow users to specify the properties they need rather than always
+// TODO (jteplitz602): Allow users to specify the properties they need rather than always id:890
 // adding value and files #3374
 export function serializeEventWithTarget(e: Event): {[key: string]: any} {
   const serializedEvent = serializeEvent(e, EVENT_PROPERTIES);
@@ -48,7 +48,7 @@ export function serializeTransitionEvent(e: TransitionEvent): {[key: string]: an
   return addTarget(e, serializedEvent);
 }
 
-// TODO(jteplitz602): #3374. See above.
+// TODO (jteplitz602): #3374. See above. id:955
 function addTarget(e: Event, serializedEvent: {[key: string]: any}): {[key: string]: any} {
   if (NODES_WITH_VALUE.has((<HTMLElement>e.target).tagName.toLowerCase())) {
     const target = <HTMLInputElement>e.target;

@@ -149,7 +149,7 @@ export class DomEventsPlugin extends EventManagerPlugin {
      * will not be invoked
      * We also do manual zone restoration in element.ts renderEventHandlerClosure method.
      *
-     * NOTE: it is possible that the element is from different iframe, and so we
+     * NOTE: it is possible that the element is from different iframe, and so we id:1147
      * have to check before we execute the method.
      */
     const self = this;

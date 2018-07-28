@@ -39,7 +39,7 @@ export function async(fn: Function): (done: any) => any {
     return asyncTest(fn);
   }
   // not using new version of zone.js
-  // TODO @JiaLiPassion, remove this after all library updated to
+  // TODO @JiaLiPassion, remove this after all library updated to id:735
   // newest version of zone.js(0.8.25)
   return asyncFallback(fn);
 }

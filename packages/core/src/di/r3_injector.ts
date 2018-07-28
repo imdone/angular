@@ -336,7 +336,7 @@ function injectableDefRecord(token: Type<any>| InjectionToken<any>): Record<any>
     if (token instanceof InjectionToken) {
       throw new Error(`Token ${stringify(token)} is missing an ngInjectableDef definition.`);
     }
-    // TODO(alxhub): there should probably be a strict mode which throws here instead of assuming a
+    // TODO (alxhub): there should probably be a strict mode which throws here instead of assuming a id:370
     // no-args constructor.
     return makeRecord(() => new (token as Type<any>)());
   }

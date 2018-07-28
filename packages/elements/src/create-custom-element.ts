@@ -43,7 +43,7 @@ export abstract class NgElement extends HTMLElement {
   /**
    * The strategy that controls how a component is transformed in a custom element.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:656
   protected ngElementStrategy !: NgElementStrategy;
   /**
    * A subscription to change, connect, and disconnect events in the custom element.
@@ -141,7 +141,7 @@ export function createCustomElement<P>(
 
       // Note that some polyfills (e.g. document-register-element) do not call the constructor.
       // Do not assume this strategy has been created.
-      // TODO(andrewseguin): Add e2e tests that cover cases where the constructor isn't called. For
+      // TODO (andrewseguin): Add e2e tests that cover cases where the constructor isn't called. For id:995
       // now this is tested using a Google internal test suite.
       this.ngElementStrategy = strategyFactory.create(injector || config.injector);
     }

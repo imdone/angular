@@ -612,11 +612,11 @@ export function getOrCreateContainerRef(di: LInjector): viewEngine.ViewContainer
  */
 class ViewContainerRef implements viewEngine.ViewContainerRef {
   private _viewRefs: viewEngine.ViewRef[] = [];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:542
   element !: viewEngine.ElementRef;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:432
   injector !: Injector;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:376
   parentInjector !: Injector;
 
   constructor(private _lContainerNode: LContainerNode) {}

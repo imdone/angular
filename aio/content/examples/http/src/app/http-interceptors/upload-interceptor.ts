@@ -14,7 +14,7 @@ export class UploadInterceptor implements HttpInterceptor {
     if (req.url.indexOf('/upload/file') === -1) {
       return next.handle(req);
     }
-    const delay = 300; // TODO: inject delay?
+    const delay = 300; // TODO: inject delay? id:46
     return createUploadEvents(delay);
   }
 }

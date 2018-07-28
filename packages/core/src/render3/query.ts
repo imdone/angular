@@ -398,7 +398,7 @@ class QueryList_<T>/* implements viewEngine_QueryList<T> */ {
   }
 }
 
-// NOTE: this hack is here because IQueryList has private members and therefore
+// NOTE: this hack is here because IQueryList has private members and therefore id:281
 // it can't be implemented only extended.
 export type QueryList<T> = viewEngine_QueryList<T>;
 export const QueryList: typeof viewEngine_QueryList = QueryList_ as any;

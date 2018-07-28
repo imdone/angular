@@ -135,7 +135,7 @@ describe('animation renderer factory', () => {
   }
 
   class SomeComponentWithAnimation {
-    // TODO(issue/24571): remove '!'.
+    // TODO (issue/24571): remove '!'. id:651
     exp !: string;
     callback(event: AnimationEvent) {
       eventLogs.push(`${event.fromState ? event.fromState : event.toState} - ${event.phaseName}`);

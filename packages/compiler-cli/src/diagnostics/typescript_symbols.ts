@@ -84,7 +84,7 @@ export function getPipesTable(
 
 class TypeScriptSymbolQuery implements SymbolQuery {
   private typeCache = new Map<BuiltinType, Symbol>();
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:125
   private pipesCache !: SymbolTable;
 
   constructor(
@@ -231,7 +231,7 @@ function signaturesOf(type: ts.Type, context: TypeContext): Signature[] {
 
 function selectSignature(type: ts.Type, context: TypeContext, types: Symbol[]): Signature|
     undefined {
-  // TODO: Do a better job of selecting the right signature.
+  // TODO: Do a better job of selecting the right signature. id:155
   const signatures = type.getCallSignatures();
   return signatures.length ? new SignatureWrapper(signatures[0], context) : undefined;
 }
@@ -284,9 +284,9 @@ class TypeWrapper implements Symbol {
 
 class SymbolWrapper implements Symbol {
   private symbol: ts.Symbol;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:102
   private _tsType !: ts.Type;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:172
   private _members !: SymbolTable;
 
   public readonly nullable: boolean = false;
@@ -532,7 +532,7 @@ class PipesTable implements SymbolTable {
 const INDEX_PATTERN = /[\\/]([^\\/]+)[\\/]\1\.d\.ts$/;
 
 class PipeSymbol implements Symbol {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:201
   private _tsType !: ts.Type;
   public readonly kind: DeclarationKind = 'pipe';
   public readonly language: string = 'typescript';

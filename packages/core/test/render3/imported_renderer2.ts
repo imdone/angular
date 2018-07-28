@@ -55,7 +55,7 @@ export function getAnimationRendererFactory2(document: any): RendererFactory2 {
       fakeNgZone);
 }
 
-// TODO: code duplicated from ../linker/change_detection_integration_spec.ts, to be removed
+// TODO: code duplicated from ../linker/change_detection_integration_spec.ts, to be removed id:625
 // START duplicated code
 export class RenderLog {
   log: string[] = [];

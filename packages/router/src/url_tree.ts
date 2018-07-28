@@ -24,7 +24,7 @@ export function containsTree(container: UrlTree, containee: UrlTree, exact: bool
 }
 
 function equalQueryParams(container: Params, containee: Params): boolean {
-  // TODO: This does not handle array params correctly.
+  // TODO: This does not handle array params correctly. id:900
   return shallowEqual(container, containee);
 }
 
@@ -39,7 +39,7 @@ function equalSegmentGroups(container: UrlSegmentGroup, containee: UrlSegmentGro
 }
 
 function containsQueryParams(container: Params, containee: Params): boolean {
-  // TODO: This does not handle array params correctly.
+  // TODO: This does not handle array params correctly. id:1032
   return Object.keys(containee).length <= Object.keys(container).length &&
       Object.keys(containee).every(key => containee[key] === container[key]);
 }
@@ -104,7 +104,7 @@ function containsSegmentGroupHelper(
  */
 export class UrlTree {
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:978
   _queryParamMap !: ParamMap;
 
   /** @internal */
@@ -138,10 +138,10 @@ export class UrlTree {
  */
 export class UrlSegmentGroup {
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1064
   _sourceSegment !: UrlSegmentGroup;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1168
   _segmentIndexShift !: number;
   /** The parent node in the url tree */
   parent: UrlSegmentGroup|null = null;
@@ -192,7 +192,7 @@ export class UrlSegmentGroup {
  */
 export class UrlSegment {
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:901
   _parameterMap !: ParamMap;
 
   constructor(

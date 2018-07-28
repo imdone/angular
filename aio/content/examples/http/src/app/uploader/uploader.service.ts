@@ -85,7 +85,7 @@ export class UploaderService {
     const userMessage = `${file.name} upload failed.`;
 
     return (error: HttpErrorResponse) => {
-      // TODO: send the error to remote logging infrastructure
+      // TODO: send the error to remote logging infrastructure id:38
       console.error(error); // log to console instead
 
       const message = (error.error instanceof Error) ?

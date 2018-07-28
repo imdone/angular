@@ -81,7 +81,7 @@ if (process.env['WEB_TEST_METADATA']) {
     // We expect that a SAUCE_USERNAME and SAUCE_ACCESS_KEY is available
     // from the environment for this test to run
 
-    // TODO(gmagolan): implement sauce labs support for protractor
+    // TODO (gmagolan): implement sauce labs support for protractor id:156
     throw new Error('Saucelabs not yet support by protractor_web_test_suite.');
 
     // if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
@@ -129,7 +129,7 @@ if (process.env['WEB_TEST_METADATA']) {
           'is determined by the browsers attribute');
     }
     if (webTestNamedFiles['FIREFOX']) {
-      // TODO(gmagolan): implement firefox support for protractor
+      // TODO (gmagolan): implement firefox support for protractor id:185
       throw new Error('Firefox not yet support by protractor_web_test_suite');
 
       // const firefoxBin = path.join('external', webTestNamedFiles['FIREFOX']);

@@ -1343,7 +1343,7 @@ export class TransitionAnimationEngine {
       const element = timelineInstruction.element;
       allConsumedElements.add(element);
 
-      // FIXME (matsko): make sure to-be-removed animations are removed properly
+      // FIXME (matsko): make sure to-be-removed animations are removed properly id:20
       const details = element[REMOVAL_FLAG];
       if (details && details.removedBeforeQueried)
         return new NoopAnimationPlayer(timelineInstruction.duration, timelineInstruction.delay);
@@ -1424,7 +1424,7 @@ export class TransitionAnimationPlayer implements AnimationPlayer {
 
   private _queuedCallbacks: {[name: string]: (() => any)[]} = {};
   public readonly destroyed = false;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:183
   public parentPlayer !: AnimationPlayer;
 
   public markedForDestroy: boolean = false;

@@ -224,7 +224,7 @@ function isComponentSymbol(identifier: ts.Node, typeChecker: ts.TypeChecker) {
   // Only handle identifiers, not expressions
   if (!ts.isIdentifier(identifier)) return false;
 
-  // NOTE: resolver.getReferencedImportDeclaration would work as well but is internal
+  // NOTE: resolver.getReferencedImportDeclaration would work as well but is internal id:230
   const symbol = typeChecker.getSymbolAtLocation(identifier);
 
   if (!symbol || !symbol.declarations || !symbol.declarations.length) {

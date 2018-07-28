@@ -252,7 +252,7 @@ function isLiteralFieldNamed(node: ts.Node, names: Set<string>): boolean {
 }
 
 export class LowerMetadataTransform implements RequestsMap, MetadataTransformer {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:210
   private cache !: MetadataCache;
   private requests = new Map<string, RequestLocationMap>();
   private lowerableFieldNames: Set<string>;

@@ -92,20 +92,20 @@ import {UrlTree} from '../url_tree';
  */
 @Directive({selector: ':not(a)[routerLink]'})
 export class RouterLink {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1160
   @Input() queryParams !: {[k: string]: any};
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:893
   @Input() fragment !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1025
   @Input() queryParamsHandling !: QueryParamsHandling;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:971
   @Input() preserveFragment !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:945
   @Input() skipLocationChange !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1161
   @Input() replaceUrl !: boolean;
   private commands: any[] = [];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:894
   private preserve !: boolean;
 
   constructor(
@@ -171,27 +171,27 @@ export class RouterLink {
  */
 @Directive({selector: 'a[routerLink]'})
 export class RouterLinkWithHref implements OnChanges, OnDestroy {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1026
   @HostBinding('attr.target') @Input() target !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:972
   @Input() queryParams !: {[k: string]: any};
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:946
   @Input() fragment !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1162
   @Input() queryParamsHandling !: QueryParamsHandling;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:895
   @Input() preserveFragment !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1027
   @Input() skipLocationChange !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:973
   @Input() replaceUrl !: boolean;
   private commands: any[] = [];
   private subscription: Subscription;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:947
   private preserve !: boolean;
 
   // the url displayed on the anchor element.
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1163
   @HostBinding() href !: string;
 
   constructor(

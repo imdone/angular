@@ -20,7 +20,7 @@ describe('sourcemaps', function() {
 
     $('error-app .errorButton').click();
 
-    // TODO(tbosch): Bug in ChromeDriver: Need to execute at least one command
+    // TODO (tbosch): Bug in ChromeDriver: Need to execute at least one command id:67
     // so that the browser logs can be read out!
     browser.executeScript('1+1');
     browser.manage().logs().get(logging.Type.BROWSER).then(function(logs: any) {

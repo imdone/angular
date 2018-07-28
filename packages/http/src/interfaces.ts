@@ -27,11 +27,11 @@ export abstract class ConnectionBackend { abstract createConnection(request: any
  * @deprecated see https://angular.io/guide/http
  */
 export abstract class Connection {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:918
   readyState !: ReadyState;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1134
   request !: Request;
-  response: any;  // TODO: generic of <Response>;
+  response: any;  // TODO: generic of <Response>; id:772
 }
 
 /**

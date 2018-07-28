@@ -37,7 +37,7 @@ export class XHRConnection implements Connection {
    * `XMLHttpRequest`.
    */
   response: Observable<Response>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1132
   readyState !: ReadyState;
   constructor(req: Request, browserXHR: BrowserXhr, baseResponseOptions?: ResponseOptions) {
     this.request = req;
@@ -87,7 +87,7 @@ export class XHRConnection implements Connection {
         response.ok = isSuccess(status);
         if (response.ok) {
           responseObserver.next(response);
-          // TODO(gdi2290): defer complete if array buffer until done
+          // TODO (gdi2290): defer complete if array buffer until done id:770
           responseObserver.complete();
           return;
         }
@@ -150,7 +150,7 @@ export class XHRConnection implements Connection {
     });
   }
 
-  setDetectedContentType(req: any /** TODO Request */, _xhr: any /** XMLHttpRequest */) {
+  setDetectedContentType(req: any /** TODO Request Skip if a custom Content-Type header is provided id:793 Skip if a custom Content-Type header is provided */, _xhr: any /** XMLHttpRequest */) {
     // Skip if a custom Content-Type header is provided
     if (req.headers != null && req.headers.get('Content-Type') != null) {
       return;

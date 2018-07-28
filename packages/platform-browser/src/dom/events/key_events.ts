@@ -126,7 +126,7 @@ export class KeyEventsPlugin extends EventManagerPlugin {
    * @returns A callback function.
    */
   static eventCallback(fullKey: any, handler: Function, zone: NgZone): Function {
-    return (event: any /** TODO #9100 */) => {
+    return (event: any /** TODO #9100 id:862*/) => {
       if (KeyEventsPlugin.getEventFullKey(event) === fullKey) {
         zone.runGuarded(() => handler(event));
       }
@@ -135,7 +135,7 @@ export class KeyEventsPlugin extends EventManagerPlugin {
 
   /** @internal */
   static _normalizeKey(keyName: string): string {
-    // TODO: switch to a Map if the mapping grows too much
+    // TODO: switch to a Map if the mapping grows too much id:958
     switch (keyName) {
       case 'esc':
         return 'escape';

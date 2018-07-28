@@ -128,11 +128,11 @@ export function create(info: any /* ts.server.PluginCreateInfo */): ts.LanguageS
            preferences: ts.UserPreferences) =>
               tryCall(
                   undefined, () => ls.getCombinedCodeFix(scope, fixId, formatOptions, preferences)),
-      // TODO(kyliau): dummy implementation to compile with ts 2.8, create real one
+      // TODO (kyliau): dummy implementation to compile with ts 2.8, create real one id:872
       getSuggestionDiagnostics: (fileName: string) => [],
-      // TODO(kyliau): dummy implementation to compile with ts 2.8, create real one
+      // TODO (kyliau): dummy implementation to compile with ts 2.8, create real one id:800
       organizeImports: (scope: ts.CombinedCodeFixScope, formatOptions: ts.FormatCodeSettings) => [],
-      // TODO: dummy implementation to compile with ts 2.9, create a real one
+      // TODO: dummy implementation to compile with ts 2.9, create a real one id:831
       getEditsForFileRename:
           (oldFilePath: string, newFilePath: string, formatOptions: ts.FormatCodeSettings,
            preferences: ts.UserPreferences | undefined) => []
@@ -148,7 +148,7 @@ export function create(info: any /* ts.server.PluginCreateInfo */): ts.LanguageS
 
   function completionToEntry(c: Completion): ts.CompletionEntry {
     return {
-      // TODO: remove any and fix type error.
+      // TODO: remove any and fix type error. id:924
       kind: c.kind as any,
       name: c.name,
       sortText: c.sort,
@@ -231,7 +231,7 @@ export function create(info: any /* ts.server.PluginCreateInfo */): ts.LanguageS
 
   proxy.getQuickInfoAtPosition = function(fileName: string, position: number): ts.QuickInfo {
     let base = oldLS.getQuickInfoAtPosition(fileName, position);
-    // TODO(vicb): the tags property has been removed in TS 2.2
+    // TODO (vicb): the tags property has been removed in TS 2.2 id:1140
     tryOperation('get quick info', () => {
       const ours = ls.getHoverAt(fileName, position);
       if (ours) {
@@ -289,7 +289,7 @@ export function create(info: any /* ts.server.PluginCreateInfo */): ts.LanguageS
                    fileName: loc.fileName,
                    textSpan: {start: loc.span.start, length: loc.span.end - loc.span.start},
                    name: '',
-                   // TODO: remove any and fix type error.
+                   // TODO: remove any and fix type error. id:873
                    kind: 'definition' as any,
                    containerName: loc.fileName,
                    containerKind: 'file' as any,

@@ -14,7 +14,7 @@ export function makeProgram(...files: {name: string, contents: string}[]): ts.Pr
   return _makeProgram([getFakeCore(), ...files], {allowJs: true, checkJs: false}).program;
 }
 
-// TODO: unify this with the //packages/compiler-cli/test/ngtsc/fake_core package
+// TODO: unify this with the //packages/compiler-cli/test/ngtsc/fake_core package id:174
 export function getFakeCore() {
   return {
     name: 'node_modules/@angular/core/index.ts',

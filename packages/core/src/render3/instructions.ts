@@ -875,7 +875,7 @@ function saveResolvedLocalsInData(): void {
 function getOrCreateTView(
     template: ComponentTemplate<any>, directives: DirectiveDefListOrFactory | null,
     pipes: PipeDefListOrFactory | null, viewQuery: ComponentQuery<any>| null): TView {
-  // TODO(misko): reading `ngPrivateData` here is problematic for two reasons
+  // TODO (misko): reading `ngPrivateData` here is problematic for two reasons id:454
   // 1. It is a megamorphic call on each invocation.
   // 2. For nested embedded views (ngFor inside ngFor) the template instance is per
   //    outer template invocation, which means that no such property will exist
@@ -1495,7 +1495,7 @@ export function textBinding<T>(index: number, value: T | NO_CHANGE): void {
 /**
  * Create a directive and their associated content queries.
  *
- * NOTE: directives can be created in order other than the index order. They can also
+ * NOTE: directives can be created in order other than the index order. They can also id:543
  *       be retrieved before they are created in which case the value will be null.
  *
  * @param directive The directive instance.
@@ -2360,7 +2360,7 @@ export function bind<T>(value: T): T|NO_CHANGE {
  * Subtracting the offset from TView.bindingStartIndex gives the first index where the bindings
  * are stored.
  *
- * NOTE: reserveSlots instructions are only ever allowed at the very end of the creation block
+ * NOTE: reserveSlots instructions are only ever allowed at the very end of the creation block id:433
  */
 export function reserveSlots(numSlots: number) {
   // Init the slots with a unique `NO_CHANGE` value so that the first change is always detected

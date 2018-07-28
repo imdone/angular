@@ -60,11 +60,11 @@ export class TranslationBundle {
 }
 
 class I18nToHtmlVisitor implements i18n.Visitor {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:256
   private _srcMsg !: i18n.Message;
   private _contextStack: {msg: i18n.Message, mapper: (name: string) => string}[] = [];
   private _errors: I18nError[] = [];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:302
   private _mapper !: (name: string) => string;
 
   constructor(
@@ -104,7 +104,7 @@ class I18nToHtmlVisitor implements i18n.Visitor {
   visitIcu(icu: i18n.Icu, context?: any): any {
     const cases = Object.keys(icu.cases).map(k => `${k} {${icu.cases[k].visit(this)}}`);
 
-    // TODO(vicb): Once all format switch to using expression placeholders
+    // TODO (vicb): Once all format switch to using expression placeholders id:346
     // we should throw when the placeholder is not in the source message
     const exp = this._srcMsg.placeholders.hasOwnProperty(icu.expression) ?
         this._srcMsg.placeholders[icu.expression] :

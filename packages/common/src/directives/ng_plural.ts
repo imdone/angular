@@ -46,9 +46,9 @@ import {SwitchView} from './ng_switch';
  */
 @Directive({selector: '[ngPlural]'})
 export class NgPlural {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:94
   private _switchValue !: number;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:164
   private _activeView !: SwitchView;
   private _caseViews: {[k: string]: SwitchView} = {};
 

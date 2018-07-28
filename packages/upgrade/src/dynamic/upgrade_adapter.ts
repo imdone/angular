@@ -112,12 +112,12 @@ export class UpgradeAdapter {
    */
   private ng1ComponentsToBeUpgraded: {[name: string]: UpgradeNg1ComponentAdapterBuilder} = {};
   private upgradedProviders: StaticProvider[] = [];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1181
   private ngZone !: NgZone;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1113
   private ng1Module !: angular.IModule;
   private moduleRef: NgModuleRef<any>|null = null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1046
   private ng2BootstrapDeferred !: Deferred<angular.IInjectorService>;
 
   constructor(private ng2AppModule: Type<any>, private compilerOptions?: CompilerOptions) {
@@ -383,7 +383,7 @@ export class UpgradeAdapter {
     const upgrade = new UpgradeAdapterRef();
 
     // Make sure resumeBootstrap() only exists if the current bootstrap is deferred
-    const windowAngular = (window as any /** TODO #???? */)['angular'];
+    const windowAngular = (window as any /** TODO #???? id:992*/)['angular'];
     windowAngular.resumeBootstrap = undefined;
 
     this.ngZone.run(() => { angular.bootstrap(element, [this.ng1Module.name], config !); });
@@ -559,7 +559,7 @@ export class UpgradeAdapter {
             .then(() => {
               // Note: There is a bug in TS 2.4 that prevents us from
               // inlining this into @NgModule
-              // TODO(tbosch): find or file a bug against TypeScript for this.
+              // TODO (tbosch): find or file a bug against TypeScript for this. id:1078
               const ngModule = {
                 providers: [
                   {provide: $INJECTOR, useFactory: () => ng1Injector},
@@ -611,7 +611,7 @@ export class UpgradeAdapter {
  * to preserve the synchronous nature of AngularJS's $compile.
  */
 class ParentInjectorPromise {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1182
   private injector !: Injector;
   private callbacks: ((injector: Injector) => any)[] = [];
 

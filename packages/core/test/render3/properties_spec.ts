@@ -97,7 +97,7 @@ describe('elementProperty', () => {
     let idDir: IdDir;
 
     class MyButton {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:640
       disabled !: boolean;
 
       static ngDirectiveDef = defineDirective({
@@ -109,7 +109,7 @@ describe('elementProperty', () => {
     }
 
     class OtherDir {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:648
       id !: number;
       clickStream = new EventEmitter();
 
@@ -123,7 +123,7 @@ describe('elementProperty', () => {
     }
 
     class OtherDisabledDir {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:851
       disabled !: boolean;
 
       static ngDirectiveDef = defineDirective({
@@ -135,7 +135,7 @@ describe('elementProperty', () => {
     }
 
     class IdDir {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:628
       idNumber !: string;
 
       static ngDirectiveDef = defineDirective({
@@ -210,7 +210,7 @@ describe('elementProperty', () => {
       let comp: Comp;
 
       class Comp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:580
         id !: number;
 
         static ngComponentDef = defineComponent({
@@ -359,9 +359,9 @@ describe('elementProperty', () => {
   describe('attributes and input properties', () => {
     let myDir: MyDir;
     class MyDir {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:641
       role !: string;
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:649
       direction !: string;
       changeStream = new EventEmitter();
 
@@ -377,7 +377,7 @@ describe('elementProperty', () => {
 
     let dirB: MyDirB;
     class MyDirB {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:852
       roleB !: string;
 
       static ngDirectiveDef = defineDirective({

@@ -42,16 +42,16 @@ class HelloRootCmp2 {
 
 @Component({selector: 'hello-app', template: ''})
 class HelloRootCmp3 {
-  appBinding: any /** TODO #9100 */;
+  appBinding: any /** TODO #9100 id:932*/;
 
-  constructor(@Inject('appBinding') appBinding: any /** TODO #9100 */) {
+  constructor(@Inject('appBinding') appBinding: any /** TODO #9100 id:1148*/) {
     this.appBinding = appBinding;
   }
 }
 
 @Component({selector: 'hello-app', template: ''})
 class HelloRootCmp4 {
-  appRef: any /** TODO #9100 */;
+  appRef: any /** TODO #9100 id:881*/;
 
   constructor(@Inject(ApplicationRef) appRef: ApplicationRef) { this.appRef = appRef; }
 }
@@ -79,7 +79,7 @@ class HelloUrlCmp {
 
 @Directive({selector: '[someDir]', host: {'[title]': 'someDir'}})
 class SomeDirective {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:863
   @Input()
   someDir !: string;
 }
@@ -129,8 +129,8 @@ function bootstrap(
 }
 
 {
-  let el: any /** TODO #9100 */, el2: any /** TODO #9100 */, testProviders: Provider[],
-      lightDom: any /** TODO #9100 */;
+  let el: any /** TODO #9100 id:959*/, el2: any /** TODO #9100 */, testProviders: Provider[],
+      lightDom: any /** TODO #9100 id:933*/;
 
   describe('bootstrap factory method', () => {
     if (isNode) return;

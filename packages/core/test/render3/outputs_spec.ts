@@ -358,7 +358,7 @@ describe('outputs', () => {
     let otherDir: OtherChangeDir;
 
     class OtherChangeDir {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:647
       change !: boolean;
 
       static ngDirectiveDef = defineDirective({

@@ -14,7 +14,7 @@ import {renderComponent, toHtml} from '../render_util';
 describe('local references', () => {
   type $RenderFlags$ = $r3$.ɵRenderFlags;
 
-  // TODO(misko): currently disabled until local refs are working
+  // TODO (misko): currently disabled until local refs are working id:620
   xit('should translate DOM structure', () => {
     type $MyComponent$ = MyComponent;
 

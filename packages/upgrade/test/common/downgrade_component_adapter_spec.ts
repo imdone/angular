@@ -111,17 +111,17 @@ withEachNg1Version(() => {
         $evalAsync(exp: angular.Ng1Expression, locals?: any) {
           return () => {};
         }
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:1080
         $$childTail !: angular.IScope;
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:1184
         $$childHead !: angular.IScope;
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:1116
         $$nextSibling !: angular.IScope;
         [key: string]: any;
         $id = 'mockScope';
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:1049
         $parent !: angular.IScope;
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:1095
         $root !: angular.IScope;
       }
 

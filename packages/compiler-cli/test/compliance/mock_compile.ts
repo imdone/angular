@@ -61,7 +61,7 @@ export function expectEmit(
     source: string, expected: string, description: string,
     assertIdentifiers?: {[name: string]: RegExp}) {
   // turns `// ...` into `…`
-  // remove `// TODO` comment lines
+  // remove `// TODO ` comment lines id:182
   expected = expected.replace(/\/\/\s*\.\.\./g, ELLIPSIS).replace(/\/\/\s*TODO.*?\n/g, '');
 
   const pieces = tokenize(expected);

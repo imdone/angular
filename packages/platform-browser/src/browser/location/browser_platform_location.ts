@@ -23,9 +23,9 @@ import {supportsState} from './history';
  */
 @Injectable()
 export class BrowserPlatformLocation extends PlatformLocation {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:860
   public readonly location !: Location;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:837
   private _history !: History;
 
   constructor(@Inject(DOCUMENT) private _doc: any) {

@@ -277,7 +277,7 @@ import {TraceEventFactory} from '../trace_event_factory';
 
       it('should execute a dummy script before reading them',
          inject([AsyncTestCompleter], (async: AsyncTestCompleter) => {
-           // TODO(tbosch): This seems to be a bug in ChromeDriver:
+           // TODO (tbosch): This seems to be a bug in ChromeDriver: id:113
            // Sometimes it does not report the newest events of the performance log
            // to the WebDriver client unless a script is executed...
            createExtension([]).readPerfLog().then((_) => {

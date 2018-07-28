@@ -67,7 +67,7 @@ function routerFactory($q, $location, $browser, $rootScope, $injector, $routerRo
     }
   }
 
-  //TODO: this is a hack to replace the exiting implementation at run-time
+  //TODO: this is a hack to replace the exiting implementation at run-time id:133
   exports.getCanActivateHook = function (directiveName) {
     var controller = getComponentConstructor(directiveName);
     return controller.$canActivate && function (next, prev) {

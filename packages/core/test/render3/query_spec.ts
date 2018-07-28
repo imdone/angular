@@ -928,7 +928,7 @@ describe('query', () => {
          * }
          */
         class Cmpt {
-          // TODO(issue/24571): remove '!'.
+          // TODO (issue/24571): remove '!'. id:853
           value !: string[];
           query: any;
           static ngComponentDef = defineComponent({
@@ -1675,7 +1675,7 @@ describe('query', () => {
 
       class WithContentDirective {
         // @ContentChildren('foo') foos;
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:630
         foos !: QueryList<ElementRef>;
 
         static ngComponentDef = defineDirective({
@@ -1718,7 +1718,7 @@ describe('query', () => {
 
       class WithContentComponent {
         // @ContentChildren('foo') foos;
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:582
         foos !: QueryList<ElementRef>;
 
         static ngComponentDef = defineComponent({

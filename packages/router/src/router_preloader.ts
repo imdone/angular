@@ -72,7 +72,7 @@ export class NoPreloading implements PreloadingStrategy {
 @Injectable()
 export class RouterPreloader implements OnDestroy {
   private loader: RouterConfigLoader;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:975
   private subscription !: Subscription;
 
   constructor(
@@ -96,7 +96,7 @@ export class RouterPreloader implements OnDestroy {
     return this.processRoutes(ngModule, this.router.config);
   }
 
-  // TODO(jasonaden): This class relies on code external to the class to call setUpPreloading. If
+  // TODO (jasonaden): This class relies on code external to the class to call setUpPreloading. If id:949
   // this hasn't been done, ngOnDestroy will fail as this.subscription will be undefined. This
   // should be refactored.
   ngOnDestroy(): void { this.subscription.unsubscribe(); }

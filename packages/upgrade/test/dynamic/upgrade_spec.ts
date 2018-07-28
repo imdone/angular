@@ -217,7 +217,7 @@ withEachNg1Version(() => {
 
            @Component({selector: 'my-app', template: '<my-child [value]="value"></my-child>'})
            class AppComponent {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:1081
              value !: number;
              constructor() { appComponent = this; }
            }
@@ -227,7 +227,7 @@ withEachNg1Version(() => {
              template: '<div>{{valueFromPromise}}',
            })
            class ChildComponent {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:1185
              valueFromPromise !: number;
              @Input()
              set value(v: number) { expect(NgZone.isInAngularZone()).toBe(true); }
@@ -498,9 +498,9 @@ withEachNg1Version(() => {
            class Ng2Component implements OnChanges {
              ngOnChangesCount = 0;
              firstChangesCount = 0;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:1117
              initialValue !: string;
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:1050
              @Input() foo !: string;
 
              ngOnChanges(changes: SimpleChanges) {
@@ -548,7 +548,7 @@ withEachNg1Version(() => {
            const adapter: UpgradeAdapter = new UpgradeAdapter(forwardRef(() => Ng2Module));
            const ng1Module = angular.module('ng1', []);
 
-           ng1Module.run(($rootScope: any /** TODO #9100 */) => { $rootScope.modelA = 'A'; });
+           ng1Module.run(($rootScope: any /** TODO #9100 id:1096*/) => { $rootScope.modelA = 'A'; });
 
            let ng2Instance: Ng2;
            @Component({selector: 'ng2', template: '{{_value}}'})
@@ -746,7 +746,7 @@ withEachNg1Version(() => {
       it('should correctly project structural directives', async(() => {
            @Component({selector: 'ng2', template: 'ng2-{{ itemId }}(<ng-content></ng-content>)'})
            class Ng2Component {
-             // TODO(issue/24571): remove '!'.
+             // TODO (issue/24571): remove '!'. id:1082
              @Input() itemId !: string;
            }
 

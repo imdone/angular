@@ -112,7 +112,7 @@ export function compileInjector(meta: R3InjectorMetadata): R3InjectorDef {
   return {expression, type};
 }
 
-// TODO(alxhub): integrate this with `compileNgModule`. Currently the two are separate operations.
+// TODO (alxhub): integrate this with `compileNgModule`. Currently the two are separate operations. id:348
 export function compileNgModuleFromRender2(
     ctx: OutputContext, ngModule: CompileShallowModuleMetadata,
     injectableCompiler: InjectableCompiler): void {

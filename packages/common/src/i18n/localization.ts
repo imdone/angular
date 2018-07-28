@@ -92,7 +92,7 @@ export class NgLocaleLocalization extends NgLocalization {
  * @experimental
  */
 export function getPluralCase(locale: string, nLike: number | string): Plural {
-  // TODO(vicb): lazy compute
+  // TODO (vicb): lazy compute id:149
   if (typeof nLike === 'string') {
     nLike = parseInt(<string>nLike, 10);
   }

@@ -7,7 +7,7 @@
  */
 
 
-(function(global: any /** TODO #9100 */) {
+(function(global: any /** TODO #9100 id:66*/) {
 
   writeScriptTag('/all/benchmarks/vendor/core.js');
   writeScriptTag('/all/benchmarks/vendor/zone.js');
@@ -79,13 +79,13 @@
 
 
     // BOOTSTRAP the app!
-    System.import('index').then(function(m: any /** TODO #9100 */) {
+    System.import('index').then(function(m: any /** TODO #9100 id:135*/) {
       m.main();
     }, console.error.bind(console));
   }
 
 
-  function writeScriptTag(scriptUrl: any /** TODO #9100 */, onload?: any /** TODO #9100 */) {
+  function writeScriptTag(scriptUrl: any /** TODO #9100 id:82*/, onload?: any /** TODO #9100 */) {
     document.write(`<script src="${scriptUrl}" onload="${onload}"></script>`);
   }
 }(window));

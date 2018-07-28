@@ -156,7 +156,7 @@ import {Injector, MeasureValues, Metric, Options, Reporter, Sampler, Validator, 
          });
          sampler.sample().then((state) => {
            expect(state.validSample).toBe(validSample);
-           // TODO(tbosch): Why does this fail??
+           // TODO (tbosch): Why does this fail?? id:159
            // expect(log).toEqual([
            //   ['validate', [{'script': 0}], null],
            //   ['validate', [{'script': 0}, {'script': 1}], validSample]
@@ -182,7 +182,7 @@ import {Injector, MeasureValues, Metric, Options, Reporter, Sampler, Validator, 
            execute: EMPTY_EXECUTE
          });
          sampler.sample().then((_) => {
-           // TODO(tbosch): Why does this fail??
+           // TODO (tbosch): Why does this fail?? id:188
            // expect(log).toEqual([
            //   ['reportMeasureValues', 0, {'script': 0}],
            //   ['reportMeasureValues', 1, {'script': 1}],

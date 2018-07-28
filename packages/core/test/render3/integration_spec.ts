@@ -369,7 +369,7 @@ describe('render3 integration test', () => {
        * % }
        */
       class MyComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:638
         condition !: boolean;
         static ngComponentDef = defineComponent({
           type: MyComp,
@@ -485,9 +485,9 @@ describe('render3 integration test', () => {
     }
 
     class ChildComponent {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:646
       beforeTree !: Tree;
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:849
       afterTree !: Tree;
       static ngComponentDef = defineComponent({
         selectors: [['child']],

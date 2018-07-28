@@ -12,14 +12,14 @@ export class HeroService {
   constructor(private messageService: MessageService) { }
 
   getHeroes(): Observable<Hero[]> {
-    // TODO: send the message _after_ fetching the heroes
+    // TODO: send the message _after_ fetching the heroes id:49
     this.messageService.add('HeroService: fetched heroes');
     return of(HEROES);
   }
 
   // #docregion getHero
   getHero(id: number): Observable<Hero> {
-    // TODO: send the message _after_ fetching the hero
+    // TODO: send the message _after_ fetching the hero id:8
     this.messageService.add(`HeroService: fetched hero id=${id}`);
     return of(HEROES.find(hero => hero.id === id));
   }

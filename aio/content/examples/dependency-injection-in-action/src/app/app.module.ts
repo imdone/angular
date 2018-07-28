@@ -56,7 +56,7 @@ const c_components = [
     FormsModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(HeroData)
-    // AppRoutingModule TODO: add routes
+    // AppRoutingModule TODO: add routes id:34
   ],
   declarations: [
     declarations,

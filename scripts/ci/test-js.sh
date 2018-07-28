@@ -9,7 +9,7 @@ source ${thisDir}/_travis-fold.sh
 
 # Run unit tests for our tools/ directory
 travisFoldStart "test.unit.tools"
-  # TODO(i): could this be rolled into the tools tests above? why is it separate?
+  # TODO (i): could this be rolled into the tools tests above? why is it separate? id:1128
   travisFoldStart "test.unit.validate-commit-message"
     (
       cd tools/validate-commit-message
@@ -26,7 +26,7 @@ travisFoldEnd "test.unit.node"
 
 
 # rebuild to revert files in @angular/compiler/test
-# TODO(tbosch): remove this and teach karma to serve the right files
+# TODO (tbosch): remove this and teach karma to serve the right files id:1061
 travisFoldStart "test.unit.rebuildHack"
   node dist/tools/@angular/compiler-cli/src/main -p packages/tsconfig-metadata.json
 travisFoldStart "test.unit.rebuildHack"

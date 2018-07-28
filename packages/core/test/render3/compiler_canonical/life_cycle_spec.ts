@@ -25,7 +25,7 @@ describe('lifecycle hooks', () => {
 
   @Component({selector: 'lifecycle-comp', template: ``})
   class LifecycleComp {
-    // TODO(issue/24571): remove '!'.
+    // TODO (issue/24571): remove '!'. id:843
     @Input('name') nameMin !: string;
 
     ngOnChanges() { events.push('changes' + this.nameMin); }

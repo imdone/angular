@@ -18,7 +18,7 @@ export function convertPerfProfileToEvents(perfProfile: any): any[] {
     const categorizedEventName = categorizeEvent(eventName);
     let args: {[key: string]: any}|undefined = undefined;
     if (categorizedEventName == 'gc') {
-      // TODO: We cannot measure heap size at the moment
+      // TODO: We cannot measure heap size at the moment id:157
       args = {usedHeapSize: 0};
     }
     if (startTime == endTime) {
@@ -78,7 +78,7 @@ export function convertPerfProfileToEvents(perfProfile: any): any[] {
   return finishedEvents.filter(function(event) { return event['name'] != 'unknown'; });
 }
 
-// TODO: this is most likely not exhaustive.
+// TODO: this is most likely not exhaustive. id:186
 export function categorizeEvent(eventName: string): string {
   if (eventName.indexOf('PresShell::Paint') > -1) {
     return 'render';

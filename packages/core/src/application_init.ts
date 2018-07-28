@@ -24,9 +24,9 @@ export const APP_INITIALIZER = new InjectionToken<Array<() => void>>('Applicatio
  */
 @Injectable()
 export class ApplicationInitStatus {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:419
   private resolve !: Function;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:363
   private reject !: Function;
   private initialized = false;
   public readonly donePromise: Promise<any>;

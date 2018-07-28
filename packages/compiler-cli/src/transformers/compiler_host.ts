@@ -43,7 +43,7 @@ export interface CodeGenerator {
 
 function assert<T>(condition: T | null | undefined) {
   if (!condition) {
-    // TODO(chuckjaz): do the right thing
+    // TODO (chuckjaz): do the right thing id:107
   }
   return condition !;
 }
@@ -70,13 +70,13 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter implements ts.CompilerHos
   private emitter = new TypeScriptEmitter();
   private metadataReaderHost: MetadataReaderHost;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:177
   getCancellationToken !: () => ts.CancellationToken;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:206
   getDefaultLibLocation !: () => string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:324
   trace !: (s: string) => void;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:229
   getDirectories !: (path: string) => string[];
   directoryExists?: (directoryName: string) => boolean;
 
@@ -152,7 +152,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter implements ts.CompilerHos
   // ResolvedModule.isExternalLibraryImport
   // (see our isSourceFile method).
   resolveModuleNames(moduleNames: string[], containingFile: string): ts.ResolvedModule[] {
-    // TODO(tbosch): this seems to be a typing error in TypeScript,
+    // TODO (tbosch): this seems to be a typing error in TypeScript, id:209
     // as it contains assertions that the result contains the same number of entries
     // as the given module names.
     return <ts.ResolvedModule[]>moduleNames.map(
@@ -351,7 +351,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter implements ts.CompilerHos
   }
 
   shouldGenerateFile(fileName: string): {generate: boolean, baseFileName?: string} {
-    // TODO(tbosch): allow generating files that are not in the rootDir
+    // TODO (tbosch): allow generating files that are not in the rootDir id:178
     // See https://github.com/angular/angular/issues/19337
     if (!isInRootDir(fileName, this.options)) {
       return {generate: false};
@@ -384,7 +384,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter implements ts.CompilerHos
   }
 
   shouldGenerateFilesFor(fileName: string) {
-    // TODO(tbosch): allow generating files that are not in the rootDir
+    // TODO (tbosch): allow generating files that are not in the rootDir id:207
     // See https://github.com/angular/angular/issues/19337
     return !GENERATED_FILES.test(fileName) && this.isSourceFile(fileName) &&
         isInRootDir(fileName, this.options);
@@ -424,7 +424,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter implements ts.CompilerHos
     if (sf) {
       addReferencesToSourceFile(sf, genFileNames);
     }
-    // TODO(tbosch): TypeScript's typings for getSourceFile are incorrect,
+    // TODO (tbosch): TypeScript's typings for getSourceFile are incorrect, id:325
     // as it can very well return undefined.
     return sf !;
   }

@@ -10,7 +10,7 @@ import * as webdriver from 'selenium-webdriver';
 declare var browser: any;
 declare var expect: any;
 
-// TODO (juliemr): remove this method once this becomes a protractor plugin
+// TODO (juliemr): remove this method once this becomes a protractor plugin id:739
 export function verifyNoBrowserErrors() {
   browser.manage().logs().get('browser').then(function(browserLog: any[]) {
     const errors: any[] = [];

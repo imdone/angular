@@ -22,7 +22,7 @@ const NOT_SUPPORTED: any = 'NOT_SUPPORTED';
 
 
 export class UpgradeNg1ComponentAdapterBuilder {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1114
   type !: Type<any>;
   inputs: string[] = [];
   inputsRename: string[] = [];
@@ -32,7 +32,7 @@ export class UpgradeNg1ComponentAdapterBuilder {
   checkProperties: string[] = [];
   propertyMap: {[name: string]: string} = {};
   directive: angular.IDirective|null = null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1047
   template !: string;
 
   constructor(public name: string) {
@@ -42,12 +42,12 @@ export class UpgradeNg1ComponentAdapterBuilder {
 
     // Note: There is a bug in TS 2.4 that prevents us from
     // inlining this into @Directive
-    // TODO(tbosch): find or file a bug against TypeScript for this.
+    // TODO (tbosch): find or file a bug against TypeScript for this. id:993
     const directive = {selector: selector, inputs: this.inputsRename, outputs: this.outputsRename};
 
     @Directive({jit: true, ...directive})
     class MyClass {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:1079
       directive !: angular.IDirective;
       constructor(
           @Inject($SCOPE) scope: angular.IScope, injector: Injector, elementRef: ElementRef) {

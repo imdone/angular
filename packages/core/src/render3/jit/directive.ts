@@ -65,7 +65,7 @@ export function compileComponent(type: Type<any>, metadata: Component): void {
         }
 
         // Compile the component metadata, including template, into an expression.
-        // TODO(alxhub): implement inputs, outputs, queries, etc.
+        // TODO (alxhub): implement inputs, outputs, queries, etc. id:280
         const res = compileR3Component(
             {
               ...directiveMetadata(type, metadata),

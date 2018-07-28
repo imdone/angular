@@ -26,9 +26,9 @@ const JSONP_ERR_WRONG_METHOD = 'JSONP requests must use GET request method.';
  * @deprecated see https://angular.io/guide/http
  */
 export class JSONPConnection implements Connection {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:792
   private _id !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:823
   private _script !: Element;
   private _responseData: any;
   private _finished: boolean = false;
@@ -36,7 +36,7 @@ export class JSONPConnection implements Connection {
   /**
    * The {@link ReadyState} of this request.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:916
   readyState !: ReadyState;
 
   /**

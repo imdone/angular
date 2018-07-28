@@ -68,7 +68,7 @@ export function convertInjectableProviderToFactory(
   if (!provider) {
     const reflectionCapabilities = new ReflectionCapabilities();
     const deps = reflectionCapabilities.parameters(type);
-    // TODO - convert to flags.
+    // TODO - convert to flags. id:536
     return () => new type(...injectArgs(deps as any[]));
   }
 

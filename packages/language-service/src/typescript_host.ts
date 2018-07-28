@@ -61,32 +61,32 @@ export class DummyResourceLoader extends ResourceLoader {
  * @experimental
  */
 export class TypeScriptServiceHost implements LanguageServiceHost {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:801
   private _resolver !: CompileMetadataResolver | null;
   private _staticSymbolCache = new StaticSymbolCache();
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:832
   private _summaryResolver !: AotSummaryResolver;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:925
   private _staticSymbolResolver !: StaticSymbolResolver;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1141
   private _reflector !: StaticReflector | null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:874
   private _reflectorHost !: ReflectorHost;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:802
   private _checker !: ts.TypeChecker | null;
   private _typeCache: Symbol[] = [];
   private context: string|undefined;
   private lastProgram: ts.Program|undefined;
   private modulesOutOfDate: boolean = true;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:833
   private analyzedModules !: NgAnalyzedModules | null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:926
   private service !: LanguageService;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1142
   private fileToComponent !: Map<string, StaticSymbol>| null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:875
   private templateReferences !: string[] | null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:803
   private collectedErrors !: Map<string, any[]>| null;
   private fileVersions = new Map<string, string>();
 
@@ -140,7 +140,7 @@ export class TypeScriptServiceHost implements LanguageServiceHost {
       }
     } else {
       this.ensureTemplateMap();
-      // TODO: Cannocalize the file?
+      // TODO: Cannocalize the file? id:834
       const componentType = this.fileToComponent !.get(fileName);
       if (componentType) {
         return this.getSourceFromType(
@@ -493,7 +493,7 @@ export class TypeScriptServiceHost implements LanguageServiceHost {
     if (parentNode.kind !== ts.SyntaxKind.PropertyAssignment) {
       return TypeScriptServiceHost.missingTemplate;
     } else {
-      // TODO: Is this different for a literal, i.e. a quoted property name like "template"?
+      // TODO: Is this different for a literal, i.e. a quoted property name like "template"? id:927
       if ((parentNode as any).name.text !== 'template') {
         return TypeScriptServiceHost.missingTemplate;
       }

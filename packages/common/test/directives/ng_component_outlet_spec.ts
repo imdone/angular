@@ -224,21 +224,21 @@ const TEST_CMP_TEMPLATE =
     `<ng-template *ngComponentOutlet="currentComponent; injector: injector; content: projectables; ngModuleFactory: module;"></ng-template>`;
 @Component({selector: 'test-cmp', template: TEST_CMP_TEMPLATE})
 class TestComponent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:97
   currentComponent !: Type<any>| null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:167
   injector !: Injector;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:196
   projectables !: any[][];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:121
   module !: NgModuleFactory<any>;
 
   get cmpRef(): ComponentRef<any>|null { return this.ngComponentOutlet['_componentRef']; }
   set cmpRef(value: ComponentRef<any>|null) { this.ngComponentOutlet['_componentRef'] = value; }
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:151
   @ViewChildren(TemplateRef) tplRefs !: QueryList<TemplateRef<any>>;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:98
   @ViewChild(NgComponentOutlet) ngComponentOutlet !: NgComponentOutlet;
 
   constructor(public vcRef: ViewContainerRef) {}

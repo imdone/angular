@@ -356,14 +356,14 @@ class SomeComponent {
 
       @Component({template: '<ng-container #vc></ng-container>'})
       class ContainerComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:390
         @ViewChild('vc', {read: ViewContainerRef})
         vc !: ViewContainerRef;
       }
 
       @Component({template: '<ng-template #t>Dynamic content</ng-template>'})
       class EmbeddedViewComp {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:501
         @ViewChild(TemplateRef)
         tplRef !: TemplateRef<Object>;
       }

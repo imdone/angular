@@ -418,9 +418,9 @@ withEachNg1Version(() => {
          class Ng2Component implements OnChanges {
            ngOnChangesCount = 0;
            firstChangesCount = 0;
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:1097
            initialValue !: string;
-           // TODO(issue/24571): remove '!'.
+           // TODO (issue/24571): remove '!'. id:1083
            @Input() foo !: string;
 
            ngOnChanges(changes: SimpleChanges) {

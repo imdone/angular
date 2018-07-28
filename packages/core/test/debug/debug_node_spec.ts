@@ -141,12 +141,12 @@ class LocalsComp {
  `
 })
 class BankAccount {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:503
   @Input() bank !: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:470
   @Input('account') id !: string;
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:685
   normalizedBankName !: string;
 }
 

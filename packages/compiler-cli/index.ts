@@ -18,7 +18,7 @@ export * from './src/transformers/entry_points';
 
 export * from './src/perform_compile';
 
-// TODO(tbosch): remove this once cli 1.5 is fully released,
+// TODO (tbosch): remove this once cli 1.5 is fully released, id:198
 // and usages in G3 are changed to `CompilerOptions`.
 export {CompilerOptions as AngularCompilerOptions} from './src/transformers/api';
 export {NgTools_InternalApi_NG_2 as __NGTOOLS_PRIVATE_API_2} from './src/ngtools_api';

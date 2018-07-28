@@ -114,7 +114,7 @@ export class MockCache {
     if (url.startsWith(this.origin)) {
       url = '/' + url.substr(this.origin.length);
     }
-    // TODO: cleanup typings. Typescript doesn't know this can resolve to undefined.
+    // TODO: cleanup typings. Typescript doesn't know this can resolve to undefined. id:904
     let res = this.cache.get(url);
     if (res !== undefined) {
       res = res.clone();

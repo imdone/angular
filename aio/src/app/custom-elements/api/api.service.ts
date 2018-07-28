@@ -41,7 +41,7 @@ export class ApiService implements OnDestroy {
 
     if (this.firstTime) {
       this.firstTime = false;
-      this.fetchSections(); // TODO: get URL for fetchSections by configuration?
+      this.fetchSections(); // TODO: get URL for fetchSections by configuration? id:51
 
       // makes sectionsSubject hot; subscribe ensures stays alive (always refCount > 0);
       this._sections.subscribe(sections => this.logger.log('ApiService got API sections') );
@@ -64,7 +64,7 @@ export class ApiService implements OnDestroy {
   * @param {string} [src] - Name of the api list JSON file
   */
   fetchSections(src?: string) {
-    // TODO: get URL by configuration?
+    // TODO: get URL by configuration? id:10
     const url = this.apiBase + (src || this.apiListJsonDefault);
     this.http.get<ApiSection[]>(url)
       .pipe(
@@ -74,7 +74,7 @@ export class ApiService implements OnDestroy {
       .subscribe(
         sections => this.sectionsSubject.next(sections),
         (err: HttpErrorResponse) => {
-          // TODO: handle error
+          // TODO: handle error id:43
           this.logger.error(err);
           throw err; // rethrow for now.
         }

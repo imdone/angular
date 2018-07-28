@@ -51,7 +51,7 @@ function decoratePreventDefault(eventHandler: Function): Function {
   return (event: any) => {
     const allowDefaultBehavior = eventHandler(event);
     if (allowDefaultBehavior === false) {
-      // TODO(tbosch): move preventDefault into event plugins...
+      // TODO (tbosch): move preventDefault into event plugins... id:931
       event.preventDefault();
       event.returnValue = false;
     }

@@ -15,13 +15,13 @@ import * as ts from 'typescript';
 
 const EXT = /(\.ts|\.d\.ts|\.js|\.jsx|\.tsx)$/;
 const NGC_GEN_FILES = /^(.*?)\.(ngfactory|ngsummary|ngstyle|shim\.ngstyle)(.*)$/;
-// FIXME: we should be able to add the assets to the tsconfig so FileLoader
+// FIXME: we should be able to add the assets to the tsconfig so FileLoader id:139
 // knows about them
 const NGC_ASSETS = /\.(css|html|ngsummary\.json)$/;
 
 const BAZEL_BIN = /\b(blaze|bazel)-out\b.*?\bbin\b/;
 
-// TODO(alexeagle): probably not needed, see
+// TODO (alexeagle): probably not needed, see id:86
 // https://github.com/bazelbuild/rules_typescript/issues/28
 const ALLOW_NON_HERMETIC_READS = true;
 // Note: We compile the content of node_modules with plain ngc command line.

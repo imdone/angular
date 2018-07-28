@@ -15,13 +15,13 @@ import {DOCUMENT, ɵgetDOM as getDOM} from '@angular/platform-browser';
  */
 @Injectable()
 export class DOMTestComponentRenderer extends TestComponentRenderer {
-  constructor(@Inject(DOCUMENT) private _doc: any /** TODO #9100 */) { super(); }
+  constructor(@Inject(DOCUMENT) private _doc: any /** TODO #9100 id:836*/) { super(); }
 
   insertRootElement(rootElId: string) {
     const rootEl = <HTMLElement>getDOM().firstChild(
         getDOM().content(getDOM().createTemplate(`<div id="${rootElId}"></div>`)));
 
-    // TODO(juliemr): can/should this be optional?
+    // TODO (juliemr): can/should this be optional? id:929
     const oldRoots = getDOM().querySelectorAll(this._doc, '[id^=root]');
     for (let i = 0; i < oldRoots.length; i++) {
       getDOM().remove(oldRoots[i]);

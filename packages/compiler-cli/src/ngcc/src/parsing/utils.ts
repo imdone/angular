@@ -26,7 +26,7 @@ const NODE_MODULES_REGEX = /(?:^|\/)node_modules\//;
  * @param rootDirectory the directory in which we should search.
  */
 export function findAllPackageJsonFiles(rootDirectory: string): string[] {
-  // TODO(gkalpak): Investigate whether skipping `node_modules/` directories (instead of traversing
+  // TODO (gkalpak): Investigate whether skipping `node_modules/` directories (instead of traversing id:225
   //                them and filtering out the results later) makes a noticeable difference.
   const paths = Array.from(find(rootDirectory));
   return paths.filter(

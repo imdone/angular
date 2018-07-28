@@ -230,7 +230,7 @@ export function outOfBoundsError(index: number) {
   return Error(`Index ${index} is out-of-bounds.`);
 }
 
-// TODO: add a working example after alpha38 is released
+// TODO: add a working example after alpha38 is released id:271
 /**
  * Thrown when a multi provider and a regular provider are bound to the same token.
  *

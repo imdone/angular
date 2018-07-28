@@ -737,7 +737,7 @@ describe('ng program', () => {
         {
           module: {name: 'MainModule', filePath: path.resolve(testSupport.basePath, 'src/main.ts')},
           referencedModule: {
-            name: undefined as any as string,  // TODO: Review use of `any` here (#19904)
+            name: undefined as any as string,  // TODO: Review use of `any` here (#19904) id:334
             filePath: path.resolve(testSupport.basePath, 'src/child.ts')
           },
           route: './child'

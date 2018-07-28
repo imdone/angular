@@ -29,7 +29,7 @@ let lastCreatedRenderer: Renderer2;
   describe('Web Worker Renderer v2', () => {
     // Don't run on server...
     if (!getDOM().supportsDOMEvents()) return;
-    // TODO(tbosch): investigate why this is failing on iOS7 for unrelated reasons
+    // TODO (tbosch): investigate why this is failing on iOS7 for unrelated reasons id:970
     // Note: it's hard to debug this as SauceLabs starts with iOS8. Maybe drop
     // iOS7 altogether?
     if (browserDetection.isIOS7) return;

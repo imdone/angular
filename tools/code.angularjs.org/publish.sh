@@ -15,7 +15,7 @@ function init {
   TMP_DIR=$(resolveDir ../../tmp)
   BUILD_DIR=$(resolveDir ../../dist/js/bundle)
   REPO_DIR=$TMP_DIR/code.angularjs.org
-  # TODO: replace with version read from the bundle dir.
+  # TODO: replace with version read from the bundle dir. id:1093
   NEW_VERSION=$VERSION_NUMBER
   if [[ "$NEW_VERSION" =~ sha ]]; then
     IS_SNAPSHOT_BUILD=true

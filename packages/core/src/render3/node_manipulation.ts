@@ -186,7 +186,7 @@ export function findComponentHost(lViewData: LViewData): LElementNode {
 }
 
 /**
- * NOTE: for performance reasons, the possible actions are inlined within the function instead of
+ * NOTE: for performance reasons, the possible actions are inlined within the function instead of id:546
  * being passed as an argument.
  */
 function executeNodeAction(

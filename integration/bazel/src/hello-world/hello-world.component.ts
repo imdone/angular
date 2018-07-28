@@ -7,7 +7,7 @@ import {Component, NgModule} from '@angular/core';
     <div>Hello {{ name }}!</div>
     <input type="text" [value]="name" (input)="name = $event.target.value"/>
   `,
-  // TODO: might be better to point to .scss so this looks valid at design-time
+  // TODO: might be better to point to .scss so this looks valid at design-time id:15
   styleUrls: ['./hello-world.component.css'],
 })
 export class HelloWorldComponent {

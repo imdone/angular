@@ -44,7 +44,7 @@ export function jsonpFactory(jsonpBackend: JSONPBackend, requestOptions: Request
  */
 @NgModule({
   providers: [
-    // TODO(pascal): use factory type annotations once supported in DI
+    // TODO (pascal): use factory type annotations once supported in DI id:794
     // issue: https://github.com/angular/angular/issues/3183
     {provide: Http, useFactory: httpFactory, deps: [XHRBackend, RequestOptions]},
     BrowserXhr,
@@ -64,7 +64,7 @@ export class HttpModule {
  */
 @NgModule({
   providers: [
-    // TODO(pascal): use factory type annotations once supported in DI
+    // TODO (pascal): use factory type annotations once supported in DI id:825
     // issue: https://github.com/angular/angular/issues/3183
     {provide: Jsonp, useFactory: jsonpFactory, deps: [JSONPBackend, RequestOptions]},
     BrowserJsonp,

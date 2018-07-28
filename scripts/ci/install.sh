@@ -21,7 +21,7 @@ fi
 mkdir -p ${LOGS_DIR}
 
 
-# TODO: install nvm?? it's already on travis so we don't need it
+# TODO: install nvm?? it's already on travis so we don't need it id:1060
 #curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 
 
@@ -55,7 +55,7 @@ if [[ ${TRAVIS} &&
   # angular.io: Install all yarn dependencies according to angular.io/yarn.lock
   travisFoldStart "yarn-install.aio"
     (
-      # HACK (don't submit with this): Build Angular
+      # HACK (don't submit with this): Build Angular id:1106
       ./build.sh --packages=core,elements --examples=false
 
       cd ${PROJECT_ROOT}/aio

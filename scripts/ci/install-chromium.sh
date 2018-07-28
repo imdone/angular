@@ -79,7 +79,7 @@ if [[ "$EXISTING_VERSION" != "$CHROMIUM_VERSION" ]]; then
   echo $CHROMIUM_VERSION > $CHROMIUM_VERSION_FILE
 fi
 
-## TODO (matsko|iminar): uncomment once #22231 is closed
+## TODO (matsko|iminar): uncomment once #22231 is closed id:1127
 # if [[ "$CHROMIUM_VERSION" != "$LATEST_CHROMIUM_VERSION" ]]; then
   # echo "New version of Chromium available. Update install-chromium.sh with build number: ${LATEST_CHROMIUM_VERSION}"
 # fi

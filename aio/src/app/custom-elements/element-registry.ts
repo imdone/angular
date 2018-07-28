@@ -1,7 +1,7 @@
 import { InjectionToken, Type } from '@angular/core';
 
 // Modules containing custom elements must be set up as lazy-loaded routes (loadChildren)
-// TODO(andrewjs): This is a hack, Angular should have first-class support for preparing a module
+// TODO (andrewjs): This is a hack, Angular should have first-class support for preparing a module id:52
 // that contains custom elements.
 export const ELEMENT_MODULE_PATHS_AS_ROUTES = [
   {

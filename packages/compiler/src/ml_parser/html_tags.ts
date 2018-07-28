@@ -12,9 +12,9 @@ export class HtmlTagDefinition implements TagDefinition {
   private closedByChildren: {[key: string]: boolean} = {};
 
   closedByParent: boolean = false;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:412
   requiredParents !: {[key: string]: boolean};
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:356
   parentToAdd !: string;
   implicitNamespacePrefix: string|null;
   contentType: TagContentType;

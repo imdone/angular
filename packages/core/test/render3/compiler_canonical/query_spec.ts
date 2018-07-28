@@ -44,9 +44,9 @@ describe('queries', () => {
     `
     })
     class ViewQueryComponent {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:572
       @ViewChild(SomeDirective) someDir !: SomeDirective;
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:633
       @ViewChildren(SomeDirective) someDirList !: QueryList<SomeDirective>;
 
       // NORMATIVE
@@ -99,9 +99,9 @@ describe('queries', () => {
       `
     })
     class ContentQueryComponent {
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:496
       @ContentChild(SomeDirective) someDir !: SomeDirective;
-      // TODO(issue/24571): remove '!'.
+      // TODO (issue/24571): remove '!'. id:844
       @ContentChildren(SomeDirective) someDirList !: QueryList<SomeDirective>;
 
       // NORMATIVE

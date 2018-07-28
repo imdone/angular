@@ -89,7 +89,7 @@ export interface LViewData extends Array<any> {
    *
    * If `LElementNode`, this is the LView of a component.
    */
-  // TODO(kara): Replace with index
+  // TODO (kara): Replace with index id:456
   [HOST_NODE]: LViewNode|LElementNode;
 
   /**
@@ -107,7 +107,7 @@ export interface LViewData extends Array<any> {
    * These must be stored separately from LNodes because their presence is
    * unknown at compile-time and thus space cannot be reserved in data[].
    */
-  // TODO: flatten into LViewData[]
+  // TODO: flatten into LViewData[] id:545
   [DIRECTIVES]: any[]|null;
 
   /**
@@ -118,7 +118,7 @@ export interface LViewData extends Array<any> {
    * These change per LView instance, so they cannot be stored on TView. Instead,
    * TView.cleanup saves an index to the necessary context in this array.
    */
-  // TODO: flatten into LViewData[]
+  // TODO: flatten into LViewData[] id:435
   [CLEANUP]: any[]|null;
 
   /**
@@ -143,7 +143,7 @@ export interface LViewData extends Array<any> {
    * The tail allows us to quickly add a new state to the end of the view list
    * without having to propagate starting from the first child.
    */
-  // TODO: replace with global
+  // TODO: replace with global id:379
   [TAIL]: LViewData|LContainer|null;
 
   /**

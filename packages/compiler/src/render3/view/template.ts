@@ -151,7 +151,7 @@ export class TemplateDefinitionBuilder implements t.Visitor<void>, LocalResolver
         [];
 
     // Generate maps of placeholder name to node indexes
-    // TODO(vicb): This is a WIP, not fully supported yet
+    // TODO (vicb): This is a WIP, not fully supported yet id:414
     for (const phToNodeIdx of this._phToNodeIdxes) {
       if (Object.keys(phToNodeIdx).length > 0) {
         const scopedName = this._bindingScope.freshReferenceName();
@@ -235,7 +235,7 @@ export class TemplateDefinitionBuilder implements t.Visitor<void>, LocalResolver
     const [namespaceKey, elementName] = splitNsName(element.name);
 
     // Elements inside i18n sections are replaced with placeholders
-    // TODO(vicb): nested elements are a WIP in this phase
+    // TODO (vicb): nested elements are a WIP in this phase id:358
     if (this._inI18nSection) {
       const phName = element.name.toLowerCase();
       if (!this._phToNodeIdxes[this._i18nSectionIndex][phName]) {
@@ -605,7 +605,7 @@ export class TemplateDefinitionBuilder implements t.Visitor<void>, LocalResolver
           params.push(sanitizationRef);
         }
 
-        // TODO(chuckj): runtime: security context?
+        // TODO (chuckj): runtime: security context? id:259
         this.instruction(
             this._bindingCode, input.sourceSpan, instruction, o.literal(elementIndex),
             o.literal(input.name), ...params);
@@ -993,7 +993,7 @@ function parseI18nMeta(i18n?: string): {description?: string, id?: string, meani
   let id: string|undefined;
 
   if (i18n) {
-    // TODO(vicb): figure out how to force a message ID with closure ?
+    // TODO (vicb): figure out how to force a message ID with closure ? id:305
     const idIndex = i18n.indexOf(ID_SEPARATOR);
 
     const descIndex = i18n.indexOf(MEANING_SEPARATOR);

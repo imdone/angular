@@ -37,7 +37,7 @@ import {DTS, GENERATED_FILES, StructureIsReused, TS, createMessageDiagnostic, is
 // the static assignments to R3 properties such as ngInjectableDef using a regex, as output files
 // are written, and applies the annotation through regex replacement.
 //
-// TODO(alxhub): clean up once fix for TS transformers lands in upstream
+// TODO (alxhub): clean up once fix for TS transformers lands in upstream id:326
 //
 // Typescript reference issue: https://github.com/Microsoft/TypeScript/issues/22497
 
@@ -115,7 +115,7 @@ class AngularCompilerProgram implements Program {
   private rootNames: string[];
   private metadataCache: MetadataCache;
   // Metadata cache used exclusively for the flat module index
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:231
   private flatModuleMetadataCache !: MetadataCache;
   private loweringMetadataTransform: LowerMetadataTransform;
   private oldProgramLibrarySummaries: Map<string, LibrarySummary>|undefined;
@@ -128,18 +128,18 @@ class AngularCompilerProgram implements Program {
   private emittedSourceFiles: ts.SourceFile[]|undefined;
 
   // Lazily initialized fields
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:211
   private _compiler !: AotCompiler;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:180
   private _hostAdapter !: TsCompilerAotCompilerTypeCheckHostAdapter;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:283
   private _tsProgram !: ts.Program;
   private _analyzedModules: NgAnalyzedModules|undefined;
   private _analyzedInjectables: NgAnalyzedFileWithInjectables[]|undefined;
   private _structuralDiagnostics: Diagnostic[]|undefined;
   private _programWithStubs: ts.Program|undefined;
   private _optionsDiagnostics: Diagnostic[] = [];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:327
   private _reifiedDecorators !: Set<StaticSymbol>;
 
   constructor(
@@ -367,7 +367,7 @@ class AngularCompilerProgram implements Program {
       // Restore the references back to the augmented value to ensure that the
       // checks that TypeScript makes for project structure reuse will succeed.
       for (const [sourceFile, references] of Array.from(augmentedReferences)) {
-        // TODO(chuckj): Remove any cast after updating build to 2.6
+        // TODO (chuckj): Remove any cast after updating build to 2.6 id:232
         (sourceFile as any).referencedFiles = references;
       }
     }
@@ -489,7 +489,7 @@ class AngularCompilerProgram implements Program {
       // Restore the references back to the augmented value to ensure that the
       // checks that TypeScript makes for project structure reuse will succeed.
       for (const [sourceFile, references] of Array.from(augmentedReferences)) {
-        // TODO(chuckj): Remove any cast after updating build to 2.6
+        // TODO (chuckj): Remove any cast after updating build to 2.6 id:212
         (sourceFile as any).referencedFiles = references;
       }
     }
@@ -800,7 +800,7 @@ class AngularCompilerProgram implements Program {
       if (!(emitFlags & EmitFlags.Codegen)) {
         return {genFiles: [], genDiags: []};
       }
-      // TODO(tbosch): allow generating files that are not in the rootDir
+      // TODO (tbosch): allow generating files that are not in the rootDir id:181
       // See https://github.com/angular/angular/issues/19337
       let genFiles = this.compiler.emitAllImpls(this.analyzedModules)
                          .filter(genFile => isInRootDir(genFile.genFileUrl, this.options));
@@ -813,7 +813,7 @@ class AngularCompilerProgram implements Program {
       }
       return {genFiles, genDiags: []};
     } catch (e) {
-      // TODO(tbosch): check whether we can actually have syntax errors here,
+      // TODO (tbosch): check whether we can actually have syntax errors here, id:284
       // as we already parsed the metadata and templates before to create the type check block.
       if (isSyntaxError(e)) {
         const genDiags: ts.Diagnostic[] = [{
@@ -835,7 +835,7 @@ class AngularCompilerProgram implements Program {
    * Returns undefined if all files should be emitted.
    */
   private getSourceFilesForEmit(): ts.SourceFile[]|undefined {
-    // TODO(tbosch): if one of the files contains a `const enum`
+    // TODO (tbosch): if one of the files contains a `const enum` id:328
     // always emit all files -> return undefined!
     let sourceFilesToEmit = this.tsProgram.getSourceFiles().filter(
         sf => { return !sf.isDeclarationFile && !GENERATED_FILES.test(sf.fileName); });
@@ -895,7 +895,7 @@ class AngularCompilerProgram implements Program {
     if (baseFile) {
       sourceFiles = sourceFiles ? [...sourceFiles, baseFile] : [baseFile];
     }
-    // TODO: remove any when TS 2.4 support is removed.
+    // TODO: remove any when TS 2.4 support is removed. id:233
     this.host.writeFile(outFileName, outData, writeByteOrderMark, onError, sourceFiles as any);
   }
 }
@@ -1005,7 +1005,7 @@ function normalizeSeparators(path: string): string {
  * Returns a function that can adjust a path from source path to out path,
  * based on an existing mapping from source to out path.
  *
- * TODO(tbosch): talk to the TypeScript team to expose their logic for calculating the `rootDir`
+ * TODO (tbosch): talk to the TypeScript team to expose their logic for calculating the `rootDir` id:213
  * if none was specified.
  *
  * Note: This function works on normalized paths from typescript.

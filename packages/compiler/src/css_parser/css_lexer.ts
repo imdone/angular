@@ -116,7 +116,7 @@ function _trackWhitespace(mode: CssLexerMode) {
 }
 
 export class CssScanner {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:247
   peek !: number;
   peekPeek: number;
   length: number = 0;
@@ -216,7 +216,7 @@ export class CssScanner {
 
     let isMatchingType: boolean = false;
     if (type == CssTokenType.IdentifierOrNumber) {
-      // TODO (matsko): implement array traversal for lookup here
+      // TODO (matsko): implement array traversal for lookup here id:293
       isMatchingType = next.type == CssTokenType.Number || next.type == CssTokenType.Identifier;
     } else {
       isMatchingType = next.type == type;

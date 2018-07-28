@@ -76,31 +76,31 @@ import {TestBed} from '@angular/core/testing';
 
 @Directive({selector: 'simple'})
 class Simple {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:839
   @Input() marker !: string;
 }
 
 @Component({selector: 'view-child-type-selector', template: ''})
 class ViewChildTypeSelectorComponent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:616
   @ViewChild(Simple) child !: Simple;
 }
 
 @Component({selector: 'view-child-string-selector', template: ''})
 class ViewChildStringSelectorComponent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:568
   @ViewChild('child') child !: ElementRef;
 }
 
 @Component({selector: 'view-children-type-selector', template: ''})
 class ViewChildrenTypeSelectorComponent {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:525
   @ViewChildren(Simple) children !: QueryList<Simple>;
 }
 
 @Component({selector: 'view-child-string-selector', template: ''})
 class ViewChildrenStringSelectorComponent {
   // Allow comma separated selector (with spaces).
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:492
   @ViewChildren('child1 , child2') children !: QueryList<ElementRef>;
 }

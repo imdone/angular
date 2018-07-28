@@ -63,10 +63,10 @@ class LifecycleDir implements DoCheck {
 })
 class LifecycleCmp implements OnChanges,
     OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
-  field: any /** TODO #9100 */;
+  field: any /** TODO #9100 id:393*/;
   constructor(private _log: Log) {}
 
-  ngOnChanges(_: any /** TODO #9100 */) { this._log.add('ngOnChanges'); }
+  ngOnChanges(_: any /** TODO #9100 id:504*/) { this._log.add('ngOnChanges'); }
 
   ngOnInit() { this._log.add('ngOnInit'); }
 

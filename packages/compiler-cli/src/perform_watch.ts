@@ -234,7 +234,7 @@ export function performWatchCompilation(host: PerformWatchHost):
 
   function watchedFileChanged(event: FileChangeEvent, fileName: string) {
     if (cachedOptions && event === FileChangeEvent.Change &&
-        // TODO(chuckj): validate that this is sufficient to skip files that were written.
+        // TODO (chuckj): validate that this is sufficient to skip files that were written. id:323
         // This assumes that the file path we write is the same file path we will receive in the
         // change notification.
         path.normalize(fileName) === path.normalize(cachedOptions.project)) {

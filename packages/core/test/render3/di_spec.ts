@@ -576,7 +576,7 @@ describe('di', () => {
     describe('flags', () => {
 
       class DirB {
-        // TODO(issue/24571): remove '!'.
+        // TODO (issue/24571): remove '!'. id:575
         value !: string;
 
         static ngDirectiveDef = defineDirective({
@@ -1418,7 +1418,7 @@ describe('di', () => {
         // so that we have smaller HelloWorld.
         (parent.tNode as{parent: any}).parent = undefined;
 
-        const injector: any = getOrCreateNodeInjector();  // TODO: Review use of `any` here (#19904)
+        const injector: any = getOrCreateNodeInjector();  // TODO: Review use of `any` here (#19904) id:636
         expect(injector).not.toBe(null);
       } finally {
         leaveView(oldView);

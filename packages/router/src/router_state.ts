@@ -106,18 +106,18 @@ export function createEmptyStateSnapshot(
  */
 export class ActivatedRoute {
   /** The current snapshot of this route */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1030
   snapshot !: ActivatedRouteSnapshot;
   /** @internal */
   _futureSnapshot: ActivatedRouteSnapshot;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:976
   _routerState !: RouterState;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:950
   _paramMap !: Observable<ParamMap>;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1166
   _queryParamMap !: Observable<ParamMap>;
 
   /** @internal */
@@ -135,7 +135,7 @@ export class ActivatedRoute {
       /** The outlet name of the route. It's a constant */
       public outlet: string,
       /** The component of the route. It's a constant */
-      // TODO(vsavkin): remove |string
+      // TODO (vsavkin): remove |string id:899
       public component: Type<any>|string|null, futureSnapshot: ActivatedRouteSnapshot) {
     this._futureSnapshot = futureSnapshot;
   }
@@ -261,16 +261,16 @@ export class ActivatedRouteSnapshot {
   /** @internal */
   _resolve: ResolveData;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1031
   _resolvedData !: Data;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:977
   _routerState !: RouterStateSnapshot;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1063
   _paramMap !: ParamMap;
   /** @internal */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:1167
   _queryParamMap !: ParamMap;
 
   /** @internal */

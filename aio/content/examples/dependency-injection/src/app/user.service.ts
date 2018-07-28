@@ -7,7 +7,7 @@ export class User {
     public isAuthorized = false) { }
 }
 
-// TODO: get the user; don't 'new' it.
+// TODO: get the user; don't 'new' it. id:33
 let alice = new User('Alice', true);
 let bob = new User('Bob', false);
 

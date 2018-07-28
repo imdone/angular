@@ -282,7 +282,7 @@ let thisArg: any;
 
     describe('track by', () => {
       it('should console.warn if trackBy is not a function', async(() => {
-           // TODO(vicb): expect a warning message when we have a proper log service
+           // TODO (vicb): expect a warning message when we have a proper log service id:168
            const template = `<p *ngFor="let item of items; trackBy: value"></p>`;
            fixture = createTestComponent(template);
            fixture.componentInstance.value = 0;
@@ -290,7 +290,7 @@ let thisArg: any;
          }));
 
       it('should track by identity when trackBy is to `null` or `undefined`', async(() => {
-           // TODO(vicb): expect no warning message when we have a proper log service
+           // TODO (vicb): expect no warning message when we have a proper log service id:197
            const template = `<p *ngFor="let item of items; trackBy: value">{{ item }}</p>`;
            fixture = createTestComponent(template);
            fixture.componentInstance.items = ['a', 'b', 'c'];

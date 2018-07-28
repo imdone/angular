@@ -27,12 +27,12 @@ describe('template variables', () => {
 
   @Directive({selector: '[forOf]'})
   class ForOfDirective {
-    // TODO(issue/24571): remove '!'.
+    // TODO (issue/24571): remove '!'. id:634
     private previous !: any[];
 
     constructor(private view: ViewContainerRef, private template: TemplateRef<any>) {}
 
-    // TODO(issue/24571): remove '!'.
+    // TODO (issue/24571): remove '!'. id:497
     @Input() forOf !: any[];
 
     ngOnChanges(simpleChanges: SimpleChanges) {
@@ -51,13 +51,13 @@ describe('template variables', () => {
     }
 
     private update() {
-      // TODO(chuckj): Not implemented yet
+      // TODO (chuckj): Not implemented yet id:845
       // this.view.clear();
       if (this.forOf) {
         const current = this.forOf;
         for (let i = 0; i < current.length; i++) {
           const context = {$implicit: current[i], index: i, even: i % 2 == 0, odd: i % 2 == 1};
-          // TODO(chuckj): Not implemented yet
+          // TODO (chuckj): Not implemented yet id:622
           // this.view.createEmbeddedView(this.template, context);
         }
         this.previous = [...this.forOf];
@@ -71,7 +71,7 @@ describe('template variables', () => {
       factory: function ForOfDirective_Factory() {
         return new ForOfDirective($r3$.ɵinjectViewContainerRef(), $r3$.ɵinjectTemplateRef());
       },
-      // TODO(chuckj): Enable when ngForOf enabling lands.
+      // TODO (chuckj): Enable when ngForOf enabling lands. id:574
       // features: [NgOnChangesFeature],
       inputs: {forOf: 'forOf'}
     });
@@ -131,7 +131,7 @@ describe('template variables', () => {
         [ForOfDirective.ngDirectiveDef];
     // /NON-NORMATIVE
 
-    // TODO(chuckj): update when the changes to enable ngForOf lands.
+    // TODO (chuckj): update when the changes to enable ngForOf lands. id:635
     expect(toHtml(renderComponent(MyComponent))).toEqual('<ul></ul>');
   });
 

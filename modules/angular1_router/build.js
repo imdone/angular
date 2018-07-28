@@ -66,7 +66,7 @@ var REQUIRE_RE = new RegExp("require\\('(.*?)'\\);", 'g');
 function transform(contents) {
   contents = contents.replace(INJECT_RE, '').replace(INJECTABLE_RE, '');
   contents = contents.replace(IMPORT_RE, function (match, imports, includePath) {
-    //TODO: remove special-case
+    //TODO: remove special-case id:64
     if (isFacadeModule(includePath) || includePath === './router_outlet') {
       return '';
     }

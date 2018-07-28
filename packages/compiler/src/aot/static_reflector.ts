@@ -49,13 +49,13 @@ export class StaticReflector implements CompileReflector {
   private staticCache = new Map<StaticSymbol, string[]>();
   private conversionMap = new Map<StaticSymbol, (context: StaticSymbol, args: any[]) => any>();
   private resolvedExternalReferences = new Map<string, StaticSymbol>();
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:245
   private injectionToken !: StaticSymbol;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:291
   private opaqueToken !: StaticSymbol;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:335
   ROUTES !: StaticSymbol;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:401
   private ANALYZE_FOR_ENTRY_COMPONENTS !: StaticSymbol;
   private annotationForParentClassWithSummaryKind =
       new Map<CompileSummaryKind, MetadataFactory<any>[]>();
@@ -472,7 +472,7 @@ export class StaticReflector implements CompileReflector {
             const summaryMsg = e.chain ? 'references \'' + e.symbol !.name + '\'' : errorSummary(e);
             const summary = `'${nestedContext.name}' ${summaryMsg}`;
             const chain = {message: summary, position: e.position, next: e.chain};
-            // TODO(chuckj): retrieve the position information indirectly from the collectors node
+            // TODO (chuckj): retrieve the position information indirectly from the collectors node id:220
             // map if the metadata is from a .ts file.
             self.error(
                 {

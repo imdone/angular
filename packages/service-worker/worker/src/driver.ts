@@ -175,7 +175,7 @@ export class Driver implements Debuggable, UpdateSource {
     // returning causes the request to fall back on the network. This is preferred over
     // `respondWith(fetch(req))` because the latter still shows in DevTools that the
     // request was handled by the SW.
-    // TODO: try to handle DriverReadyState.EXISTING_CLIENTS_ONLY here.
+    // TODO: try to handle DriverReadyState.EXISTING_CLIENTS_ONLY here. id:903
     if (this.state === DriverReadyState.SAFE_MODE) {
       // Even though the worker is in safe mode, idle tasks still need to happen so
       // things like update checks, etc. can take place.
@@ -189,7 +189,7 @@ export class Driver implements Debuggable, UpdateSource {
     // `mode: 'same-origin'`.
     // This is likely a bug in Chrome DevTools. Avoid handling such requests.
     // (See also https://github.com/angular/angular/issues/22362.)
-    // TODO(gkalpak): Remove once no longer necessary (i.e. fixed in Chrome DevTools).
+    // TODO (gkalpak): Remove once no longer necessary (i.e. fixed in Chrome DevTools). id:1035
     if ((req.cache as string) === 'only-if-cached' && req.mode !== 'same-origin') {
       // Log the incident only the first time it happens, to avoid spamming the logs.
       if (!this.loggedInvalidOnlyIfCachedRequest) {
@@ -574,7 +574,7 @@ export class Driver implements Debuggable, UpdateSource {
           appVersion = this.lookupVersionByHash(this.latestHash, 'assignVersion');
         }
 
-        // TODO: make sure the version is valid.
+        // TODO: make sure the version is valid. id:981
         return appVersion;
       } else {
         // This is the first time this client ID has been seen. Whether the SW is in a
@@ -683,7 +683,7 @@ export class Driver implements Debuggable, UpdateSource {
         await this.versionFailed(appVersion, err, latest);
       }
     };
-    // TODO: better logic for detecting localhost.
+    // TODO: better logic for detecting localhost. id:1067
     if (this.scope.registration.scope.indexOf('://localhost') > -1) {
       return initialize();
     }
@@ -700,7 +700,7 @@ export class Driver implements Debuggable, UpdateSource {
     }
     const brokenHash = broken[0];
 
-    // TODO: notify affected apps.
+    // TODO: notify affected apps. id:1171
 
     // The action taken depends on whether the broken manifest is the active (latest) or not.
     // If so, the SW cannot accept new clients, but can continue to service old ones.

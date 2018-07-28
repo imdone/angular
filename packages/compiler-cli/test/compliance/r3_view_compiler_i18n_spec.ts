@@ -160,7 +160,7 @@ describe('i18n support in the view compiler', () => {
     });
   });
 
-  // TODO(vicb): this feature is not supported yet
+  // TODO (vicb): this feature is not supported yet id:287
   xdescribe('nested nodes', () => {
     it('should generate the placeholders maps', () => {
       const files = {

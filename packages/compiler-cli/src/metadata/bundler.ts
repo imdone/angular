@@ -85,7 +85,7 @@ export class MetadataBundler {
   private exports = new Map<string, Symbol[]>();
   private rootModule: string;
   private privateSymbolPrefix: string;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:126
   private exported !: Set<Symbol>;
 
   constructor(
@@ -100,7 +100,7 @@ export class MetadataBundler {
     // the exports.
     const exportedSymbols = this.exportAll(this.rootModule);
     this.canonicalizeSymbols(exportedSymbols);
-    // TODO: exports? e.g. a module re-exports a symbol from another bundle
+    // TODO: exports? e.g. a module re-exports a symbol from another bundle id:224
     const metadata = this.getEntries(exportedSymbols);
     const privates = Array.from(this.symbolMap.values())
                          .filter(s => s.referenced && s.isPrivate)

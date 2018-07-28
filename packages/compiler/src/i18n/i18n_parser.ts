@@ -30,15 +30,15 @@ export function createI18nMessageFactory(interpolationConfig: InterpolationConfi
 }
 
 class _I18nVisitor implements html.Visitor {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:341
   private _isIcu !: boolean;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:407
   private _icuDepth !: number;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:351
   private _placeholderRegistry !: PlaceholderRegistry;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:252
   private _placeholderToContent !: {[phName: string]: string};
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:298
   private _placeholderToMessage !: {[phName: string]: i18n.Message};
 
   constructor(
@@ -118,7 +118,7 @@ class _I18nVisitor implements html.Visitor {
     // ICU placeholders should not be replaced with their original content but with the their
     // translations. We need to create a new visitor (they are not re-entrant) to compute the
     // message id.
-    // TODO(vicb): add a html.Node -> i18n.Message cache to avoid having to re-create the msg
+    // TODO (vicb): add a html.Node -> i18n.Message cache to avoid having to re-create the msg id:342
     const phName = this._placeholderRegistry.getPlaceholderName('ICU', icu.sourceSpan.toString());
     const visitor = new _I18nVisitor(this._expressionParser, this._interpolationConfig);
     this._placeholderToMessage[phName] = visitor.toI18nMessage([icu], '', '', '');

@@ -88,7 +88,7 @@ export class EventManager {
 export abstract class EventManagerPlugin {
   constructor(private _doc: any) {}
 
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:880
   manager !: EventManager;
 
   abstract supports(eventName: string): boolean;

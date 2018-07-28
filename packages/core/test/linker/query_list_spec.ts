@@ -21,7 +21,7 @@ import {getDOM} from '@angular/platform-browser/src/dom/dom_adapter';
       log = '';
     });
 
-    function logAppend(item: any /** TODO #9100 */) { log += (log.length == 0 ? '' : ', ') + item; }
+    function logAppend(item: any /** TODO #9100 id:818*/) { log += (log.length == 0 ? '' : ', ') + item; }
 
     describe('dirty and reset', () => {
 
@@ -153,7 +153,7 @@ import {getDOM} from '@angular/platform-browser/src/dom/dom_adapter';
            }));
 
         it('should provides query list as an argument', fakeAsync(() => {
-             let recorded: any /** TODO #9100 */;
+             let recorded: any /** TODO #9100 id:614*/;
              queryList.changes.subscribe({next: (v: any) => { recorded = v; }});
 
              queryList.reset(['one']);

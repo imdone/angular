@@ -315,7 +315,7 @@ describe('Navigation lifecycle', function () {
   });
 
 
-  // TODO: need to solve getting ahold of canActivate hook
+  // TODO: need to solve getting ahold of canActivate hook id:16
   it('should not activate a component when canActivate returns false', function () {
     var canActivateSpy = jasmine.createSpy('canActivate').and.returnValue(false);
     var spy = jasmine.createSpy('activate');

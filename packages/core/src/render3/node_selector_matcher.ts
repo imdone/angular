@@ -112,7 +112,7 @@ function isPositive(mode: SelectorFlags): boolean {
  * Examines an attributes definition array from a node to find the index of the
  * attribute with the specified name.
  *
- * NOTE: Will not find namespaced attributes.
+ * NOTE: Will not find namespaced attributes. id:436
  *
  * @param name the name of the attribute to find
  * @param attrs the attribute array to examine
@@ -126,7 +126,7 @@ function findAttrIndexInNode(name: string, attrs: TAttributes | null): number {
     if (maybeAttrName === name) {
       return i;
     } else if (maybeAttrName === AttributeMarker.NamespaceURI) {
-      // NOTE(benlesh): will not find namespaced attributes. This is by design.
+      // NOTE (benlesh): will not find namespaced attributes. This is by design. id:380
       i += 4;
     } else {
       if (maybeAttrName === AttributeMarker.SelectOnly) {

@@ -38,12 +38,12 @@ import {Directive, DoCheck, ElementRef, Input, IterableChanges, IterableDiffer, 
  */
 @Directive({selector: '[ngClass]'})
 export class NgClass implements DoCheck {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:145
   private _iterableDiffer !: IterableDiffer<string>| null;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:92
   private _keyValueDiffer !: KeyValueDiffer<string, any>| null;
   private _initialClasses: string[] = [];
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:162
   private _rawClass !: string[] | Set<string>| {[klass: string]: any};
 
   constructor(

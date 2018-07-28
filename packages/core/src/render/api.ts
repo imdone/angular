@@ -239,7 +239,7 @@ export abstract class Renderer2 {
    * If null or undefined, the view engine won't call it.
    * This is used as a performance optimization for production mode.
    */
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:321
   destroyNode !: ((node: any) => void) | null;
   /**
    * Appends a child to a given parent node in the host element DOM.

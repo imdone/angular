@@ -29,9 +29,9 @@ import {MessageBasedRenderer2} from './web_workers/ui/renderer';
  */
 @Injectable()
 export class WebWorkerInstance {
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:956
   public worker !: Worker;
-  // TODO(issue/24571): remove '!'.
+  // TODO (issue/24571): remove '!'. id:969
   public bus !: MessageBus;
 
   /** @internal */
@@ -65,7 +65,7 @@ export const _WORKER_UI_PLATFORM_PROVIDERS: StaticProvider[] = [
   BROWSER_SANITIZATION_PROVIDERS,
   {provide: ErrorHandler, useFactory: _exceptionHandler, deps: []},
   {provide: DOCUMENT, useFactory: _document, deps: []},
-  // TODO(jteplitz602): Investigate if we definitely need EVENT_MANAGER on the render thread
+  // TODO (jteplitz602): Investigate if we definitely need EVENT_MANAGER on the render thread id:943
   // #5298
   {
     provide: EVENT_MANAGER_PLUGINS,

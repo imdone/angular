@@ -437,7 +437,7 @@ export class DataGroup {
     try {
       await this.cacheResponse(req, await res, await this.lru());
     } catch (e) {
-      // TODO: handle this error somehow?
+      // TODO: handle this error somehow? id:980
     }
   }
 
@@ -467,7 +467,7 @@ export class DataGroup {
       lru.remove(req.url);
       await this.clearCacheForUrl(req.url);
 
-      // TODO: avoid duplicate in event of network timeout, maybe.
+      // TODO: avoid duplicate in event of network timeout, maybe. id:1066
       await this.syncLru();
     }
     return null;
@@ -497,7 +497,7 @@ export class DataGroup {
       }
     }
 
-    // TODO: evaluate for possible race conditions during flaky network periods.
+    // TODO: evaluate for possible race conditions during flaky network periods. id:1170
 
     // Mark this resource as having been accessed recently. This ensures it won't be evicted
     // until enough other resources are requested that it falls off the end of the LRU chain.
