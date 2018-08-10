@@ -7,7 +7,7 @@
  */
 
 // TODO (jteplitz602): Load WorkerGlobalScope from lib.webworker.d.ts file #3492 id:394
-declare var WorkerGlobalScope: any /** TODO #9100 CommonJS / Node have global context exposed as "global" variable. We don't want to include the whole node.d.ts this this compilation unit so we'll just fake the global "global" var for now. id:460 CommonJS / Node have global context exposed as "global" variable. We don't want to include the whole node.d.ts this this compilation unit so we'll just fake the global "global" var for now. */;
+declare var WorkerGlobalScope: any /** TODO #9100 CommonJS / Node have global context exposed as "global" variable. We don't want to include the whole node.d.ts this this compilation unit so we'll just fake the global "global" var for now. CommonJS / Node have global context exposed as "global" variable. We don't want to include the whole node.d.ts this this compilation unit so we'll just fake the global "global" var for now. id:460 CommonJS / Node have global context exposed as "global" variable. We don't want to include the whole node.d.ts this this compilation unit so we'll just fake the global "global" var for now. */;
 // CommonJS / Node have global context exposed as "global" variable.
 // We don't want to include the whole node.d.ts this this compilation unit so we'll just fake
 // the global "global" var for now.

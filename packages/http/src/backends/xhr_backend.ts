@@ -150,7 +150,7 @@ export class XHRConnection implements Connection {
     });
   }
 
-  setDetectedContentType(req: any /** TODO Request Skip if a custom Content-Type header is provided id:793 Skip if a custom Content-Type header is provided */, _xhr: any /** XMLHttpRequest */) {
+  setDetectedContentType(req: any /** TODO Request Skip if a custom Content-Type header is provided Skip if a custom Content-Type header is provided id:793 Skip if a custom Content-Type header is provided */, _xhr: any /** XMLHttpRequest */) {
     // Skip if a custom Content-Type header is provided
     if (req.headers != null && req.headers.get('Content-Type') != null) {
       return;

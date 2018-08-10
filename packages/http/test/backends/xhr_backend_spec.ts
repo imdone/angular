@@ -320,7 +320,7 @@ class MockBrowserXHR extends BrowserXhr {
                 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
       });
 
-      if ((global as any /** TODO #9100 `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3, but a BlobBuilder can be used instead id:799 `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3, but a BlobBuilder can be used instead */)['Blob']) {
+      if ((global as any /** TODO #9100 `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3, but a BlobBuilder can be used instead `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3, but a BlobBuilder can be used instead id:799 `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3, but a BlobBuilder can be used instead */)['Blob']) {
         // `new Blob(...)` throws an 'Illegal constructor' exception in Android browser <= 4.3,
         // but a BlobBuilder can be used instead
         const createBlob = (data: Array<string>, datatype: string) => {
