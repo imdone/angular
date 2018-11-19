@@ -4,7 +4,7 @@ imdone-help
 #HELP: Ignore files by adding `.imdoneignore` to the root of your project. +imdone-help id:78
 - [imdone.io](https://imdone.io) implements this with the [ignore package](https://www.npmjs.com/package/ignore)
 
-#HELP: Use markdown in todo comments or in the description id:14
+#HELP: Use markdown in todo comments or in the description id:14 +imdonehelp +imdonehelp
  - **This is a description...**
 
 #HELP: Add tags to your comments like this `+mvp` +imdone-help id:72
