@@ -6,6 +6,7 @@ import * as c from './constants';
 
 // Run
 // TODO (gkalpak): Add e2e tests to cover these interactions as well. id:2
+// - <https://github.com/imdone/angular/issues/3>
 GithubPullRequests.prototype.addComment = () => Promise.resolve();
 BuildVerifier.prototype.getPrIsTrusted = (pr: number) => {
   switch (pr) {
