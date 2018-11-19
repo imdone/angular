@@ -5,7 +5,7 @@ import {UploadError} from '../upload-server/upload-error';
 import * as c from './constants';
 
 // Run
-// TODO (gkalpak): Add e2e tests to cover these interactions as well. id:2
+// TODO (gkalpak): Add e2e tests to cover these interactions as well. id:2 +debt +debt @github
 // - <https://github.com/imdone/angular/issues/3>
 GithubPullRequests.prototype.addComment = () => Promise.resolve();
 BuildVerifier.prototype.getPrIsTrusted = (pr: number) => {
